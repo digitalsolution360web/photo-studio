@@ -36,9 +36,9 @@ export function Preloader() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="mt-8 text-white/40 text-[10px] uppercase tracking-[0.4em] font-bold"
+            className="mt-8 text-white/40 text-[10px] uppercase tracking-[0.4em] font-bold text-center px-6"
           >
-            Capturing Memories
+            Cinematic Storytelling
           </motion.p>
         </motion.div>
       )}

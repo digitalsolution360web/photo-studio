@@ -11,17 +11,17 @@ export function Footer() {
       <div className="absolute top-1/2 -right-24 w-64 h-64 bg-secondary/10 rounded-full blur-[100px] pointer-events-none"></div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 mb-20 animate-in fade-in slide-in-from-bottom-5 duration-1000">
           
           {/* Brand/About */}
           <div className="lg:col-span-4 space-y-8">
             <Link href="/" className="inline-block">
-              <div className="relative w-48 h-12 bg-white/5 px-4 py-2 rounded-xl border border-white/10 backdrop-blur-md">
+              <div className="relative w-64 h-20 overflow-hidden rounded-xl group transition-all duration-700">
                 <Image 
                   src="/logo.jpeg" 
                   alt="Max Photo Studio" 
                   fill
-                  className="object-contain p-1"
+                  className="object-contain"
                 />
               </div>
             </Link>
@@ -41,10 +41,18 @@ export function Footer() {
           <div className="lg:col-span-2">
             <h3 className="text-white font-heading font-bold text-lg mb-8 tracking-tight">Explore</h3>
             <ul className="space-y-4 text-sm uppercase tracking-widest font-medium">
-              {['Home', 'About Us', 'Services', 'Portfolio', 'Investment'].map((link) => (
-                <li key={link}>
-                  <Link href={`#${link.toLowerCase().replace(' ', '-')}`} className="hover:text-secondary transition-colors inline-block relative group">
-                    {link}
+              {[
+                { name: "Home", href: "/" },
+                { name: "About", href: "/about" },
+                { name: "Films", href: "/films" },
+                { name: "Experience", href: "/experience" },
+                { name: "Services", href: "/services" },
+                { name: "Investment", href: "/investment" },
+                { name: "Contact", href: "/contact" },
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="hover:text-secondary transition-colors inline-block relative group text-xs">
+                    {link.name}
                   </Link>
                 </li>
               ))}
@@ -96,9 +104,19 @@ export function Footer() {
 
         </div>
 
+        {/* Legal Disclaimer */}
+        <div className="mb-12 p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm">
+          <p className="text-sm font-bold text-white mb-2 uppercase tracking-widest">Legal Identity & Payments</p>
+          <p className="text-xs leading-relaxed max-w-2xl">
+            Max Photo is the creative brand. Max Photo Studio is the legal foundation. 
+            All bookings and invoices are issued under our parent entity, Max Photo Studio. 
+            Payments can be made via Cheque, UPI, or Bank Transfer to the studio account.
+          </p>
+        </div>
+
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[11px] uppercase tracking-[0.2em] font-medium text-slate-500">
-          <p>© {new Date().getFullYear()} Max Photo Studio. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Max Photo. All rights reserved.</p>
           <div className="flex items-center gap-8">
             <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>

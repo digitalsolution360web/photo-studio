@@ -20,10 +20,11 @@ export function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Portfolio", href: "#films" },
-    { name: "Investment", href: "#investment" },
+    { name: "About", href: "/about" },
+    { name: "Experience", href: "/experience" },
+    { name: "Services", href: "/services" },
+    { name: "Investment", href: "/investment" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -43,8 +44,8 @@ export function Navbar() {
             : "bg-transparent py-2 px-6 md:px-12"
         }`}
       >
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className={`relative transition-all duration-500 overflow-hidden rounded-lg ${isScrolled ? "w-28 h-8" : "w-36 h-12"}`}>
+        <Link href="/" className="flex items-center gap-4 group">
+          <div className={`relative transition-all duration-500 overflow-hidden rounded-lg ${isScrolled ? "w-36 h-10" : "w-44 h-14"}`}>
             <Image
               src="/logo.jpeg"
               alt="Max Photo Studio"
@@ -61,7 +62,7 @@ export function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 relative group ${isScrolled ? "text-primary hover:text-secondary" : "text-white hover:text-secondary"
+              className={`px-3 py-2 rounded-full text-xs xl:text-sm font-bold uppercase tracking-widest transition-all duration-300 relative group ${isScrolled ? "text-primary hover:text-secondary" : "text-white hover:text-secondary"
                 }`}
             >
               {link.name}
@@ -72,12 +73,12 @@ export function Navbar() {
           <div className="pl-6">
             <Link
               href="#contact"
-              className={`px-6 py-2.5 rounded-full font-bold text-[10px] uppercase tracking-widest transition-all duration-500 flex items-center gap-2 shadow-xl hover:scale-105 active:scale-95 ${isScrolled
+              className={`px-8 py-3 rounded-full font-bold text-xs uppercase tracking-widest transition-all duration-500 flex items-center gap-2 shadow-xl hover:scale-105 active:scale-95 ${isScrolled
                 ? "bg-primary text-white hover:bg-secondary"
                 : "bg-white text-primary hover:bg-secondary hover:text-white"
                 }`}
             >
-              <Calendar size={14} />
+              <Calendar size={16} />
               Check My Date
             </Link>
           </div>

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Max Photo Studio | Cinematic Wedding Films & AI Galleries",
-  description: "Specialized in premium wedding storytelling, cinematic films, and AI-powered guest galleries in Mumbai.",
+  title: "Max Photo | Cinematic Wedding Photography & Films in Mumbai",
+  description: "Max Photo creates cinematic wedding stories, elegant portraits, and premium memories designed to last a lifetime. Specialized in AI-powered guest experiences.",
 };
 
 import { Preloader } from "@/components/Preloader";
