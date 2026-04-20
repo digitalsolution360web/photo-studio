@@ -11,12 +11,14 @@ import {
   BookOpen, 
   Image as ImageIcon, 
   Palette, 
-  Gift 
+  Gift,
+  ArrowUpRight
 } from "lucide-react";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Photography & Videography Services | Max Photo Mumbai",
-  description: "Explore Max Photo services including wedding photography, candid coverage, cinematography, albums, photo restoration, collages, and personalized gifting.",
+  title: "Professional Photography Services | Max Photo Mumbai",
+  description: "Explore our full range of services from cinematic wedding films to premium album printing and photo restoration.",
 };
 
 export default function ServicesPage() {
@@ -24,47 +26,56 @@ export default function ServicesPage() {
     {
       title: "Studio Photography",
       desc: "Clean, refined portrait sessions for families, individuals, and professional needs.",
-      icon: <Camera size={24} />
+      icon: <Camera size={24} />,
+      bgIcon: <Camera size={120} />
     },
     {
       title: "Event Photography",
       desc: "Complete visual coverage for social events, gatherings, and special occasions.",
-      icon: <Users size={24} />
+      icon: <Users size={24} />,
+      bgIcon: <Users size={120} />
     },
     {
       title: "Candid Photography",
       desc: "Natural, emotionally driven moments captured without disruption.",
-      icon: <Sparkles size={24} />
+      icon: <Sparkles size={24} />,
+      bgIcon: <Sparkles size={120} />
     },
     {
       title: "Event Videography & Cinematography",
       desc: "Professional video coverage with a cinematic style and smooth storytelling.",
-      icon: <Video size={24} />
+      icon: <Video size={24} />,
+      bgIcon: <Video size={120} />
     },
     {
       title: "Pre-Wedding Photo Shoot",
       desc: "Stylized couple sessions designed to reflect personality, romance, and chemistry.",
-      icon: <Film size={24} />
+      icon: <Film size={24} />,
+      bgIcon: <Film size={120} />
     },
     {
       title: "Digital Album Printing",
       desc: "Premium album design and printing with elegant layouts and durable finishes.",
-      icon: <BookOpen size={24} />
+      icon: <BookOpen size={24} />,
+      bgIcon: <BookOpen size={120} />
     },
     {
       title: "Collages & Blow-Ups",
       desc: "Custom wall-ready photo compositions for gifting, display, and decor.",
-      icon: <ImageIcon size={24} />
+      icon: <ImageIcon size={24} />,
+      bgIcon: <ImageIcon size={120} />
     },
     {
       title: "Photo Colouring & Restoration",
-      desc: "Breathing new life into old or damaged photographs with careful restoration and color enhancement.",
-      icon: <Palette size={24} />
+      desc: "Breathing new life into old or damaged photographs with color enhancement.",
+      icon: <Palette size={24} />,
+      bgIcon: <Palette size={120} />
     },
     {
       title: "Personalized Gifting",
-      desc: "Thoughtful photo-based gifts created for weddings, anniversaries, and celebrations.",
-      icon: <Gift size={24} />
+      desc: "Thoughtful photo-based gifts created for weddings and anniversaries.",
+      icon: <Gift size={24} />,
+      bgIcon: <Gift size={120} />
     }
   ];
 
@@ -73,64 +84,81 @@ export default function ServicesPage() {
       <Navbar />
       
       <main className="flex-grow pt-24">
-        {/* Cinematic Services Hero */}
-        <section className="relative py-20 md:py-32 bg-[#0a0a0b] text-white">
-           <div className="absolute inset-0 z-0">
-             <Image src="/b1.webp" alt="Services" fill className="object-cover opacity-20" />
-             <div className="absolute inset-0 bg-gradient-to-tr from-primary via-transparent to-transparent"></div>
+        {/* Luxury Hero */}
+        <section className="relative py-24 md:py-40 bg-[#0a0a0b] text-white overflow-hidden">
+           <div className="absolute inset-0">
+             <Image 
+               src="/b3.webp" 
+               alt="Services Hero" 
+               fill 
+               className="object-cover opacity-30" 
+               sizes="100vw"
+               priority
+             />
+             <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/80 via-[#0a0a0b] to-[#0a0a0b]"></div>
            </div>
            
-           <div className="container mx-auto px-6 md:px-12 text-center relative z-10">
-            <span className="text-secondary font-bold uppercase tracking-[0.4em] text-xs mb-6 block">What We Offer</span>
-            <h1 className="text-3xl md:text-5xl font-heading font-extrabold mb-10 tracking-tighter leading-tight">
-              Our Services
-            </h1>
-            <p className="text-lg md:text-2xl text-white/50 max-w-3xl mx-auto font-light leading-relaxed">
-              Max Photo offers a complete range of photography and visual storytelling services for weddings, events, families, and personal milestones.
-            </p>
-          </div>
+           <div className="container mx-auto px-6 relative z-10 text-center">
+              <span className="text-secondary font-bold uppercase tracking-[0.6em] text-xs mb-8 block">Our Expertise</span>
+              <h1 className="text-4xl md:text-7xl font-heading font-extrabold mb-8 tracking-tighter leading-tight">
+                Crafting <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-white">Excellence</span>
+              </h1>
+              <p className="text-lg md:text-2xl text-white/50 max-w-2xl mx-auto font-light leading-relaxed">
+                From grand wedding films to fine art restoration, we deliver a full spectrum of visual services tailored for legacy.
+              </p>
+           </div>
         </section>
 
-        {/* Services Professional Grid */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-6 md:px-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {allServices.map((service, index) => (
-                <div 
-                  key={index} 
-                  className="bg-slate-50 p-10 rounded-[2.5rem] border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 group relative overflow-hidden"
-                >
-                  <div className="absolute top-0 right-0 p-8 text-primary/5 group-hover:text-primary/10 transition-colors pointer-events-none -translate-y-4 translate-x-4">
-                     {service.icon}
-                  </div>
-                  
-                  <div className="w-16 h-16 bg-white text-secondary rounded-[1.5rem] shadow-sm flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-500">
-                    {service.icon}
-                  </div>
-                  <h3 className="text-2xl font-heading font-extrabold text-primary mb-4 leading-tight group-hover:text-secondary transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-slate-500 leading-relaxed font-light text-base">
-                    {service.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
+        <section className="py-24 bg-white">
+           <div className="container mx-auto px-6 md:px-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                 {allServices.map((service, i) => (
+                    <div key={i} className="group relative bg-white p-8 rounded-[2rem] border border-slate-100 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 overflow-hidden flex flex-col items-start gap-6 shadow-sm">
+                        
+                        <div className="flex justify-between items-start w-full relative z-10">
+                           <div className="w-12 h-12 bg-slate-50 text-secondary rounded-xl flex items-center justify-center shrink-0 border border-slate-100 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-500">
+                              {service.icon}
+                           </div>
+                           <span className="text-[10px] font-bold text-slate-200 group-hover:text-secondary transition-colors duration-500">
+                              {String(i + 1).padStart(2, '0')}
+                           </span>
+                        </div>
+                        
+                        <div className="space-y-3 relative z-10">
+                           <h3 className="text-xl font-heading font-extrabold text-primary leading-tight group-hover:text-secondary transition-colors duration-500">
+                             {service.title}
+                           </h3>
+                           <p className="text-slate-500 text-sm leading-relaxed font-light">
+                             {service.desc}
+                           </p>
+                        </div>
+
+                        <div className="pt-2 w-full relative z-10">
+                           <Link href="/contact" className="text-[10px] uppercase tracking-widest font-bold text-slate-400 group-hover:text-primary transition-all flex items-center gap-2">
+                              Inquire Now <ArrowUpRight size={12} />
+                           </Link>
+                        </div>
+                        
+                        {/* Bottom highlight bar */}
+                        <div className="absolute bottom-0 left-0 w-0 h-1 bg-secondary group-hover:w-full transition-all duration-700"></div>
+                    </div>
+                 ))}
+              </div>
+           </div>
         </section>
 
-        {/* Call to Action - Modern Banner */}
-        <section className="py-20 bg-slate-50 border-y border-slate-100 italic-none">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto bg-primary rounded-[3.5rem] p-12 md:p-16 text-center text-white shadow-2xl relative overflow-hidden">
-               <div className="absolute top-0 left-0 w-full h-1 bg-secondary"></div>
-               <h2 className="text-2xl md:text-3xl font-heading font-extrabold mb-6">Need a custom photography solution?</h2>
-               <p className="text-lg text-white/50 mb-10 max-w-2xl mx-auto font-light">We can tailor our services to perfectly match the unique needs of your event or project. Every grand celebration starts with a conversation.</p>
-               <a href="/contact" className="inline-block px-12 py-5 bg-white text-primary rounded-full font-bold text-lg hover:bg-secondary hover:text-white transition-all shadow-xl active:scale-95">
-                 Get in Touch Today
-               </a>
-            </div>
-          </div>
+        {/* Closing CTA */}
+        <section className="py-24 bg-primary text-white text-center mx-6 md:mx-12 rounded-[3.5rem] mb-12 relative overflow-hidden">
+           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+           <div className="relative z-10 space-y-8">
+              <h2 className="text-3xl md:text-5xl font-heading font-extrabold tracking-tighter">Ready to capture your story?</h2>
+              <p className="text-lg text-white/50 max-w-xl mx-auto font-light leading-relaxed">Book a consultation session to discuss your vision and get a tailored proposal.</p>
+              <div className="pt-4">
+                 <Link href="/contact" className="px-12 py-5 bg-secondary text-white rounded-full font-extrabold text-lg shadow-2xl hover:scale-105 active:scale-95 transition-all inline-block">
+                    Inquire Online
+                 </Link>
+              </div>
+           </div>
         </section>
       </main>
 

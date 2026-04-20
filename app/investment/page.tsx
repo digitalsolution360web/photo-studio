@@ -144,10 +144,14 @@ export default function InvestmentPage() {
                      <div className="flex justify-center">
                         <div className="px-8 py-2 bg-secondary text-white text-[11px] font-bold uppercase tracking-[0.3em] rounded-full">Preferred Pricing</div>
                      </div>
-                     <h3 className="text-2xl md:text-4xl font-heading font-extrabold text-primary max-w-3xl mx-auto leading-tight italic-none">Packages for Catholic weddings in Mumbai start at ₹1.15L.</h3>
+                     <h3 className="text-2xl md:text-4xl font-heading font-extrabold text-primary max-w-3xl mx-auto leading-tight italic-none">
+                        Our wedding packages are thoughtfully designed
+                     </h3>
                      <p className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto font-light leading-relaxed">
-                       This helps us serve couples who are looking for a premium cinematic experience and complete coverage.
+                        for couples seeking a premium, cinematic experience with comprehensive coverage.
                      </p>
+
+
                      
                      <div className="flex flex-col sm:flex-row justify-center gap-6 pt-6">
                        <Link href="https://wa.me/919819509546" className="px-16 py-6 bg-primary text-white rounded-full font-bold text-lg flex items-center justify-center gap-3 hover:bg-secondary transition-all shadow-2xl hover:scale-105">

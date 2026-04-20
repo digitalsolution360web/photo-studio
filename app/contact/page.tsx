@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Metadata } from "next";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Send, MessageCircle, Calendar, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 
@@ -160,6 +161,44 @@ export default function ContactPage() {
 
             </div>
           </div>
+        </section>
+
+        {/* Official Scanners Section */}
+        <section className="py-24 bg-slate-50 border-t border-slate-100">
+           <div className="container mx-auto px-6 md:px-12 text-center">
+              <div className="max-w-3xl mx-auto space-y-4 mb-20 text-center">
+                 <span className="text-secondary font-bold uppercase tracking-[0.4em] text-xs">Official Scanners</span>
+                 <h2 className="text-3xl md:text-5xl font-heading font-extrabold text-primary leading-tight">Fast Connect & Follow</h2>
+                 <p className="text-lg text-slate-500 font-light max-w-xl mx-auto">
+                    Scan these QR codes to quickly follow us on social media or connect with our support team on WhatsApp.
+                 </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                 {[
+                   { name: "Facebook", img: "/sc.jpeg", color: "text-[#1877F2]", desc: "Follow our updates" },
+                   { name: "YouTube", img: "/sc1.jpeg", color: "text-[#FF0000]", desc: "Watch our latest films" },
+                   { name: "Instagram", img: "/sc2.jpeg", color: "text-[#E4405F]", desc: "Follow our daily story" },
+                   { name: "WhatsApp", img: "/sc3.jpeg", color: "text-[#25D366]", desc: "Direct chat with team" },
+                 ].map((scanner, i) => (
+                   <div key={i} className="group relative bg-white p-8 rounded-[3.5rem] border border-slate-100 transition-all duration-700 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2">
+                       <div className="relative aspect-square mb-8 rounded-[2rem] overflow-hidden border border-slate-100 bg-white p-4 shadow-inner group-hover:scale-105 transition-transform duration-700">
+                           <Image src={scanner.img} alt={scanner.name} fill className="object-contain p-2" sizes="(max-width: 768px) 100vw, 300px" />
+                           <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors pointer-events-none"></div>
+                       </div>
+                       <div className="space-y-1">
+                          <p className={`text-lg font-heading font-extrabold ${scanner.color}`}>{scanner.name}</p>
+                          <p className="text-xs uppercase tracking-widest font-bold text-slate-400">{scanner.desc}</p>
+                       </div>
+                       
+                       {/* Subtle Decoration */}
+                       <div className="absolute -top-4 -right-4 w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                          <Send size={16} className="text-secondary" />
+                       </div>
+                   </div>
+                 ))}
+              </div>
+           </div>
         </section>
       </main>
 

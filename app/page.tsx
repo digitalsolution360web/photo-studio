@@ -79,15 +79,15 @@ export default function Home() {
                 <div className="grid grid-cols-12 gap-4 items-center">
                   <div className="col-span-12 md:col-span-7">
                     <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative aspect-[4/5] group">
-                      <Image src="/p1.webp" alt="Wedding Story" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                      <Image src="/p1.webp" alt="Wedding Story" fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
                     </div>
                   </div>
                   <div className="hidden md:block md:col-span-5 space-y-4">
                     <div className="rounded-[1.5rem] overflow-hidden shadow-xl aspect-square relative group">
-                      <Image src="/p2.jpg" alt="Candid Moments" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                      <Image src="/p2.jpg" alt="Candid Moments" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
                     </div>
                     <div className="rounded-[1.5rem] overflow-hidden shadow-xl aspect-square relative group">
-                      <Image src="/p3.jpg" alt="Emotional Energy" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                      <Image src="/p3.jpg" alt="Emotional Energy" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
                     </div>
                   </div>
                 </div>
@@ -104,26 +104,86 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-primary">What We Do Best</h2>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { title: "Studio Photography", icon: <Camera size={22} /> },
-                { title: "Event Photography", icon: <Users size={22} /> },
-                { title: "Candid Photography", icon: <Sparkles size={22} /> },
-                { title: "Event Videography & Cinematography", icon: <Video size={22} /> },
-                { title: "Pre-Wedding Photo Shoots", icon: <Film size={22} /> },
-                { title: "Digital Album Printing", icon: <BookOpen size={22} /> },
-                { title: "Collages & Blow-Ups", icon: <ImageIcon size={22} /> },
-                { title: "Photo Colouring & Restoration", icon: <Palette size={22} /> },
-                { title: "Personalized Gifting", icon: <Gift size={22} /> },
+                { 
+                  title: "Studio Photography", 
+                  desc: "Clean, refined portrait sessions for families, individuals, and professional needs.",
+                  icon: <Camera size={20} />,
+                  bgIcon: <Camera size={140} />
+                },
+                { 
+                  title: "Event Photography", 
+                  desc: "Complete visual coverage for social events, gatherings, and special occasions.",
+                  icon: <Users size={20} />,
+                  bgIcon: <Users size={140} />
+                },
+                { 
+                  title: "Candid Photography", 
+                  desc: "Natural, emotionally driven moments captured without disruption.",
+                  icon: <Sparkles size={20} />,
+                  bgIcon: <Sparkles size={140} />
+                },
+                { 
+                  title: "Event Videography & Cinematography", 
+                  desc: "Professional video coverage with a cinematic style and smooth storytelling.",
+                  icon: <Video size={20} />,
+                  bgIcon: <Video size={140} />
+                },
+                { 
+                  title: "Pre-Wedding Photo Shoot", 
+                  desc: "Stylized couple sessions designed to reflect personality, romance, and chemistry.",
+                  icon: <Film size={20} />,
+                  bgIcon: <Film size={140} />
+                },
+                { 
+                  title: "Digital Album Printing", 
+                  desc: "Premium album design and printing with elegant layouts and durable finishes.",
+                  icon: <BookOpen size={20} />,
+                  bgIcon: <BookOpen size={140} />
+                },
+                { 
+                  title: "Collages & Blow-Ups", 
+                  desc: "Custom wall-ready photo compositions for gifting, display, and decor.",
+                  icon: <ImageIcon size={20} />,
+                  bgIcon: <ImageIcon size={140} />
+                },
+                { 
+                  title: "Photo Colouring & Restoration", 
+                  desc: "Breathing new life into old or damaged photographs with careful restoration and color enhancement.",
+                  icon: <Palette size={20} />,
+                  bgIcon: <Palette size={140} />
+                },
+                { 
+                  title: "Personalized Gifting", 
+                  desc: "Thoughtful photo-based gifts created for weddings, anniversaries, and celebrations.",
+                  icon: <Gift size={20} />,
+                  bgIcon: <Gift size={140} />
+                },
               ].map((service, index) => (
-                <div key={index} className="bg-white p-8 rounded-[2rem] border border-slate-100 hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 group flex items-start gap-6">
-                  <div className="w-12 h-12 bg-slate-50 text-secondary rounded-xl flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-sm">
+                <Link 
+                  key={index} 
+                  href="/services" 
+                  className="group relative bg-[#f8fafc]/50 p-10 rounded-[3rem] border border-slate-100 transition-all duration-700 hover:bg-white hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.08)] hover:-translate-y-2 overflow-hidden flex flex-col items-start gap-6"
+                >
+                  {/* Ghost Background Icon */}
+                  <div className="absolute top-2 right-2 text-slate-200/30 group-hover:text-primary/5 transition-colors duration-700 -rotate-12 pointer-events-none">
+                    {service.bgIcon}
+                  </div>
+
+                  <div className="w-14 h-14 bg-white text-secondary rounded-2xl flex items-center justify-center shrink-0 shadow-sm border border-slate-50 group-hover:bg-secondary group-hover:text-white transition-all duration-500 relative z-10">
                     {service.icon}
                   </div>
-                  <h4 className="text-lg font-heading font-bold text-primary group-hover:text-secondary transition-colors leading-tight pt-3">
-                    {service.title}
-                  </h4>
-                </div>
+                  
+                  <div className="space-y-3 relative z-10">
+                    <h4 className="text-xl font-heading font-extrabold text-primary leading-tight">
+                      {service.title}
+                    </h4>
+                    <p className="text-slate-500 text-sm leading-relaxed font-light line-clamp-3">
+                      {service.desc}
+                    </p>
+                  </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -160,7 +220,7 @@ export default function Home() {
               <div className="lg:w-1/2 lg:order-1 relative p-4">
                   <div className="absolute inset-0 bg-slate-50 rounded-[3rem] translate-x-4 translate-y-4"></div>
                   <div className="relative z-10 rounded-[3.5rem] overflow-hidden shadow-2xl aspect-[4/5] bg-slate-100">
-                    <Image src="/p.webp" alt="Why Couples Trust Us" fill className="object-cover" />
+                    <Image src="/p.webp" alt="Why Couples Trust Us" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
                   </div>
                   {/* Years badge */}
                   <div className="absolute -bottom-6 -left-6 bg-primary text-white p-8 rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.3)] z-20">

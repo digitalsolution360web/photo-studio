@@ -17,6 +17,7 @@ export default function RootLayout({
     <html
       lang="en"
       className="h-full antialiased scroll-smooth"
+      data-scroll-behavior="smooth"
     >
       <body className="min-h-full flex flex-col">
         <Preloader />
