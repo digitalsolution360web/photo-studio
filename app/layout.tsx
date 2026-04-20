@@ -7,6 +7,8 @@ export const metadata: Metadata = {
 };
 
 import { Preloader } from "@/components/Preloader";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
+
 
 export default function RootLayout({
   children,
@@ -22,6 +24,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Preloader />
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );

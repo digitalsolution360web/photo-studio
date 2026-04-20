@@ -85,7 +85,8 @@ export default function ServicesPage() {
       
       <main className="flex-grow pt-24">
         {/* Luxury Hero */}
-        <section className="relative py-24 md:py-40 bg-[#0a0a0b] text-white overflow-hidden">
+        <section className="relative py-16 md:py-24 bg-[#0a0a0b] text-white overflow-hidden">
+
            <div className="absolute inset-0">
              <Image 
                src="/b3.webp" 
@@ -109,11 +110,12 @@ export default function ServicesPage() {
            </div>
         </section>
 
-        <section className="py-24 bg-white">
+        <section className="py-12 bg-white">
+
            <div className="container mx-auto px-6 md:px-12">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                  {allServices.map((service, i) => (
-                    <div key={i} className="group relative bg-white p-8 rounded-[2rem] border border-slate-100 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 overflow-hidden flex flex-col items-start gap-6 shadow-sm">
+                    <div key={i} className="group relative bg-white p-8 rounded-[2rem] border border-slate-100 transition-all duration-500 hover:shadow-2xl hover:shadow-secondary/10 hover:border-secondary/20 hover:-translate-y-2 overflow-hidden flex flex-col items-start gap-6 shadow-sm">
                         
                         <div className="flex justify-between items-start w-full relative z-10">
                            <div className="w-12 h-12 bg-slate-50 text-secondary rounded-xl flex items-center justify-center shrink-0 border border-slate-100 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-500">
@@ -148,7 +150,8 @@ export default function ServicesPage() {
         </section>
 
         {/* Closing CTA */}
-        <section className="py-24 bg-primary text-white text-center mx-6 md:mx-12 rounded-[3.5rem] mb-12 relative overflow-hidden">
+        <section className="py-12 bg-primary text-white text-center mx-6 md:mx-12 rounded-[3.5rem] mb-8 relative overflow-hidden">
+
            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
            <div className="relative z-10 space-y-8">
               <h2 className="text-3xl md:text-5xl font-heading font-extrabold tracking-tighter">Ready to capture your story?</h2>

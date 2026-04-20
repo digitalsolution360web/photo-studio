@@ -164,7 +164,7 @@ export default function AboutPage() {
                        <h2 className="text-3xl font-heading font-extrabold text-primary leading-tight">The Foundation</h2>
                     </div>
                     <div className="space-y-6 text-base text-slate-600 leading-relaxed font-light">
-                       <p className="font-bold text-primary">Max Photo is the creative brand. Max Photo Studio is the legal foundation.</p>
+                       <p className="font-bold text-primary">Max Photo operates as an enterprise under Max Photo Studio. All billing and invoicing will be conducted in the name of Max Photo Studio.</p>
                        <p>
                          Max Photo is the premium public-facing brand you will see across our website, films, and client experience. All bookings, invoicing, and official business transactions are managed by our parent entity, Max Photo Studio.
                        </p>

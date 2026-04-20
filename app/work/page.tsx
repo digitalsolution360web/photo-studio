@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import Image from "next/image";
 import { CheckCircle2, Play, Camera, Film, Users, BookOpen, Star, Trophy, MapPin, Calendar } from "lucide-react";
 import Link from "next/link";
+import { Counter } from "@/components/Counter";
 
 export default function WorkPage() {
   const categories = [
@@ -58,7 +59,8 @@ export default function WorkPage() {
       
       <main className="flex-grow pt-24">
         {/* Work Hero */}
-        <section className="py-24 md:py-36 bg-white overflow-hidden">
+        <section className="py-12 md:py-16 bg-white overflow-hidden">
+
            <div className="container mx-auto px-6 md:px-12">
               <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
                  <div className="lg:w-1/2 space-y-8 animate-in fade-in slide-in-from-left-5 duration-1000">
@@ -93,7 +95,8 @@ export default function WorkPage() {
         </section>
 
         {/* Categories Section */}
-        <section className="py-24 bg-slate-50 border-y border-slate-100">
+        <section className="py-12 bg-slate-50 border-y border-slate-100">
+
            <div className="container mx-auto px-6 md:px-12">
               <div className="text-center mb-20 space-y-4">
                  <h2 className="text-3xl md:text-5xl font-heading font-extrabold text-primary leading-tight">Mastering the Craft</h2>
@@ -123,7 +126,8 @@ export default function WorkPage() {
         </section>
 
         {/* Featured Stories - NEW RECENT WORK CONTENT */}
-        <section className="py-24 bg-white overflow-hidden">
+        <section className="py-12 bg-white overflow-hidden">
+
            <div className="container mx-auto px-6 md:px-12">
               <div className="flex justify-between items-end mb-16 gap-6">
                  <div className="space-y-4 max-w-2xl">
@@ -160,7 +164,8 @@ export default function WorkPage() {
         </section>
 
         {/* Process Section */}
-        <section className="py-24 bg-slate-50 relative overflow-hidden">
+        <section className="py-12 bg-slate-50 relative overflow-hidden">
+
            <div className="container mx-auto px-6 md:px-12">
               <div className="flex flex-col lg:flex-row gap-24 items-center">
                  <div className="lg:w-1/2 order-2 lg:order-1">
@@ -206,21 +211,27 @@ export default function WorkPage() {
         </section>
 
         {/* Global Stats - NEW CONTENT */}
-        <section className="py-24 bg-primary text-white overflow-hidden relative">
+        <section className="py-12 bg-primary text-white overflow-hidden relative">
+
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
             <div className="container mx-auto px-6 md:px-12 relative z-10">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
                     {[
-                        { label: "Successful Weddings", value: "850+", icon: <Star className="text-secondary" /> },
-                        { label: "International Awards", value: "24", icon: <Trophy className="text-secondary" /> },
-                        { label: "Hours of Footage", value: "5000+", icon: <Film className="text-secondary" /> },
-                        { label: "Happy Clients", value: "2000+", icon: <Users className="text-secondary" /> }
+                        { label: "Successful Weddings", value: 850, suffix: "+", icon: <Star className="text-secondary" /> },
+                        { label: "International Awards", value: 24, suffix: "", icon: <Trophy className="text-secondary" /> },
+                        { label: "Hours of Footage", value: 5000, suffix: "+", icon: <Film className="text-secondary" /> },
+                        { label: "Happy Clients", value: 2000, suffix: "+", icon: <Users className="text-secondary" /> }
                     ].map((stat, i) => (
                         <div key={i} className="space-y-4">
                             <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
                                 {stat.icon}
                             </div>
-                            <p className="text-4xl md:text-5xl font-heading font-extrabold text-secondary tracking-tighter leading-none">{stat.value}</p>
+                            <Counter 
+                                from={0} 
+                                to={stat.value} 
+                                suffix={stat.suffix} 
+                                className="text-4xl md:text-5xl font-heading font-extrabold text-secondary tracking-tighter leading-none block" 
+                            />
                             <p className="text-[10px] uppercase font-bold tracking-[0.3em] opacity-50">{stat.label}</p>
                         </div>
                     ))}
@@ -229,7 +240,8 @@ export default function WorkPage() {
         </section>
 
         {/* Trust Logos Banner */}
-        <section className="py-20 bg-slate-50 border-b border-slate-100">
+        <section className="py-8 bg-slate-50 border-b border-slate-100">
+
            <div className="container mx-auto px-6 overflow-hidden">
               <div className="flex flex-wrap justify-center items-center gap-16 md:gap-24 opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
                  <div className="text-xl font-heading font-bold tracking-tighter">CANON CINEMA</div>
@@ -242,7 +254,8 @@ export default function WorkPage() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-32 bg-white text-center">
+        <section className="py-12 bg-white text-center">
+
            <div className="container mx-auto px-6">
               <div className="max-w-2xl mx-auto space-y-10 font-heading">
                  <h2 className="text-3xl md:text-6xl font-extrabold text-primary leading-tight tracking-tighter">Experience the Max Photo difference.</h2>

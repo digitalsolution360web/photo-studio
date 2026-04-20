@@ -73,7 +73,8 @@ export function Navbar() {
 
           <div className="pl-6">
             <Link
-              href="#contact"
+              href="/contact"
+
               className={`px-8 py-3 rounded-full font-bold text-xs uppercase tracking-widest transition-all duration-500 flex items-center gap-2 shadow-xl hover:scale-105 active:scale-95 ${isScrolled
                 ? "bg-primary text-white hover:bg-secondary"
                 : "bg-white text-primary hover:bg-secondary hover:text-white"
@@ -127,7 +128,8 @@ export function Navbar() {
             </div>
             <div className="mt-auto">
               <Link
-                href="#contact"
+                href="/contact"
+
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full block text-center py-5 bg-secondary text-white rounded-2xl font-bold text-lg"
               >

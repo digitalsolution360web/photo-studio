@@ -59,7 +59,8 @@ export default function Home() {
         </section>
 
         {/* Intro Section */}
-        <section className="py-16 bg-white relative overflow-hidden">
+        <section className="py-12 bg-white relative overflow-hidden">
+
           <div className="container mx-auto px-6 md:px-12">
             <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
               <div className="lg:w-1/2 space-y-6">
@@ -97,7 +98,8 @@ export default function Home() {
         </section>
 
         {/* Services Preview Section */}
-        <section className="py-16 bg-slate-50 border-y border-slate-100">
+        <section className="py-12 bg-slate-50 border-y border-slate-100">
+
           <div className="container mx-auto px-6 md:px-12">
             <div className="text-center mb-10 space-y-3">
               <span className="text-secondary font-bold uppercase tracking-[0.3em] text-xs block">Services Preview</span>
@@ -164,8 +166,9 @@ export default function Home() {
                 <Link 
                   key={index} 
                   href="/services" 
-                  className="group relative bg-[#f8fafc]/50 p-10 rounded-[3rem] border border-slate-100 transition-all duration-700 hover:bg-white hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.08)] hover:-translate-y-2 overflow-hidden flex flex-col items-start gap-6"
+                  className="group relative bg-white p-10 rounded-[3rem] border border-slate-100 transition-all duration-700 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] hover:border-secondary/20 hover:-translate-y-2 overflow-hidden flex flex-col items-start gap-6 shadow-sm"
                 >
+
                   {/* Ghost Background Icon */}
                   <div className="absolute top-2 right-2 text-slate-200/30 group-hover:text-primary/5 transition-colors duration-700 -rotate-12 pointer-events-none">
                     {service.bgIcon}
@@ -190,7 +193,8 @@ export default function Home() {
         </section>
 
         {/* Why Choose Us Section */}
-        <section className="py-16 bg-white overflow-hidden">
+        <section className="py-12 bg-white overflow-hidden">
+
           <div className="container mx-auto px-6 md:px-12">
             <div className="flex flex-col lg:flex-row gap-10 items-center">
               <div className="lg:w-1/2 lg:order-2 space-y-6">
@@ -233,7 +237,8 @@ export default function Home() {
         </section>
 
         {/* Feature Section */}
-        <section className="py-16 bg-primary text-white relative overflow-hidden mx-6 md:mx-12 rounded-[2.5rem] my-8">
+        <section className="py-12 bg-primary text-white relative overflow-hidden mx-6 md:mx-12 rounded-[2.5rem] my-4">
+
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-secondary/20 rounded-full blur-[120px] pointer-events-none"></div>
           

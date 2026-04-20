@@ -136,9 +136,8 @@ export function Footer() {
         <div className="mb-12 p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm">
           <p className="text-sm font-bold text-white mb-2 uppercase tracking-widest">Legal Identity & Payments</p>
           <p className="text-xs leading-relaxed max-w-2xl">
-            Max Photo is the creative brand. Max Photo Studio is the legal foundation. 
-            All bookings and invoices are issued under our parent entity, Max Photo Studio. 
-            Payments can be made via Cheque, UPI, or Bank Transfer to the studio account.
+            Max Photo operates as an enterprise under Max Photo Studio. 
+            All billing and invoicing will be conducted in the name of Max Photo Studio.
           </p>
         </div>
 
