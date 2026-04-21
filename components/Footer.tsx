@@ -144,12 +144,21 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[11px] uppercase tracking-[0.2em] font-medium text-slate-500">
           <p>© {new Date().getFullYear()} Max Photo. All rights reserved.</p>
-          <div className="flex items-center gap-8">
+          <div className="flex flex-wrap items-center justify-center md:justify-end gap-x-8 gap-y-4">
             <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
-            <p className="flex items-center gap-2 text-white/40">
+            <div className="flex items-center gap-2 text-white/40">
               Made with <Heart size={10} className="text-secondary fill-secondary" /> in Mumbai
-            </p>
+            </div>
+            <a 
+              href="https://www.digitalsolution360.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-blue-400/70 hover:text-blue-400 transition-all duration-300 group border-l border-white/10 pl-8 ml-2"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-400/40 group-hover:scale-125 group-hover:bg-blue-400 transition-all animate-pulse"></span>
+              Design by Digital Solution 360
+            </a>
           </div>
         </div>
       </div>
