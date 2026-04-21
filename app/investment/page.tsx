@@ -157,7 +157,7 @@ export default function InvestmentPage() {
 
                      
                      <div className="flex flex-col sm:flex-row justify-center gap-6 pt-6">
-                       <Link href="https://wa.me/919819509546" className="px-16 py-6 bg-primary text-white rounded-full font-bold text-lg flex items-center justify-center gap-3 hover:bg-secondary transition-all shadow-2xl hover:scale-105">
+                       <Link href="https://wa.me/919820685643" className="px-16 py-6 bg-primary text-white rounded-full font-bold text-lg flex items-center justify-center gap-3 hover:bg-secondary transition-all shadow-2xl hover:scale-105">
                           <FileText size={22} />
                           Request the Brochure
                        </Link>

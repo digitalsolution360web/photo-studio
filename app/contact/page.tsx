@@ -46,23 +46,23 @@ export default function ContactPage() {
                   <h3 className="text-2xl font-heading font-extrabold text-primary">Reach Out Directly</h3>
                   
                   <div className="space-y-8">
-                    <a href="tel:9819509546" className="flex items-start gap-6 group">
+                    <a href="tel:9820685643" className="flex items-start gap-6 group">
                       <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-secondary shadow-sm group-hover:bg-primary group-hover:text-white transition-all">
                         <Phone size={24} />
                       </div>
                       <div className="space-y-1">
                         <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Call or WhatsApp</p>
-                        <p className="text-xl font-bold text-primary group-hover:text-secondary transition-colors">+91 9819509546</p>
+                        <p className="text-xl font-bold text-primary group-hover:text-secondary transition-colors">+91 9820685643</p>
                       </div>
                     </a>
 
-                    <a href="mailto:studiojobs@maxphotostudio.in" className="flex items-start gap-6 group">
+                    <a href="mailto:events@maxphotostudio.in" className="flex items-start gap-6 group">
                       <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-secondary shadow-sm group-hover:bg-primary group-hover:text-white transition-all">
                         <Mail size={24} />
                       </div>
                       <div className="space-y-1">
                         <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Email Inquiry</p>
-                        <p className="text-lg font-bold text-primary group-hover:text-secondary transition-colors truncate max-w-[200px] md:max-w-none">studiojobs@maxphotostudio.in</p>
+                        <p className="text-lg font-bold text-primary group-hover:text-secondary transition-colors truncate max-w-[200px] md:max-w-none">events@maxphotostudio.in</p>
                       </div>
                     </a>
 
@@ -73,7 +73,7 @@ export default function ContactPage() {
                       <div className="space-y-1">
                         <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Our Studio</p>
                         <p className="text-base text-slate-600 font-light leading-relaxed">
-                          Shop No.2, Saroj Apartments, Andheri (E), Mumbai - 93
+                          Shop No. 2, Saroj Apartments, Opp. Holy Spirit Hospital, Mahakali Caves Road, Andheri (E), Mumbai - 400 093.
                         </p>
                       </div>
                     </div>
@@ -81,7 +81,7 @@ export default function ContactPage() {
 
                   <div className="pt-8 border-t border-slate-200">
                      <p className="text-xs font-bold text-secondary uppercase tracking-widest mb-4">Official WhatsApp</p>
-                     <Link href="https://wa.me/919819509546" className="inline-flex items-center gap-3 px-8 py-4 bg-[#25D366] text-white rounded-full font-bold hover:shadow-lg transition-all active:scale-95">
+                     <Link href="https://wa.me/919820685643" className="inline-flex items-center gap-3 px-8 py-4 bg-[#25D366] text-white rounded-full font-bold hover:shadow-lg transition-all active:scale-95">
                         <MessageCircle size={20} />
                         Message on WhatsApp
                      </Link>

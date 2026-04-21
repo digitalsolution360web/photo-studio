@@ -33,7 +33,7 @@ export function Footer() {
               {[
                 { 
                   name: "Facebook", 
-                  href: "https://www.facebook.com/share/1DYXEPjfh2/",
+                  href: "https://www.facebook.com/share/1Dt5dRzfGg/",
                   icon: (
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
                   )
@@ -54,7 +54,7 @@ export function Footer() {
                 },
                 { 
                   name: "WhatsApp", 
-                  href: "https://wa.me/919819509546",
+                  href: "https://wa.me/919820685643",
                   icon: <MessageCircle size={18} />
                 }
               ].map((social, i) => (
@@ -92,11 +92,11 @@ export function Footer() {
             <h3 className="text-white font-heading font-bold text-lg mb-8 tracking-tight">The Team</h3>
             <div className="space-y-6">
               {[
-                { name: "Mr. Sanjay Pinto", tel: "9819509546", role: "Lead Cinematographer" },
+                { name: "Mr. Sanjay Pinto", tel: "9820685643", role: "Lead Cinematographer" },
                 { name: "Mr. Shaun Pinto", tel: "7710987546", role: "Directing Photographer" },
                 { name: "Mrs. Wilma Pinto", tel: "9820685643", role: "Studio Manager" }
               ].map((contact) => (
-                <div key={contact.tel} className="group cursor-default">
+                <div key={contact.name} className="group cursor-default">
                   <p className="text-white font-bold group-hover:text-secondary transition-colors">{contact.name}</p>
                   <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-1">{contact.role}</p>
                   <a href={`tel:${contact.tel}`} className="text-sm underline underline-offset-4 decoration-white/10 hover:decoration-secondary">+91 {contact.tel}</a>
@@ -111,13 +111,13 @@ export function Footer() {
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <MapPin size={20} className="text-secondary mt-1 shrink-0" />
-                <p className="text-sm leading-relaxed max-w-[200px]">
-                  Shop No.2, Saroj Apartments, Opp. Holy Spirit Hospital, Andheri (E), Mumbai - 93
+                <p className="text-sm leading-relaxed max-w-[250px]">
+                  Shop No. 2, Saroj Apartments, Opp. Holy Spirit Hospital, Mahakali Caves Road, Andheri (E), Mumbai - 400 093.
                 </p>
               </div>
               <div className="flex items-center gap-4">
                 <Mail size={18} className="text-secondary shrink-0" />
-                <a href="mailto:studiojobs@maxphotostudio.in" className="text-sm hover:text-white transition-colors break-all">studiojobs@maxphotostudio.in</a>
+                <a href="mailto:events@maxphotostudio.in" className="text-sm hover:text-white transition-colors break-all">events@maxphotostudio.in</a>
               </div>
               <div className="pt-4 border-t border-white/5 inline-block">
                 <div className="flex items-center gap-2 mb-2">

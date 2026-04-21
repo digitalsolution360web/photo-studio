@@ -237,45 +237,60 @@ export default function Home() {
         </section>
 
         {/* Feature Section */}
-        <section className="py-12 bg-primary text-white relative overflow-hidden mx-6 md:mx-12 rounded-[2.5rem] my-4">
+        <section className="py-8 bg-primary text-white relative overflow-hidden mx-6 md:mx-12 rounded-[2.5rem] mt-10 mb-6 shadow-2xl">
 
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-secondary/20 rounded-full blur-[120px] pointer-events-none"></div>
           
           <div className="container mx-auto px-8 md:px-16 relative z-10">
-            <div className="max-w-3xl space-y-8">
-              <span className="text-secondary font-bold uppercase tracking-[0.4em] text-xs">Premium Experience</span>
-              <h2 className="text-3xl md:text-5xl font-heading font-extrabold tracking-tight">A Premium Experience for Modern Couples</h2>
-              <p className="text-lg md:text-xl text-white/70 font-light leading-relaxed">
-                From the first consultation to the final album, every part of the Max Photo journey is designed to feel seamless, personal, and elevated.
-              </p>
-              
-              <div className="flex items-center gap-4 pt-6">
-                <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-secondary">
-                  <Gem size={24} />
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+              <div className="lg:w-3/5 space-y-4">
+                <span className="text-secondary font-bold uppercase tracking-[0.4em] text-[10px]">Premium Experience</span>
+                <h2 className="text-2xl md:text-4xl font-heading font-extrabold tracking-tight leading-tight">A Premium Experience for Modern Couples</h2>
+                <p className="text-base md:text-lg text-white/70 font-light leading-relaxed max-w-xl">
+                  From the first consultation to the final album, every part of the Max Photo journey is designed to feel seamless, personal, and elevated.
+                </p>
+                
+                <div className="flex items-center gap-3 pt-2">
+                  <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center text-secondary">
+                    <Gem size={20} />
+                  </div>
+                  <div>
+                     <p className="text-[11px] font-bold uppercase tracking-widest">Master Storytelling</p>
+                     <p className="text-[10px] text-white/40">Excellence in every frame</p>
+                  </div>
                 </div>
-                <div>
-                   <p className="text-sm font-bold uppercase tracking-widest">Master Storytelling</p>
-                   <p className="text-xs text-white/40">Excellence in every frame</p>
-                </div>
+              </div>
+
+              <div className="lg:w-1/4 relative group self-center">
+                  <div className="absolute inset-0 bg-secondary/20 rounded-[1.5rem] rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
+                  <div className="relative aspect-square rounded-[1.5rem] overflow-hidden shadow-2xl border border-white/10 max-w-[220px] mx-auto">
+                      <Image 
+                        src="/event.webp" 
+                        alt="Event Experience" 
+                        fill 
+                        className="object-cover group-hover:scale-110 transition-transform duration-700" 
+                        sizes="(max-width: 1024px) 100vw, 220px"
+                      />
+                  </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Final CTA Section */}
-        <section className="py-20 bg-white text-center">
+        <section className="py-12 bg-white text-center">
              <div className="container mx-auto px-6">
-                <div className="w-16 h-16 bg-secondary/5 text-secondary rounded-3xl flex items-center justify-center mx-auto mb-6">
-                    <Heart size={32} />
+                <div className="w-14 h-14 bg-secondary/5 text-secondary rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <Heart size={28} />
                 </div>
-                <h2 className="text-3xl md:text-6xl font-heading font-extrabold text-primary mb-8 tracking-tighter leading-tight">Ready to capture your <br className="hidden md:block"/>story beautifully?</h2>
-                <p className="text-base md:text-lg text-slate-500 mb-12 max-w-xl mx-auto font-light leading-relaxed">Check your date and begin your Max Photo experience today.</p>
-                <div className="flex flex-col sm:flex-row justify-center gap-6">
-                  <Link href="/contact" className="px-12 py-5 bg-primary text-white rounded-full font-bold text-lg hover:bg-secondary transition-all shadow-xl shadow-primary/10 active:scale-95">
+                <h2 className="text-2xl md:text-5xl font-heading font-extrabold text-primary mb-4 tracking-tighter leading-tight">Ready to capture your <br className="hidden md:block"/>story beautifully?</h2>
+                <p className="text-sm md:text-base text-slate-500 mb-8 max-w-xl mx-auto font-light leading-relaxed">Check your date and begin your Max Photo experience today.</p>
+                <div className="flex flex-col sm:flex-row justify-center gap-4">
+                  <Link href="/contact" className="px-10 py-4 bg-primary text-white rounded-full font-bold text-base hover:bg-secondary transition-all shadow-xl shadow-primary/10 active:scale-95">
                     Check Availability
                   </Link>
-                  <Link href="https://wa.me/919819509546" className="px-12 py-5 bg-white text-primary border border-slate-200 rounded-full font-bold text-lg hover:bg-slate-50 transition-all active:scale-95 flex items-center justify-center gap-2">
+                  <Link href="https://wa.me/919820685643" className="px-10 py-4 bg-white text-primary border border-slate-200 rounded-full font-bold text-base hover:bg-slate-50 transition-all active:scale-95 flex items-center justify-center gap-2">
                     WhatsApp Us
                   </Link>
                 </div>
