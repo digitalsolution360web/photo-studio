@@ -46,7 +46,7 @@ export function Navbar() {
         }`}
       >
         <Link href="/" className="flex items-center gap-4 group">
-          <div className={`relative transition-all duration-500 overflow-hidden rounded-lg ${isScrolled ? "w-36 h-10" : "w-44 h-14"}`}>
+          <div className={`relative transition-all duration-500 overflow-hidden rounded-lg ${isScrolled ? "w-32 md:w-36 h-8 md:h-10" : "w-36 md:w-44 h-10 md:h-14"}`}>
             <Image
               src="/logo.jpeg"
               alt="Max Photo Studio"

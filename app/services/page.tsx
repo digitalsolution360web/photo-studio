@@ -27,55 +27,64 @@ export default function ServicesPage() {
       title: "Studio Photography",
       desc: "Clean, refined portrait sessions for families, individuals, and professional needs.",
       icon: <Camera size={24} />,
-      bgIcon: <Camera size={120} />
+      bgIcon: <Camera size={120} />,
+      href: "/services/studio-photography"
     },
     {
       title: "Event Photography",
       desc: "Complete visual coverage for social events, gatherings, and special occasions.",
       icon: <Users size={24} />,
-      bgIcon: <Users size={120} />
+      bgIcon: <Users size={120} />,
+      href: "/services/event-photography"
     },
     {
       title: "Candid Photography",
       desc: "Natural, emotionally driven moments captured without disruption.",
       icon: <Sparkles size={24} />,
-      bgIcon: <Sparkles size={120} />
+      bgIcon: <Sparkles size={120} />,
+      href: "/services/candid-photography"
     },
     {
       title: "Event Videography & Cinematography",
       desc: "Professional video coverage with a cinematic style and smooth storytelling.",
       icon: <Video size={24} />,
-      bgIcon: <Video size={120} />
+      bgIcon: <Video size={120} />,
+      href: "/services/event-videography"
     },
     {
       title: "Pre-Wedding Photo Shoot",
       desc: "Stylized couple sessions designed to reflect personality, romance, and chemistry.",
       icon: <Film size={24} />,
-      bgIcon: <Film size={120} />
+      bgIcon: <Film size={120} />,
+      href: "/services/pre-wedding"
     },
     {
       title: "Digital Album Printing",
       desc: "Premium album design and printing with elegant layouts and durable finishes.",
       icon: <BookOpen size={24} />,
-      bgIcon: <BookOpen size={120} />
+      bgIcon: <BookOpen size={120} />,
+      href: "/services/digital-album"
     },
     {
       title: "Collages & Blow-Ups",
       desc: "Custom wall-ready photo compositions for gifting, display, and decor.",
       icon: <ImageIcon size={24} />,
-      bgIcon: <ImageIcon size={120} />
+      bgIcon: <ImageIcon size={120} />,
+      href: "/services/collages-blowups"
     },
     {
       title: "Photo Colouring & Restoration",
       desc: "Breathing new life into old or damaged photographs with color enhancement.",
       icon: <Palette size={24} />,
-      bgIcon: <Palette size={120} />
+      bgIcon: <Palette size={120} />,
+      href: "/services/photo-restoration"
     },
     {
       title: "Personalized Gifting",
       desc: "Thoughtful photo-based gifts created for weddings and anniversaries.",
       icon: <Gift size={24} />,
-      bgIcon: <Gift size={120} />
+      bgIcon: <Gift size={120} />,
+      href: "/services/personalized-gifting"
     }
   ];
 
@@ -115,7 +124,11 @@ export default function ServicesPage() {
            <div className="container mx-auto px-6 md:px-12">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                  {allServices.map((service, i) => (
-                    <div key={i} className="group relative bg-white p-8 rounded-[2rem] border border-slate-100 transition-all duration-500 hover:shadow-2xl hover:shadow-secondary/10 hover:border-secondary/20 hover:-translate-y-2 overflow-hidden flex flex-col items-start gap-6 shadow-sm">
+                    <Link 
+                      key={i} 
+                      href={service.href}
+                      className="group relative bg-white p-8 rounded-[2rem] border border-slate-100 transition-all duration-500 hover:shadow-2xl hover:shadow-secondary/10 hover:border-secondary/20 hover:-translate-y-2 overflow-hidden flex flex-col items-start gap-6 shadow-sm"
+                    >
                         
                         <div className="flex justify-between items-start w-full relative z-10">
                            <div className="w-12 h-12 bg-slate-50 text-secondary rounded-xl flex items-center justify-center shrink-0 border border-slate-100 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-500">
@@ -136,14 +149,14 @@ export default function ServicesPage() {
                         </div>
 
                         <div className="pt-2 w-full relative z-10">
-                           <Link href="/contact" className="text-[10px] uppercase tracking-widest font-bold text-slate-400 group-hover:text-primary transition-all flex items-center gap-2">
-                              Inquire Now <ArrowUpRight size={12} />
-                           </Link>
+                           <div className="text-[10px] uppercase tracking-widest font-bold text-slate-400 group-hover:text-primary transition-all flex items-center gap-2">
+                              {service.href !== "/services" ? "View Details" : "Inquire Now"} <ArrowUpRight size={12} />
+                           </div>
                         </div>
                         
                         {/* Bottom highlight bar */}
                         <div className="absolute bottom-0 left-0 w-0 h-1 bg-secondary group-hover:w-full transition-all duration-700"></div>
-                    </div>
+                    </Link>
                  ))}
               </div>
            </div>

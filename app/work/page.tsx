@@ -142,7 +142,7 @@ export default function WorkPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                  {stories.map((story, i) => (
                     <div key={i} className="group cursor-pointer">
-                        <div className="relative aspect-[16/10] rounded-[2.5rem] overflow-hidden mb-8 shadow-lg">
+                        <div className="relative aspect-[16/10] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden mb-8 shadow-lg">
                            <Image src={story.img} alt={story.title} fill className="object-cover transition-transform duration-1000 group-hover:scale-110" sizes="(max-width: 1024px) 100vw, 33vw" />
                            <div className="absolute top-6 right-6 px-4 py-2 bg-white/90 backdrop-blur-md rounded-full text-[9px] font-bold uppercase tracking-widest text-primary shadow-sm">
                               {story.tag}
