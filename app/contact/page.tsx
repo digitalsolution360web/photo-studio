@@ -63,7 +63,7 @@ export default function ContactPage() {
                       </div>
                       <div className="space-y-1">
                         <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Email Inquiry</p>
-                        <p className="text-lg font-bold text-primary group-hover:text-secondary transition-colors truncate max-w-[200px] md:max-w-none">events@maxphotostudio.in</p>
+                        <p className="text-lg font-bold text-primary group-hover:text-secondary transition-colors truncate max-w-[200px] md:max-w-none">info@maxphotostudio.in</p>
                       </div>
                     </a>
 
