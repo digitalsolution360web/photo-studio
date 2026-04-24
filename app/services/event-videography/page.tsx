@@ -27,7 +27,7 @@ export default function EventVideographyPage() {
         {/* Luxury Hero */}
         <section className="relative py-12 md:py-20 bg-[#0a0a0b] text-white">
           <div className="absolute inset-0">
-             <Image src="/ev.webp" alt="Videography Hero" fill className="object-cover opacity-20" priority />
+             <Image src="/samford-album/Samford%20Roc.webp" alt="Videography Hero" fill className="object-cover opacity-20" priority />
              <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/80 via-[#0a0a0b] to-[#0a0a0b]"></div>
           </div>
           
@@ -48,7 +48,7 @@ export default function EventVideographyPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                  {/* Featured image */}
                  <div className="md:col-span-2 relative aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl border border-slate-100 group">
-                    <Image src="/ev.webp" alt="Videography Featured" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <Image src="/samford-album/Samford%20Roce.webp" alt="Videography Featured" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
                        <div className="w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
                           <Play size={24} fill="white" />
@@ -58,13 +58,13 @@ export default function EventVideographyPage() {
                  
                  {/* Side images */}
                  <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/ev1.webp" alt="Event 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <Image src="/silver-wedding/Silver%20Wed.webp" alt="Event 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                  </div>
                  <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/ev2.webp" alt="Event 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <Image src="/silver-wedding/Silver%20Wedd.webp" alt="Event 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                  </div>
                  <div className="md:col-span-2 relative aspect-[16/7] rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/ev3.webp" alt="Event 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <Image src="/silver-wedding/Silver%20Weddin.webp" alt="Event 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                  </div>
               </div>
            </div>

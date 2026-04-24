@@ -11,9 +11,9 @@ import 'swiper/css/pagination';
 
 export function HeroSlider() {
   const slides = [
-    { image: '/b1.webp' },
-    { image: '/b2.webp' },
-    { image: '/b3.webp' }
+    { image: '/wedding/Page%20wed.webp' },
+    { image: '/sam-wedding/Samford%20Wedding.webp' },
+    { image: '/silver-wedding/Silver%20Wedding.webp' }
   ];
 
   return (

@@ -27,7 +27,7 @@ export default function CollagesBlowupsPage() {
         {/* Artistic Hero */}
         <section className="relative py-12 md:py-20 bg-[#0a0a0b] text-white">
           <div className="absolute inset-0">
-             <Image src="/col.webp" alt="Collages Hero" fill className="object-cover opacity-20" priority />
+             <Image src="/keith-album/Keith's%20Communio.webp" alt="Collages Hero" fill className="object-cover opacity-20" priority />
              <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/80 via-[#0a0a0b] to-[#0a0a0b]"></div>
           </div>
           
@@ -48,7 +48,7 @@ export default function CollagesBlowupsPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                  {/* Featured image */}
                  <div className="md:col-span-2 relative aspect-[16/10] rounded-3xl overflow-hidden shadow-2xl border border-slate-100 group">
-                    <Image src="/col.webp" alt="Collage Featured" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <Image src="/keith-album/Keith's%20Communion.webp" alt="Collage Featured" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-end p-8">
                        <div className="flex items-center gap-3 text-white">
                           <Maximize size={20} className="text-secondary" />
@@ -59,13 +59,13 @@ export default function CollagesBlowupsPage() {
                  
                  {/* Side images */}
                  <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/col1.webp" alt="Collage 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <Image src="/kristin/Kristine_Cover.webp" alt="Collage 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                  </div>
                  <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/col2.webp" alt="Collage 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <Image src="/kristin/Kristine_Page.webp" alt="Collage 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                  </div>
                  <div className="md:col-span-2 relative aspect-[16/7] rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/col3.webp" alt="Collage 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <Image src="/kristin/Kristine_Page_.webp" alt="Collage 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                  </div>
               </div>
            </div>

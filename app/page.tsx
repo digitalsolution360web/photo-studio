@@ -71,24 +71,24 @@ export default function Home() {
                   Max Photo specializes in cinematic wedding photography and films for couples who want emotion, elegance, and detail in every frame. With a refined visual style and an AI-powered guest experience, we create memories that feel alive long after the celebration ends.
                 </p>
                 <div className="flex gap-4 items-center pt-4">
-                    <div className="w-12 h-px bg-secondary"></div>
-                    <span className="text-xs uppercase tracking-[0.3em] font-bold text-secondary">Premium Storytelling</span>
+                  <div className="w-12 h-px bg-secondary"></div>
+                  <span className="text-xs uppercase tracking-[0.3em] font-bold text-secondary">Premium Storytelling</span>
                 </div>
               </div>
-              
+
               <div className="lg:w-1/2">
                 <div className="grid grid-cols-12 gap-4 items-center">
                   <div className="col-span-12 md:col-span-7">
                     <div className="rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl relative aspect-[4/5] group">
-                      <Image src="/p1.webp" alt="Wedding Story" fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
+                      <Image src="/wedding/Page.webp" alt="Wedding Story" fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
                     </div>
                   </div>
                   <div className="hidden md:block md:col-span-5 space-y-4">
                     <div className="rounded-[1.5rem] md:rounded-[1.5rem] overflow-hidden shadow-xl aspect-square relative group">
-                      <Image src="/p2.jpg" alt="Candid Moments" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
+                      <Image src="/sam-wedding/Samford%20Wedding.webp" alt="Candid Moments" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
                     </div>
                     <div className="rounded-[1.5rem] md:rounded-[1.5rem] overflow-hidden shadow-xl aspect-square relative group">
-                      <Image src="/p3.jpg" alt="Emotional Energy" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
+                      <Image src="/silver-wedding/Silver%20Wedding.webp" alt="Emotional Energy" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
                     </div>
                   </div>
                 </div>
@@ -105,78 +105,78 @@ export default function Home() {
               <span className="text-secondary font-bold uppercase tracking-[0.3em] text-xs block">Services Preview</span>
               <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-primary">What We Do Best</h2>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { 
-                  title: "Studio Photography", 
+                {
+                  title: "Studio Photography",
                   desc: "Clean, refined portrait sessions for families, individuals, and professional needs.",
                   icon: <Camera size={20} />,
                   bgIcon: <Camera size={140} />
                 },
-                { 
-                  title: "Event Photography", 
+                {
+                  title: "Event Photography",
                   desc: "Complete visual coverage for social events, gatherings, and special occasions.",
                   icon: <Users size={20} />,
                   bgIcon: <Users size={140} />
                 },
-                { 
-                  title: "Candid Photography", 
+                {
+                  title: "Candid Photography",
                   desc: "Natural, emotionally driven moments captured without disruption.",
                   icon: <Sparkles size={20} />,
                   bgIcon: <Sparkles size={140} />
                 },
-                { 
-                  title: "Event Videography & Cinematography", 
+                {
+                  title: "Event Videography & Cinematography",
                   desc: "Professional video coverage with a cinematic style and smooth storytelling.",
                   icon: <Video size={20} />,
                   bgIcon: <Video size={140} />
                 },
-                { 
-                  title: "Pre-Wedding Photo Shoot", 
+                {
+                  title: "Pre-Wedding Photo Shoot",
                   desc: "Stylized couple sessions designed to reflect personality, romance, and chemistry.",
                   icon: <Film size={20} />,
                   bgIcon: <Film size={140} />
                 },
-                { 
-                  title: "Digital Album Printing", 
+                {
+                  title: "Digital Album Printing",
                   desc: "Premium album design and printing with elegant layouts and durable finishes.",
                   icon: <BookOpen size={20} />,
                   bgIcon: <BookOpen size={140} />
                 },
-                { 
-                  title: "Collages & Blow-Ups", 
+                {
+                  title: "Collages & Blow-Ups",
                   desc: "Custom wall-ready photo compositions for gifting, display, and decor.",
                   icon: <ImageIcon size={20} />,
                   bgIcon: <ImageIcon size={140} />
                 },
-                { 
-                  title: "Photo Colouring & Restoration", 
+                {
+                  title: "Photo Colouring & Restoration",
                   desc: "Breathing new life into old or damaged photographs with careful restoration and color enhancement.",
                   icon: <Palette size={20} />,
                   bgIcon: <Palette size={140} />
                 },
-                { 
-                  title: "Personalized Gifting", 
+                {
+                  title: "Personalized Gifting",
                   desc: "Thoughtful photo-based gifts created for weddings, anniversaries, and celebrations.",
                   icon: <Gift size={20} />,
                   bgIcon: <Gift size={140} />
                 },
               ].map((service, index) => (
-                <Link 
-                  key={index} 
+                <Link
+                  key={index}
                   href={
-                    service.title === "Studio Photography" ? "/services/studio-photography" : 
-                    service.title === "Event Photography" ? "/services/event-photography" : 
-                    service.title === "Candid Photography" ? "/services/candid-photography" : 
-                    service.title === "Event Videography & Cinematography" ? "/services/event-videography" : 
-                    service.title === "Pre-Wedding Photo Shoot" ? "/services/pre-wedding" : 
-                    service.title === "Digital Album Printing" ? "/services/digital-album" : 
-                    service.title === "Collages & Blow-Ups" ? "/services/collages-blowups" : 
-                    service.title === "Photo Colouring & Restoration" ? "/services/photo-restoration" : 
-                    service.title === "Personalized Gifting" ? "/services/personalized-gifting" : 
-                    "/services"
-                  } 
+                    service.title === "Studio Photography" ? "/services/studio-photography" :
+                      service.title === "Event Photography" ? "/services/event-photography" :
+                        service.title === "Candid Photography" ? "/services/candid-photography" :
+                          service.title === "Event Videography & Cinematography" ? "/services/event-videography" :
+                            service.title === "Pre-Wedding Photo Shoot" ? "/services/pre-wedding" :
+                              service.title === "Digital Album Printing" ? "/services/digital-album" :
+                                service.title === "Collages & Blow-Ups" ? "/services/collages-blowups" :
+                                  service.title === "Photo Colouring & Restoration" ? "/services/photo-restoration" :
+                                    service.title === "Personalized Gifting" ? "/services/personalized-gifting" :
+                                      "/services"
+                  }
                   className="group relative bg-white p-7 md:p-10 rounded-[2.5rem] md:rounded-[3rem] border border-slate-100 transition-all duration-700 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] hover:border-secondary/20 hover:-translate-y-2 overflow-hidden flex flex-col items-start gap-6 shadow-sm"
                 >
 
@@ -188,7 +188,7 @@ export default function Home() {
                   <div className="w-14 h-14 bg-white text-secondary rounded-2xl flex items-center justify-center shrink-0 shadow-sm border border-slate-50 group-hover:bg-secondary group-hover:text-white transition-all duration-500 relative z-10">
                     {service.icon}
                   </div>
-                  
+
                   <div className="space-y-3 relative z-10">
                     <h4 className="text-xl font-heading font-extrabold text-primary leading-tight">
                       {service.title}
@@ -204,22 +204,21 @@ export default function Home() {
         </section>
 
         {/* Why Choose Us Section */}
-        <section className="py-12 bg-white overflow-hidden">
-
+        <section className="py-24 bg-white overflow-hidden">
           <div className="container mx-auto px-6 md:px-12">
             <div className="flex flex-col lg:flex-row gap-12 items-center">
               {/* Image Container First on Mobile */}
               <div className="w-full lg:w-1/2 relative p-4 order-1 lg:order-1">
-                  <div className="absolute inset-0 bg-slate-50 rounded-[2.5rem] translate-x-3 translate-y-3 md:translate-x-4 md:translate-y-4"></div>
-                  <div className="relative z-10 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden shadow-2xl aspect-[4/3] md:aspect-square bg-slate-100 max-w-[500px] mx-auto lg:ml-0">
-                    <Image src="/p.webp" alt="Why Couples Trust Us" fill className="object-cover" sizes="(max-width: 768px) 100vw, 500px" />
-                  </div>
-                  
-                  {/* Years badge - More stable positioning */}
-                  <div className="absolute -bottom-4 -right-4 lg:-bottom-10 lg:-left-10 lg:right-auto bg-primary text-white p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] shadow-[0_30px_60px_rgba(0,0,0,0.4)] z-20 border border-white/5 backdrop-blur-sm">
-                    <p className="text-3xl md:text-5xl font-heading font-extrabold text-secondary leading-none">15+</p>
-                    <p className="text-[7px] md:text-[10px] uppercase tracking-[0.3em] font-bold opacity-60 mt-2">Years of Legacy</p>
-                  </div>
+                <div className="absolute inset-0 bg-slate-50 rounded-[2.5rem] translate-x-3 translate-y-3 md:translate-x-4 md:translate-y-4"></div>
+                <div className="relative z-10 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden shadow-2xl aspect-[4/3] md:aspect-square bg-slate-100 max-w-[500px] mx-auto lg:ml-0">
+                  <Image src="/kristin/Kristine_Cover.webp" alt="Why Couples Trust Us" fill className="object-cover" sizes="(max-width: 768px) 100vw, 500px" />
+                </div>
+
+                {/* Years badge - More stable positioning */}
+                <div className="absolute -bottom-4 -right-4 lg:-bottom-10 lg:-left-10 lg:right-auto bg-primary text-white p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] shadow-[0_30px_60px_rgba(0,0,0,0.4)] z-20 border border-white/5 backdrop-blur-sm">
+                  <p className="text-3xl md:text-5xl font-heading font-extrabold text-secondary leading-none">15+</p>
+                  <p className="text-[7px] md:text-[10px] uppercase tracking-[0.3em] font-bold opacity-60 mt-2">Years of Legacy</p>
+                </div>
               </div>
 
               {/* Text Container Second on Mobile */}
@@ -228,7 +227,7 @@ export default function Home() {
                   <span className="text-xs font-bold uppercase tracking-[0.4em] text-secondary">Why Choose Us</span>
                   <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-primary leading-tight">Why Couples Trust Max Photo</h2>
                 </div>
-                
+
                 <div className="space-y-4 md:space-y-5">
                   {[
                     "Cinematic storytelling with a premium finish",
@@ -250,12 +249,54 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Recent Masterpieces Showcase - NEW PREMIUM SECTION */}
+        <section className="py-24 bg-slate-50 overflow-hidden">
+          <div className="container mx-auto px-6 md:px-12">
+            <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+              <div className="space-y-4 max-w-2xl">
+                <span className="text-secondary font-bold uppercase tracking-[0.4em] text-xs">Recently Captured</span>
+                <h2 className="text-3xl md:text-5xl font-heading font-extrabold text-primary leading-tight tracking-tighter">Recent Masterpieces</h2>
+                <p className="text-slate-500 font-light text-lg">A glance at our most recent cinematic journeys across Mumbai.</p>
+              </div>
+              <Link href="/gallery" className="px-10 py-4 bg-primary text-white rounded-full font-bold text-sm hover:bg-secondary transition-all shadow-xl shadow-primary/20 flex items-center gap-2">
+                View Full Gallery
+                <span>→</span>
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                { src: "/wedding/Page%20wed.webp", cat: "Wedding", title: "The Royal Union" },
+                { src: "/sam-wedding/Samford%20Weddin.webp", cat: "Ceremony", title: "Sacred Vows" },
+                { src: "/silver-wedding/Silver%20Weddin.webp", cat: "Anniversary", title: "Silver Jubilee" },
+                { src: "/lalia-album/Lilia%20Maam.webp", cat: "Pre-Wedding", title: "Dreamy Escape" },
+                { src: "/birthday/Dalreen%20Birthday.webp", cat: "Celebration", title: "Joyful Spirit" },
+                { src: "/keith-album/Keith%27s%20Communion.webp", cat: "Event", title: "Legacy Celebration" }
+              ].map((item, i) => (
+                <div key={i} className="group relative rounded-[2.5rem] overflow-hidden shadow-lg aspect-[4/5] bg-slate-200">
+                  <Image
+                    src={item.src}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 p-8 flex flex-col justify-end">
+                    <span className="text-secondary font-bold uppercase tracking-widest text-[10px] mb-2 block">{item.cat}</span>
+                    <h4 className="text-white text-2xl font-heading font-extrabold tracking-tight">{item.title}</h4>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Feature Section */}
         <section className="py-12 md:py-20 bg-primary text-white relative overflow-hidden mx-4 md:mx-12 rounded-[3rem] mt-16 mb-8 shadow-2xl shadow-primary/20">
 
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-secondary/20 rounded-full blur-[120px] pointer-events-none"></div>
-          
+
           <div className="container mx-auto px-6 md:px-16 relative z-10">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               <div className="lg:w-3/5 space-y-4 text-center lg:text-left">
@@ -264,36 +305,36 @@ export default function Home() {
                 <p className="text-base md:text-lg text-white/70 font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
                   From the first consultation to the final album, every part of the Max Photo journey is designed to feel seamless, personal, and elevated.
                 </p>
-                
+
                 <div className="flex items-center justify-center lg:justify-start gap-3 pt-2">
                   <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center text-secondary">
                     <Gem size={20} />
                   </div>
                   <div>
-                     <p className="text-[11px] font-bold uppercase tracking-widest">Master Storytelling</p>
-                     <p className="text-[10px] text-white/40">Excellence in every frame</p>
+                    <p className="text-[11px] font-bold uppercase tracking-widest">Master Storytelling</p>
+                    <p className="text-[10px] text-white/40">Excellence in every frame</p>
                   </div>
                 </div>
               </div>
 
               <div className="lg:w-1/3 relative group self-center flex flex-col items-center mt-8 lg:mt-0">
-                  <div className="absolute inset-0 bg-secondary/20 rounded-[2rem] rotate-3 group-hover:rotate-6 transition-transform duration-500 -z-10"></div>
-                  <div className="relative aspect-square rounded-[2rem] overflow-hidden shadow-2xl border border-white/10 w-full max-w-[200px] md:max-w-[240px] mx-auto">
-                      <Image 
-                        src="/event.webp" 
-                        alt="Event Experience" 
-                        fill 
-                        className="object-cover group-hover:scale-110 transition-transform duration-700" 
-                        sizes="(max-width: 768px) 200px, 240px"
-                      />
-                  </div>
-                  <div className="mt-6 text-center relative z-10">
-                     <p className="text-[9px] md:text-[10px] font-bold text-secondary uppercase tracking-[0.4em] mb-2">Exclusive Access</p>
-                     <p className="text-xs md:text-sm font-bold text-white uppercase tracking-widest leading-relaxed">
-                        Get More Information Instantly <br />
-                        <span className="text-white/40 font-medium text-[10px] md:text-xs">— Scan the QR Code —</span>
-                     </p>
-                  </div>
+                <div className="absolute inset-0 bg-secondary/20 rounded-[2rem] rotate-3 group-hover:rotate-6 transition-transform duration-500 -z-10"></div>
+                <div className="relative aspect-square rounded-[2rem] overflow-hidden shadow-2xl border border-white/10 w-full max-w-[200px] md:max-w-[240px] mx-auto">
+                  <Image
+                    src="/event.webp"
+                    alt="Event Experience"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                    sizes="(max-width: 768px) 200px, 240px"
+                  />
+                </div>
+                <div className="mt-6 text-center relative z-10">
+                  <p className="text-[9px] md:text-[10px] font-bold text-secondary uppercase tracking-[0.4em] mb-2">Exclusive Access</p>
+                  <p className="text-xs md:text-sm font-bold text-white uppercase tracking-widest leading-relaxed">
+                    Get More Information Instantly <br />
+                    <span className="text-white/40 font-medium text-[10px] md:text-xs">— Scan the QR Code —</span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -301,21 +342,21 @@ export default function Home() {
 
         {/* Final CTA Section */}
         <section className="py-12 bg-white text-center">
-             <div className="container mx-auto px-6">
-                <div className="w-14 h-14 bg-secondary/5 text-secondary rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Heart size={28} />
-                </div>
-                <h2 className="text-2xl md:text-5xl font-heading font-extrabold text-primary mb-4 tracking-tighter leading-tight">Ready to capture your <br className="hidden md:block"/>story beautifully?</h2>
-                <p className="text-sm md:text-base text-slate-500 mb-8 max-w-xl mx-auto font-light leading-relaxed">Check your date and begin your Max Photo experience today.</p>
-                <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <Link href="/contact" className="px-10 py-4 bg-primary text-white rounded-full font-bold text-base hover:bg-secondary transition-all shadow-xl shadow-primary/10 active:scale-95">
-                    Check Availability
-                  </Link>
-                  <Link href="https://wa.me/919820685643" className="px-10 py-4 bg-white text-primary border border-slate-200 rounded-full font-bold text-base hover:bg-slate-50 transition-all active:scale-95 flex items-center justify-center gap-2">
-                    WhatsApp Us
-                  </Link>
-                </div>
-             </div>
+          <div className="container mx-auto px-6">
+            <div className="w-14 h-14 bg-secondary/5 text-secondary rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <Heart size={28} />
+            </div>
+            <h2 className="text-2xl md:text-5xl font-heading font-extrabold text-primary mb-4 tracking-tighter leading-tight">Ready to capture your <br className="hidden md:block" />story beautifully?</h2>
+            <p className="text-sm md:text-base text-slate-500 mb-8 max-w-xl mx-auto font-light leading-relaxed">Check your date and begin your Max Photo experience today.</p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link href="/contact" className="px-10 py-4 bg-primary text-white rounded-full font-bold text-base hover:bg-secondary transition-all shadow-xl shadow-primary/10 active:scale-95">
+                Check Availability
+              </Link>
+              <Link href="https://wa.me/919820685643" className="px-10 py-4 bg-white text-primary border border-slate-200 rounded-full font-bold text-base hover:bg-slate-50 transition-all active:scale-95 flex items-center justify-center gap-2">
+                WhatsApp Us
+              </Link>
+            </div>
+          </div>
         </section>
 
       </main>

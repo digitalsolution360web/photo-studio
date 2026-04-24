@@ -13,43 +13,43 @@ export default function WorkPage() {
       title: "Wedding Cinematography",
       desc: "Our narrative films blend high-end production with raw emotion, creating a cinematic legacy for your family.",
       icon: <Film />,
-      img: "/b1.webp"
+      img: "/wedding/Page%20wed.webp"
     },
     {
       title: "Fine Art Photography",
       desc: "Classic wedding portraiture with a modern, elegant finish. Preserving every look, touch, and tear in high definition.",
       icon: <Camera />,
-      img: "/p2.jpg"
+      img: "/sam-wedding/Samford%20Wedding.webp"
     },
     {
       title: "Candid Storytelling",
       desc: "We stay behind the scenes to capture the genuine, unscripted moments that make your celebration unique.",
       icon: <Users />,
-      img: "/p1.webp"
+      img: "/silver-wedding/Silver%20Wedding.webp"
     }
   ];
 
   const stories = [
     {
-        title: "The Royal Mumbai Wedding",
-        location: "Grand Hyatt, Mumbai",
+        title: "Samford Wedding Celebration",
+        location: "Mumbai",
         date: "December 2023",
-        img: "/p3.jpg",
+        img: "/sam-wedding/Samford%20Wedding.webp",
         tag: "Cinematic"
     },
     {
-        title: "Sunset Pre-Wedding Bliss",
-        location: "Marine Drive, Mumbai",
+        title: "Silver Anniversary Special",
+        location: "Mumbai",
         date: "November 2023",
-        img: "/b3.webp",
+        img: "/silver-wedding/Silver%20Wedding.webp",
         tag: "Romance"
     },
     {
-        title: "Traditional Heritage Union",
-        location: "St. Thomas Cathedral",
+        title: "Kristine's Pre-Wedding Story",
+        location: "Mumbai",
         date: "January 2024",
-        img: "/p5.webp",
-        tag: "Heritage"
+        img: "/kristin/Kristine_Cover.webp",
+        tag: "Pre-Wedding"
     }
   ];
 
@@ -82,7 +82,7 @@ export default function WorkPage() {
                  <div className="lg:w-1/2 relative group">
                     <div className="absolute inset-0 bg-slate-50 rounded-[4rem] translate-x-6 translate-y-6 -z-10 group-hover:translate-x-8 group-hover:translate-y-8 transition-transform duration-700"></div>
                     <div className="relative aspect-[4/5] rounded-[3.5rem] overflow-hidden shadow-2xl">
-                       <Image src="/p.webp" alt="Our Work" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+                       <Image src="/keith-album/Keith's%20Comm.webp" alt="Our Work" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
                        <div className="absolute inset-0 bg-primary/20 flex items-center justify-center">
                           <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center text-secondary shadow-2xl scale-100 hover:scale-110 transition-transform cursor-pointer">
                              <Play fill="currentColor" size={32} />
@@ -172,10 +172,10 @@ export default function WorkPage() {
                     <div className="grid grid-cols-2 gap-6 relative">
                        <div className="absolute -top-10 -left-10 w-40 h-40 bg-secondary/5 rounded-full blur-[60px] pointer-events-none appearance-none"></div>
                        <div className="rounded-[2.5rem] overflow-hidden aspect-square h-80 relative shadow-2xl border-4 border-white">
-                          <Image src="/p3.jpg" alt="Process 1" fill className="object-cover" sizes="(max-width: 768px) 100vw, 25vw" />
+                          <Image src="/jassi-album/Jessy%20Album.webp" alt="Process 1" fill className="object-cover" sizes="(max-width: 768px) 100vw, 25vw" />
                        </div>
                        <div className="rounded-[2.5rem] overflow-hidden aspect-square h-64 mt-20 relative shadow-2xl border-4 border-white">
-                          <Image src="/p4.jpg" alt="Process 2" fill className="object-cover" sizes="(max-width: 768px) 100vw, 25vw" />
+                          <Image src="/aeron-album/Aeronalbum.webp" alt="Process 2" fill className="object-cover" sizes="(max-width: 768px) 100vw, 25vw" />
                        </div>
                     </div>
                  </div>

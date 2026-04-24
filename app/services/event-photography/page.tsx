@@ -34,7 +34,7 @@ export default function EventPhotographyPage() {
         {/* Clean Hero Section */}
         <section className="relative py-12 md:py-20 bg-[#0a0a0b] text-white">
           <div className="absolute inset-0">
-             <Image src="/eve.webp" alt="Event Hero" fill className="object-cover opacity-20" priority />
+             <Image src="/sam-wedding/Samford%20Wed.webp" alt="Event Hero" fill className="object-cover opacity-20" priority />
              <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/80 via-[#0a0a0b] to-[#0a0a0b]"></div>
           </div>
           
@@ -55,18 +55,18 @@ export default function EventPhotographyPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                  {/* Main large image */}
                  <div className="md:col-span-2 relative aspect-[16/10] rounded-3xl overflow-hidden shadow-lg border border-slate-100">
-                    <Image src="/eve1.webp" alt="Featured Event" fill className="object-cover transition-transform duration-1000 hover:scale-105" />
+                    <Image src="/sam-wedding/Samford%20Wedd.webp" alt="Featured Event" fill className="object-cover transition-transform duration-1000 hover:scale-105" />
                  </div>
                  
                  {/* Side images */}
                  <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100">
-                    <Image src="/eve2.webp" alt="Event Moment" fill className="object-cover transition-transform duration-1000 hover:scale-105" />
+                    <Image src="/sam-wedding/Samford%20Weddin.webp" alt="Event Moment" fill className="object-cover transition-transform duration-1000 hover:scale-105" />
                  </div>
                  <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100">
-                    <Image src="/eve3.webp" alt="Event Coverage" fill className="object-cover transition-transform duration-1000 hover:scale-105" />
+                    <Image src="/sam-wedding/Samford%20Wedding.webp" alt="Event Coverage" fill className="object-cover transition-transform duration-1000 hover:scale-105" />
                  </div>
                  <div className="md:col-span-2 relative aspect-[16/7] rounded-3xl overflow-hidden shadow-lg border border-slate-100">
-                    <Image src="/eve.webp" alt="Event Atmosphere" fill className="object-cover transition-transform duration-1000 hover:scale-105" />
+                    <Image src="/samford-album/Samford%20R.webp" alt="Event Atmosphere" fill className="object-cover transition-transform duration-1000 hover:scale-105" />
                  </div>
               </div>
            </div>
@@ -128,7 +128,7 @@ export default function EventPhotographyPage() {
                  </div>
                  
                  <div className="lg:w-1/2 relative rounded-[2rem] overflow-hidden shadow-2xl aspect-[4/3] w-full">
-                    <Image src="/eve2.webp" alt="Professional Coverage" fill className="object-cover" />
+                    <Image src="/samford-album/Samford%20Ro.webp" alt="Professional Coverage" fill className="object-cover" />
                  </div>
               </div>
            </div>

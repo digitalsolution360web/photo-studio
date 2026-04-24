@@ -68,7 +68,7 @@ export default function InvestmentPage() {
         <section className="relative py-16 md:py-24 bg-[#0a0a0b] text-white">
 
            <div className="absolute inset-0 z-0">
-             <Image src="/b1.webp" alt="Wedding Investment" fill className="object-cover opacity-20" />
+             <Image src="/birthday/Dalreenbirthday.webp" alt="Wedding Investment" fill className="object-cover opacity-20" />
              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0a0b]/80 to-[#0a0a0b]"></div>
            </div>
            

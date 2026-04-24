@@ -51,7 +51,7 @@ export default function FilmsPage() {
         <section className="relative py-24 md:py-36 bg-[#0a0a0b] text-white overflow-hidden">
            <div className="absolute inset-0 z-0">
              <Image 
-                src="/b3.webp" 
+                src="/birthday/Dalreen%20Birthday.webp" 
                 alt="Cinematography" 
                 fill 
                 className="object-cover opacity-40 grayscale hover:grayscale-0 transition-all duration-1000"

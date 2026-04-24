@@ -52,7 +52,7 @@ export default function ExperiencePage() {
         {/* Experience Hero */}
         <section className="relative py-20 md:py-32 bg-[#0a0a0b] text-white overflow-hidden">
           <div className="absolute inset-0">
-             <Image src="/b1.webp" alt="Background" fill className="object-cover opacity-20 scale-105" />
+             <Image src="/aeron-album/Aeronalbum.webp" alt="Background" fill className="object-cover opacity-20 scale-105" />
              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0b] via-transparent to-transparent"></div>
           </div>
           <div className="container mx-auto px-6 md:px-12 relative z-10 text-center">
@@ -139,7 +139,7 @@ export default function ExperiencePage() {
         {/* Section 4: Creative Direction - Dark Cinema CTA */}
         <section className="py-24 bg-[#0a0a0b] text-white relative overflow-hidden border-t border-white/5">
           <div className="absolute inset-0">
-             <Image src="/b3.webp" alt="Creative Direction" fill className="object-cover opacity-10" />
+             <Image src="/birthday/Dalreen%20Birthda.webp" alt="Creative Direction" fill className="object-cover opacity-10" />
              <div className="absolute inset-0 bg-gradient-to-r from-primary to-transparent opacity-80"></div>
           </div>
           <div className="container mx-auto px-6 relative z-10">

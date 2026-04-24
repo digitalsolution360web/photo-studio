@@ -1,14 +1,13 @@
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import { Metadata } from "next";
 import Image from "next/image";
-import { Phone, Mail, MapPin, Send, MessageCircle, Calendar, ShieldCheck } from "lucide-react";
-import Link from "next/link";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import { InquiryForm } from "@/components/InquiryForm";
+import { Gem, MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Max Photo | Book Your Mumbai Wedding Photographer",
-  description: "Contact Max Photo for cinematic wedding photography and films in Mumbai. Share your date and venue details to begin your visual story.",
+  title: "Contact Max Photo | Premium Wedding Photography & Films in Mumbai",
+  description: "Get in touch with Max Photo to capture your special moments.",
 };
 
 export default function ContactPage() {
@@ -17,139 +16,142 @@ export default function ContactPage() {
       <Navbar />
 
       <main className="flex-grow pt-24">
-        {/* Contact Hero - High Impact */}
-        <section className="relative py-24 md:py-36 bg-[#0a0a0b] text-white overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2"></div>
-          </div>
-
-          <div className="container mx-auto px-6 relative z-10 text-center">
-            <span className="text-secondary font-bold uppercase tracking-[0.6em] text-xs mb-8 block">Inquire Today</span>
-            <h1 className="text-3xl md:text-5xl font-heading font-extrabold mb-10 tracking-tighter leading-tight max-w-5xl mx-auto">
-              Let's Begin <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-white">Your Story</span>
+        {/* Contact Hero Section */}
+        <section className="py-20 bg-slate-50 relative overflow-hidden">
+          <div className="container mx-auto px-6 md:px-12 relative z-10 text-center">
+            <span className="text-secondary font-bold uppercase tracking-[0.5em] text-xs mb-6 block">Get In Touch</span>
+            <h1 className="text-3xl md:text-5xl font-heading font-extrabold mb-8 tracking-tighter leading-tight max-w-4xl mx-auto text-primary">
+              Let's Create Something <br className="hidden md:block" /> Beautiful Together
             </h1>
-            <p className="text-lg md:text-2xl text-white/50 max-w-2xl mx-auto font-light leading-relaxed">
-              We would love to hear about your wedding or event. Share your details, and we will guide you through the next steps.
+            <p className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto font-light leading-relaxed">
+              We’d love to hear from you. Fill out the form below or reach us through our contact details.
             </p>
           </div>
         </section>
 
-        {/* Contact Content Grid */}
+        {/* Contact Layout */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6 md:px-12">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+            <div className="flex flex-col lg:flex-row gap-16 items-start">
 
-              {/* Left Column: Contact Cards */}
-              <div className="lg:col-span-5 space-y-8 animate-in fade-in slide-in-from-left-5 duration-1000">
-                <div className="bg-slate-50 p-10 rounded-[3rem] border border-slate-100 shadow-sm space-y-10">
-                  <h3 className="text-2xl font-heading font-extrabold text-primary">Reach Out Directly</h3>
+              {/* Left Column: Contact Details */}
+              <div className="lg:w-1/3 space-y-12">
+                <div className="space-y-8">
+                  <h3 className="text-2xl font-heading font-extrabold text-primary">Contact Information</h3>
 
-                  <div className="space-y-8">
-                    <a href="tel:9820685643" className="flex items-start gap-6 group">
-                      <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-secondary shadow-sm group-hover:bg-primary group-hover:text-white transition-all">
-                        <Phone size={24} />
-                      </div>
-                      <div className="space-y-1">
-                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Call or WhatsApp</p>
-                        <p className="text-xl font-bold text-primary group-hover:text-secondary transition-colors">+91 9820685643</p>
-                      </div>
-                    </a>
-
-                    <a href="mailto:events@maxphotostudio.in" className="flex items-start gap-6 group">
-                      <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-secondary shadow-sm group-hover:bg-primary group-hover:text-white transition-all">
-                        <Mail size={24} />
-                      </div>
-                      <div className="space-y-1">
-                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Email Inquiry</p>
-                        <p className="text-lg font-bold text-primary group-hover:text-secondary transition-colors truncate max-w-[200px] md:max-w-none">info@maxphotostudio.in</p>
-                      </div>
-                    </a>
-
-                    <div className="flex items-start gap-6 group">
-                      <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-secondary shadow-sm">
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-secondary shrink-0">
                         <MapPin size={24} />
                       </div>
-                      <div className="space-y-1">
-                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Our Studio</p>
-                        <p className="text-base text-slate-600 font-light leading-relaxed">
-                          Shop No. 2, Saroj Apartments, Opp. Holy Spirit Hospital, Mahakali Caves Road, Andheri (E), Mumbai - 400 093.
+                      <div>
+                        <p className="text-sm font-bold text-primary mb-1 uppercase tracking-widest">Studio Address</p>
+                        <p className="text-slate-500 text-sm leading-relaxed">
+                          Shop No. 2, Saroj Apartments,<br />
+                          Opp. Holy Spirit Hospital,<br />
+                          Mahakali Caves Road, Andheri (E),<br />
+                          Mumbai - 400 093.
                         </p>
                       </div>
                     </div>
-                  </div>
 
-                  <div className="pt-8 border-t border-slate-200">
-                    <p className="text-xs font-bold text-secondary uppercase tracking-widest mb-4">Official WhatsApp</p>
-                    <Link href="https://wa.me/919820685643" className="inline-flex items-center gap-3 px-8 py-4 bg-[#25D366] text-white rounded-full font-bold hover:shadow-lg transition-all active:scale-95">
-                      <MessageCircle size={20} />
-                      Message on WhatsApp
-                    </Link>
-                  </div>
-                </div>
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-secondary shrink-0">
+                        <Phone size={24} />
+                      </div>
+                      <div>
+                        <p className="text-sm font-bold text-primary mb-1 uppercase tracking-widest">Phone</p>
+                        <p className="text-slate-500 text-sm leading-relaxed">
+                          +91 98206 85643
+                        </p>
+                      </div>
+                    </div>
 
-                {/* Trust Information */}
-                <div className="p-8 rounded-[2.5rem] bg-primary text-white space-y-6 relative overflow-hidden">
-                  <div className="absolute top-0 right-0 p-6 text-white/10">
-                    <ShieldCheck size={100} />
-                  </div>
-                  <div className="relative z-10 space-y-4">
-                    <h4 className="text-xl font-heading font-bold">Secure Booking</h4>
-                    <p className="text-sm text-white/70 leading-relaxed font-light">
-                      All bookings and invoices are issued under our parent entity, Max Photo Studio. Secure payments via UPI, Cheque, or Bank Transfer.
-                    </p>
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-secondary shrink-0">
+                        <Mail size={24} />
+                      </div>
+                      <div>
+                        <p className="text-sm font-bold text-primary mb-1 uppercase tracking-widest">Email</p>
+                        <a href="mailto:info@maxphotostudio.in" className="text-secondary text-sm leading-relaxed hover:underline">
+                          info@maxphotostudio.in
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-secondary shrink-0">
+                        <Clock size={24} />
+                      </div>
+                      <div>
+                        <p className="text-sm font-bold text-primary mb-1 uppercase tracking-widest">Studio Timings</p>
+                        <p className="text-slate-500 text-sm leading-relaxed">
+                          Mon - Sat: 9:00 AM - 8:30 PM<br />
+                          <span className="text-secondary italic font-bold">Sunday Closed</span>
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
 
               {/* Right Column: Inquiry Form */}
-              <div className="lg:col-span-7 animate-in fade-in slide-in-from-right-5 duration-1000">
+              <div className="lg:w-2/3 w-full">
                 <InquiryForm />
               </div>
-
 
             </div>
           </div>
         </section>
 
+        {/* Feature Section (Premium Experience) */}
+        <section className="py-12 md:py-20 bg-primary text-white relative overflow-hidden mx-4 md:mx-12 rounded-[3rem] mt-8 mb-16 shadow-2xl shadow-primary/20">
+          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-secondary/20 rounded-full blur-[120px] pointer-events-none"></div>
 
-        {/* <section className="py-24 bg-slate-50 border-t border-slate-100">
-           <div className="container mx-auto px-6 md:px-12 text-center">
-              <div className="max-w-3xl mx-auto space-y-4 mb-20 text-center">
-                 <span className="text-secondary font-bold uppercase tracking-[0.4em] text-xs">Official Scanners</span>
-                 <h2 className="text-3xl md:text-5xl font-heading font-extrabold text-primary leading-tight">Fast Connect & Follow</h2>
-                 <p className="text-lg text-slate-500 font-light max-w-xl mx-auto">
-                    Scan these QR codes to quickly follow us on social media or connect with our support team on WhatsApp.
-                 </p>
+          <div className="container mx-auto px-6 md:px-16 relative z-10">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+              <div className="lg:w-3/5 space-y-4 text-center lg:text-left">
+                <span className="text-secondary font-bold uppercase tracking-[0.4em] text-[10px]">Premium Experience</span>
+                <h2 className="text-2xl md:text-4xl font-heading font-extrabold tracking-tight leading-tight">A Premium Experience for Modern Couples</h2>
+                <p className="text-base md:text-lg text-white/70 font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+                  From the first consultation to the final album, every part of the Max Photo journey is designed to feel seamless, personal, and elevated.
+                </p>
+
+                <div className="flex items-center justify-center lg:justify-start gap-3 pt-2">
+                  <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center text-secondary">
+                    <Gem size={20} />
+                  </div>
+                  <div>
+                    <p className="text-[11px] font-bold uppercase tracking-widest">Master Storytelling</p>
+                    <p className="text-[10px] text-white/40">Excellence in every frame</p>
+                  </div>
+                </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                 {[
-                   { name: "Facebook", img: "/sc.jpeg", color: "text-[#1877F2]", desc: "Follow our updates" },
-                   { name: "YouTube", img: "/sc1.jpeg", color: "text-[#FF0000]", desc: "Watch our latest films" },
-                   { name: "Instagram", img: "/sc2.jpeg", color: "text-[#E4405F]", desc: "Follow our daily story" },
-                   { name: "WhatsApp", img: "/sc3.jpeg", color: "text-[#25D366]", desc: "Direct chat with team" },
-                 ].map((scanner, i) => (
-                   <div key={i} className="group relative bg-white p-8 rounded-[3.5rem] border border-slate-100 transition-all duration-700 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2">
-                       <div className="relative aspect-square mb-8 rounded-[2rem] overflow-hidden border border-slate-100 bg-white p-4 shadow-inner group-hover:scale-105 transition-transform duration-700">
-                           <Image src={scanner.img} alt={scanner.name} fill className="object-contain p-2" sizes="(max-width: 768px) 100vw, 300px" />
-                           <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors pointer-events-none"></div>
-                       </div>
-                       <div className="space-y-1">
-                          <p className={`text-lg font-heading font-extrabold ${scanner.color}`}>{scanner.name}</p>
-                          <p className="text-xs uppercase tracking-widest font-bold text-slate-400">{scanner.desc}</p>
-                       </div>
-                       
-                      
-                       <div className="absolute -top-4 -right-4 w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                          <Send size={16} className="text-secondary" />
-                       </div>
-                   </div>
-                 ))}
+              <div className="lg:w-1/3 relative group self-center flex flex-col items-center mt-8 lg:mt-0">
+                <div className="absolute inset-0 bg-secondary/20 rounded-[2rem] rotate-3 group-hover:rotate-6 transition-transform duration-500 -z-10"></div>
+                <div className="relative aspect-square rounded-[2rem] overflow-hidden shadow-2xl border border-white/10 w-full max-w-[200px] md:max-w-[240px] mx-auto">
+                  <Image
+                    src="/event.webp"
+                    alt="Event Experience"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                    sizes="(max-width: 768px) 200px, 240px"
+                  />
+                </div>
+                <div className="mt-6 text-center relative z-10">
+                  <p className="text-[9px] md:text-[10px] font-bold text-secondary uppercase tracking-[0.4em] mb-2">Exclusive Access</p>
+                  <p className="text-xs md:text-sm font-bold text-white uppercase tracking-widest leading-relaxed">
+                    Get More Information Instantly <br />
+                    <span className="text-white/40 font-medium text-[10px] md:text-xs">— Scan the QR Code —</span>
+                  </p>
+                </div>
               </div>
-           </div>
-        </section> */}
+            </div>
+          </div>
+        </section>
+
       </main>
 
       <Footer />

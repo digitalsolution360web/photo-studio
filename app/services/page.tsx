@@ -98,7 +98,7 @@ export default function ServicesPage() {
 
            <div className="absolute inset-0">
              <Image 
-               src="/b3.webp" 
+               src="/silver-wedding/Silver%20Wedding.webp" 
                alt="Services Hero" 
                fill 
                className="object-cover opacity-30" 

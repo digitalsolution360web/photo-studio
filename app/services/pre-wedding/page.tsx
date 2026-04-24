@@ -27,7 +27,7 @@ export default function PreWeddingPage() {
         {/* Romance Hero */}
         <section className="relative py-12 md:py-20 bg-[#0a0a0b] text-white">
           <div className="absolute inset-0">
-             <Image src="/pre.webp" alt="Pre-Wedding Hero" fill className="object-cover opacity-20" priority />
+             <Image src="/birthday/Dalreenbirthda.webp" alt="Pre-Wedding Hero" fill className="object-cover opacity-20" priority />
              <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/80 via-[#0a0a0b] to-[#0a0a0b]"></div>
           </div>
           
@@ -48,7 +48,7 @@ export default function PreWeddingPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                  {/* Featured image */}
                  <div className="md:col-span-2 relative aspect-[16/10] rounded-3xl overflow-hidden shadow-2xl border border-slate-100 group">
-                    <Image src="/pre.webp" alt="Pre-Wedding Featured" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <Image src="/birthday/Dalreenbirthday.webp" alt="Pre-Wedding Featured" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div className="absolute top-6 left-6 z-20">
                        <div className="bg-white/90 backdrop-blur-md px-4 py-2 rounded-full flex items-center gap-2 shadow-lg">
                           <MapPin size={14} className="text-secondary" />
@@ -59,13 +59,13 @@ export default function PreWeddingPage() {
                  
                  {/* Side images */}
                  <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/pre1.webp" alt="Pre-Wedding 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <Image src="/florines/Florine's%20Comm.webp" alt="Pre-Wedding 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                  </div>
                  <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/pre2.webp" alt="Pre-Wedding 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <Image src="/florines/Florine's%20Communi.webp" alt="Pre-Wedding 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                  </div>
                  <div className="md:col-span-2 relative aspect-[16/7] rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/pre3.webp" alt="Pre-Wedding 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <Image src="/florines/Florine's%20Communion.webp" alt="Pre-Wedding 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                  </div>
               </div>
            </div>

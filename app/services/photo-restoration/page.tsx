@@ -27,7 +27,7 @@ export default function PhotoRestorationPage() {
         {/* Legacy Hero */}
         <section className="relative py-12 md:py-20 bg-[#0a0a0b] text-white">
           <div className="absolute inset-0">
-             <Image src="/colur.webp" alt="Restoration Hero" fill className="object-cover opacity-20" priority />
+             <Image src="/aeron-album/Aaron%20Album%60_Page_024.jpg" alt="Restoration Hero" fill className="object-cover opacity-20" priority />
              <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/80 via-[#0a0a0b] to-[#0a0a0b]"></div>
           </div>
           
@@ -48,7 +48,7 @@ export default function PhotoRestorationPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                  {/* Featured image */}
                  <div className="md:col-span-2 relative aspect-[16/10] rounded-3xl overflow-hidden shadow-2xl border border-slate-100 group">
-                    <Image src="/colur.webp" alt="Restoration Featured" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <Image src="/aeron-album/Aeron%20Album.webp" alt="Restoration Featured" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div className="absolute top-6 right-6 z-20">
                        <div className="bg-secondary text-white px-4 py-2 rounded-full flex items-center gap-2 shadow-lg animate-pulse">
                           <Wand2 size={14} />
@@ -59,13 +59,13 @@ export default function PhotoRestorationPage() {
                  
                  {/* Side images */}
                  <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/colur1.webp" alt="Restoration 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <Image src="/aeron-album/Aeronalbum.webp" alt="Restoration 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                  </div>
                  <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/colur2.webp" alt="Restoration 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <Image src="/birthday/Dalreen%20Birthda.webp" alt="Restoration 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                  </div>
                  <div className="md:col-span-2 relative aspect-[16/7] rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/colur3.webp" alt="Restoration 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <Image src="/birthday/Dalreen%20Birthday.webp" alt="Restoration 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                  </div>
               </div>
            </div>

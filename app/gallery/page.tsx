@@ -3,145 +3,220 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import Image from "next/image";
-import { Camera, Sparkles, Heart, Film } from "lucide-react";
+import Link from "next/link";
+import { Camera, Sparkles, Heart, Film, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-function AnimatedCounter({ target, duration = 2000 }: { target: number, duration?: number }) {
+function AnimatedCounter({ target, duration = 2000 }: { target: number; duration?: number }) {
   const [count, setCount] = useState(0);
-
   useEffect(() => {
     let start = 0;
     const end = target;
     if (start === end) return;
-
     let totalFrames = Math.min(target, 60);
     let frameDuration = duration / totalFrames;
     let increment = end / totalFrames;
-
     let timer = setInterval(() => {
       start += increment;
-      if (start >= end) {
-        setCount(end);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
-      }
+      if (start >= end) { setCount(end); clearInterval(timer); }
+      else { setCount(Math.floor(start)); }
     }, frameDuration);
-
     return () => clearInterval(timer);
   }, [target, duration]);
-
   return <>{count}</>;
 }
 
+const allImages = [
+  // Weddings
+  { src: "/wedding/Page%20wed.webp",       title: "Royal Union",             category: "Weddings" },
+  { src: "/wedding/Page.webp",             title: "The Grand Celebration",    category: "Weddings" },
+  { src: "/wedding/Page_0.webp",           title: "Eternal Vows",            category: "Weddings" },
+  { src: "/wedding/Page_00.webp",          title: "Golden Moments",          category: "Weddings" },
+  { src: "/sam-wedding/Samford%20Wedding.webp",  title: "Cultural Heritage",   category: "Weddings" },
+  { src: "/sam-wedding/Samford%20Weddin.webp",   title: "Sacred Bond",         category: "Weddings" },
+  { src: "/sam-wedding/Samford%20Wedd.webp",     title: "Traditional Grace",    category: "Weddings" },
+  { src: "/sam-wedding/Samford%20Wed.webp",      title: "Vibrant Joy",          category: "Weddings" },
+  { src: "/silver-wedding/Silver%20Wedding.webp", title: "Silver Jubilee",      category: "Weddings" },
+  { src: "/silver-wedding/Silver%20Weddin.webp",  title: "Classic Elegance",    category: "Weddings" },
+  { src: "/silver-wedding/Silver%20Wedd.webp",    title: "Timeless Bond",       category: "Weddings" },
+  { src: "/silver-wedding/Silver%20Wed.webp",     title: "Love's Journey",      category: "Weddings" },
+
+  // Pre-Wedding
+  { src: "/kristin/Kristine_Cover.webp",         title: "Sunset Romance",       category: "Pre-Wedding" },
+  { src: "/kristin/Kristine_Page.webp",          title: "Timeless Love",        category: "Pre-Wedding" },
+  { src: "/kristin/Kristine_Page_.webp",         title: "Modern Fairytale",     category: "Pre-Wedding" },
+  { src: "/kristin/Kristine_Page_00.webp",       title: "Urban Romance",        category: "Pre-Wedding" },
+  { src: "/lalia-album/Lilia%20Maam.webp",       title: "Artistic Portrait",    category: "Pre-Wedding" },
+  { src: "/lalia-album/Lilia%20Maam_Pa.webp",    title: "Candid Grace",         category: "Pre-Wedding" },
+  { src: "/lalia-album/Lilia%20Maa.webp",        title: "Dreamy Escape",        category: "Pre-Wedding" },
+  { src: "/lalia-album/Lilia%20M.webp",          title: "Serene Moments",       category: "Pre-Wedding" },
+
+  // Events
+  { src: "/florines/Florine%27s%20Communion.webp", title: "Sacred Communion",  category: "Events" },
+  { src: "/florines/Florine%27s%20Communi.webp",   title: "Divine Joy",         category: "Events" },
+  { src: "/florines/Florine%27s%20Comm.webp",      title: "Blessed Path",       category: "Events" },
+  { src: "/florines/Florine%27scommu.webp",        title: "Holy Spirit",        category: "Events" },
+  { src: "/keith-album/Keith%27s%20Communion.webp",  title: "Family Legacy",   category: "Events" },
+  { src: "/keith-album/Keith%27s%20Communio.webp",   title: "Solemn Ceremony",  category: "Events" },
+  { src: "/keith-album/Keith%27s%20Commun.webp",     title: "Faith & Love",     category: "Events" },
+  { src: "/keith-album/Keith%27s%20Comm.webp",       title: "Youthful Grace",   category: "Events" },
+  { src: "/birthday/Dalreen%20Birthday.webp",   title: "Celebration Spirit",   category: "Events" },
+  { src: "/birthday/Dalreenbirthday.webp",       title: "Joyful Gathering",     category: "Events" },
+  { src: "/birthday/Dalreen%20Birthda.webp",     title: "Birthday Cheer",      category: "Events" },
+  { src: "/birthday/Dalreenbirthda.webp",       title: "Party Vibes",          category: "Events" },
+
+  // Cinematic / Albums
+  { src: "/aeron-album/Aaron%20Album.webp",      title: "Storybook Legacy",     category: "Cinematic" },
+  { src: "/aeron-album/Aeronalbum.webp",          title: "Visual Narrative",     category: "Cinematic" },
+  { src: "/aeron-album/Aaron%20Album_Page_024.jpg", title: "Detailed Memories", category: "Cinematic" },
+  { src: "/jassi-album/Jessy%20Album.webp",      title: "Signature Style",      category: "Cinematic" },
+  { src: "/jassi-album/Jessy%20Al.webp",         title: "Candid Essence",       category: "Cinematic" },
+  { src: "/jassi-album/Jessy%20Alb.webp",        title: "Refined Texture",      category: "Cinematic" },
+  { src: "/jassi-album/Jessy%20Albu.webp",       title: "Elegant Layout",       category: "Cinematic" },
+  { src: "/samford-album/Samford%20Roce.webp",   title: "Cinematic Frame",      category: "Cinematic" },
+  { src: "/samford-album/Samford%20Roc.webp",    title: "Dynamic Shot",         category: "Cinematic" },
+  { src: "/samford-album/Samford%20Ro.webp",     title: "Artistic Angle",       category: "Cinematic" },
+  { src: "/samford-album/Samford%20R.webp",      title: "Pro Production",       category: "Cinematic" },
+];
+
+const categories = ["All", "Weddings", "Pre-Wedding", "Events", "Cinematic"];
+
 export default function GalleryPage() {
-  const images = [
-    { src: "/p1.webp", title: "The Royal Entrance", category: "Weddings" },
-    { src: "/p2.jpg", title: "Candid Joy", category: "Moments" },
-    { src: "/p3.jpg", title: "Eternal Vows", category: "Ceremony" },
-    { src: "/p4.jpg", title: "Sangeet Night", category: "Events" },
-    { src: "/p.webp", title: "The Beautiful Bride", category: "Portraits" },
-    { src: "/p5.webp", title: "Groom's Squad", category: "Portraits" },
-    { src: "/b1.webp", title: "Cinematic Scene", category: "Films" },
-    { src: "/b3.webp", title: "Golden Hour", category: "Pre-Wedding" },
-  ];
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const filtered = activeCategory === "All"
+    ? allImages
+    : allImages.filter(img => img.category === activeCategory);
 
   return (
     <div className="flex flex-col min-h-screen bg-white selection:bg-secondary selection:text-white">
       <Navbar />
-      
+
       <main className="flex-grow pt-24">
         {/* Luxury Hero */}
         <section className="relative py-24 md:py-40 bg-[#0a0a0b] text-white overflow-hidden">
-           <div className="absolute inset-0">
-             <Image src="/b1.webp" alt="Gallery Hero" fill className="object-cover opacity-30" sizes="100vw" />
-             <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/80 via-[#0a0a0b] to-[#0a0a0b]"></div>
-           </div>
-           
-           <div className="container mx-auto px-6 relative z-10 text-center">
-              <span className="text-secondary font-bold uppercase tracking-[0.6em] text-xs mb-8 block">Preserved Perfection</span>
+          <div className="absolute inset-0">
+            <Image src="/wedding/Page%20wed.webp" alt="Gallery Hero" fill className="object-cover opacity-30" sizes="100vw" priority />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/80 via-[#0a0a0b]/60 to-[#0a0a0b]"></div>
+          </div>
+          <div className="container mx-auto px-6 relative z-10 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <span className="text-secondary font-bold uppercase tracking-[0.6em] text-xs mb-8 block">Official Portfolio</span>
               <h1 className="text-4xl md:text-7xl font-heading font-extrabold mb-8 tracking-tighter leading-tight">
-                Official <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-white">Gallery</span>
+                Curated <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-white">Masterpieces</span>
               </h1>
               <p className="text-lg md:text-2xl text-white/50 max-w-2xl mx-auto font-light leading-relaxed">
-                A curated selection of our finest work. From grand celebrations to intimate emotions, every frame tells a unique story.
+                A visual journey through grand celebrations, intimate emotions, and timeless stories captured by Max Photo.
               </p>
-           </div>
+            </motion.div>
+          </div>
         </section>
 
-        {/* Gallery Grid */}
-        <section className="py-24 bg-white">
-           <div className="container mx-auto px-6 md:px-12">
-              {/* Category Filter Pills (Static for UI) */}
-              <div className="flex flex-wrap justify-center gap-4 mb-20">
-                {["All", "Weddings", "Films", "Pre-Wedding", "Events", "Cinematic"].map((cat, i) => (
-                  <button key={i} className={`px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest transition-all ${i === 0 ? 'bg-primary text-white shadow-xl' : 'bg-slate-50 text-slate-400 hover:bg-slate-100'}`}>
-                    {cat}
-                  </button>
-                ))}
-              </div>
+        {/* Gallery Grid Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-6 md:px-12">
+            
+            {/* Filter Navigation */}
+            <div className="flex flex-wrap justify-center gap-3 mb-16">
+              {categories.map((cat, i) => (
+                <button
+                  key={i}
+                  onClick={() => setActiveCategory(cat)}
+                  className={`px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all duration-300 ${
+                    activeCategory === cat
+                      ? "bg-primary text-white shadow-xl shadow-primary/20 scale-105"
+                      : "bg-slate-50 text-slate-400 hover:bg-slate-100 hover:text-primary"
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
 
-              <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4 animate-in fade-in slide-in-from-bottom-5 duration-1000">
-                 {images.map((img, i) => (
-                    <div key={i} className="group relative break-inside-avoid rounded-[1.5rem] overflow-hidden border border-slate-100 shadow-sm transition-all duration-700 hover:shadow-2xl hover:shadow-primary/10">
-                        <div className="relative w-full aspect-square overflow-hidden">
-                           <Image 
-                              src={img.src} 
-                              alt={img.title} 
-                              fill 
-                              className="object-cover transition-transform duration-1000 group-hover:scale-110" 
-                              sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                           />
-                           <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                        </div>
-
-                        <div className="absolute bottom-0 left-0 w-full p-6 translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700">
-                           <span className="text-secondary font-bold uppercase tracking-widest text-[9px] mb-1 block">{img.category}</span>
-                           <h3 className="text-white text-base font-heading font-extrabold mb-3 line-clamp-1">{img.title}</h3>
-                           <div className="w-8 h-8 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
-                              <Sparkles size={14} />
-                           </div>
-                        </div>
+            {/* Masonry-Style Grid */}
+            <motion.div 
+              layout
+              className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6"
+            >
+              <AnimatePresence mode="popLayout">
+                {filtered.map((img, i) => (
+                  <motion.div
+                    layout
+                    key={img.src}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 0.5, delay: i * 0.05 }}
+                    className="group relative break-inside-avoid rounded-[2rem] overflow-hidden border border-slate-100 shadow-sm transition-all duration-700 hover:shadow-2xl hover:shadow-primary/10"
+                  >
+                    <div className="relative w-full overflow-hidden" style={{ aspectRatio: i % 2 === 0 ? '4/5' : '1/1' }}>
+                      <Image
+                        src={img.src}
+                        alt={img.title}
+                        fill
+                        className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                     </div>
-                 ))}
-              </div>
 
-              {/* Showcase Stats */}
-              <div className="mt-32 grid grid-cols-1 md:grid-cols-4 gap-8">
-                 {[
-                   { label: "Wedding Stories", value: 500, icon: <Heart className="text-secondary" /> },
-                   { label: "Cinematic Films", value: 200, icon: <Film className="text-secondary" /> },
-                   { label: "Happy Couples", value: 1200, icon: <Camera className="text-secondary" /> },
-                   { label: "Legacy Years", value: 15, icon: <Sparkles className="text-secondary" /> },
-                 ].map((stat, i) => (
-                   <div key={i} className="bg-slate-50 p-10 rounded-[3rem] text-center space-y-4 border border-slate-100">
-                      <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mx-auto shadow-sm">
-                        {stat.icon}
+                    <div className="absolute bottom-0 left-0 w-full p-6 translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700">
+                      <span className="text-secondary font-bold uppercase tracking-widest text-[8px] mb-1 block">{img.category}</span>
+                      <h3 className="text-white text-base font-heading font-extrabold line-clamp-1">{img.title}</h3>
+                      <div className="mt-4 flex items-center gap-2 text-white/60 text-[10px] font-medium">
+                        <Sparkles size={12} className="text-secondary" />
+                        Signature Collection
                       </div>
-                      <div>
-                        <p className="text-3xl font-heading font-extrabold text-primary">
-                          <AnimatedCounter target={stat.value} />+
-                        </p>
-                        <p className="text-[10px] uppercase tracking-widest font-bold text-slate-400">{stat.label}</p>
-                      </div>
-                   </div>
-                 ))}
-              </div>
-           </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </motion.div>
+
+            {/* Showcase Stats */}
+            <div className="mt-32 grid grid-cols-2 md:grid-cols-4 gap-8">
+              {[
+                { label: "Wedding Stories", value: 500, icon: <Heart className="text-secondary" size={24} /> },
+                { label: "Cinematic Films", value: 200, icon: <Film className="text-secondary" size={24} /> },
+                { label: "Happy Couples",   value: 1200, icon: <Camera className="text-secondary" size={24} /> },
+                { label: "Legacy Years",    value: 15,   icon: <Sparkles className="text-secondary" size={24} /> },
+              ].map((stat, i) => (
+                <div key={i} className="bg-slate-50 p-10 rounded-[3rem] text-center space-y-4 border border-slate-100 hover:bg-white hover:shadow-xl transition-all duration-500">
+                  <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mx-auto shadow-sm">
+                    {stat.icon}
+                  </div>
+                  <div>
+                    <p className="text-3xl font-heading font-extrabold text-primary">
+                      <AnimatedCounter target={stat.value} />+
+                    </p>
+                    <p className="text-[10px] uppercase tracking-widest font-bold text-slate-400">{stat.label}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
 
-        {/* CTA */}
+        {/* Final Call to Action */}
         <section className="py-24 bg-primary text-white text-center mx-6 md:mx-12 rounded-[3.5rem] mb-12 relative overflow-hidden">
-           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
-           <div className="relative z-10 space-y-8">
-              <h2 className="text-3xl md:text-5xl font-heading font-extrabold tracking-tighter">Ready for your own masterpiece?</h2>
-              <p className="text-lg text-white/50 max-w-xl mx-auto font-light">Book your consultation today and let's start planning how to capture your most valuable moments.</p>
-              <div className="flex justify-center pt-4">
-                 <button className="px-12 py-5 bg-secondary text-white rounded-full font-extrabold text-lg hover:shadow-2xl hover:scale-105 active:scale-95 transition-all">
-                    Inquire for Date
-                 </button>
-              </div>
-           </div>
+          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+          <div className="relative z-10 container mx-auto px-6 space-y-8">
+            <h2 className="text-3xl md:text-5xl font-heading font-extrabold tracking-tighter">Ready to tell your story?</h2>
+            <p className="text-lg text-white/50 max-w-xl mx-auto font-light leading-relaxed">
+              Book your consultation today and let's start planning how to capture your most valuable moments.
+            </p>
+            <div className="flex justify-center pt-4">
+              <Link href="/contact" className="group px-12 py-5 bg-secondary text-white rounded-full font-extrabold text-lg hover:shadow-2xl hover:scale-105 active:scale-95 transition-all flex items-center gap-3">
+                Inquire for Date
+                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
         </section>
       </main>
 

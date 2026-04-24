@@ -27,7 +27,7 @@ export default function DigitalAlbumPage() {
         {/* Heritage Hero */}
         <section className="relative py-12 md:py-20 bg-[#0a0a0b] text-white">
           <div className="absolute inset-0">
-             <Image src="/alu.webp" alt="Album Hero" fill className="object-cover opacity-20" priority />
+             <Image src="/kristin/Kristine_Page_00.webp" alt="Album Hero" fill className="object-cover opacity-20" priority />
              <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/80 via-[#0a0a0b] to-[#0a0a0b]"></div>
           </div>
           
@@ -48,19 +48,19 @@ export default function DigitalAlbumPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                  {/* Featured image */}
                  <div className="md:col-span-2 relative aspect-[16/10] rounded-3xl overflow-hidden shadow-2xl border border-slate-100 group">
-                    <Image src="/alu.webp" alt="Album Featured" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <Image src="/lalia-album/Lilia%20M.webp" alt="Album Featured" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-gradient-to-tr from-secondary/20 to-transparent pointer-events-none"></div>
                  </div>
                  
                  {/* Side images */}
                  <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/alu1.webp" alt="Album 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <Image src="/lalia-album/Lilia%20Maa.webp" alt="Album 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                  </div>
                  <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/alu2.webp" alt="Album 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <Image src="/lalia-album/Lilia%20Maam.webp" alt="Album 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                  </div>
                  <div className="md:col-span-2 relative aspect-[16/7] rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/alu3.webp" alt="Album 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <Image src="/lalia-album/Lilia%20Maam_Pa.webp" alt="Album 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                  </div>
               </div>
            </div>

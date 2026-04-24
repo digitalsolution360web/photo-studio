@@ -34,7 +34,7 @@ export default function StudioPhotographyPage() {
         {/* Simple & Clean Hero */}
         <section className="relative py-12 md:py-20 bg-[#0a0a0b] text-white">
           <div className="absolute inset-0">
-             <Image src="/stu1.webp" alt="Studio Hero" fill className="object-cover opacity-20" priority />
+             <Image src="/florines/Florine'scommu.webp" alt="Studio Hero" fill className="object-cover opacity-20" priority />
              <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/80 via-[#0a0a0b] to-[#0a0a0b]"></div>
           </div>
           
@@ -55,18 +55,18 @@ export default function StudioPhotographyPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                  {/* Main large image */}
                  <div className="md:col-span-2 relative aspect-[16/10] rounded-3xl overflow-hidden shadow-lg border border-slate-100">
-                    <Image src="/stu1.webp" alt="Featured" fill className="object-cover" />
+                    <Image src="/jassi-album/Jessy%20Al.webp" alt="Featured" fill className="object-cover" />
                  </div>
                  
                  {/* Side images */}
                  <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100">
-                    <Image src="/stu3.webp" alt="Studio 3" fill className="object-cover" />
+                    <Image src="/jassi-album/Jessy%20Alb.webp" alt="Studio 3" fill className="object-cover" />
                  </div>
                  <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100">
-                    <Image src="/stu.webp" alt="Studio 2" fill className="object-cover" />
+                    <Image src="/jassi-album/Jessy%20Albu.webp" alt="Studio 2" fill className="object-cover" />
                  </div>
                  <div className="md:col-span-2 relative aspect-[16/7] rounded-3xl overflow-hidden shadow-lg border border-slate-100">
-                    <Image src="/stud2.webp" alt="Studio 4" fill className="object-cover" />
+                    <Image src="/jassi-album/Jessy%20Album.webp" alt="Studio 4" fill className="object-cover" />
                  </div>
               </div>
            </div>
