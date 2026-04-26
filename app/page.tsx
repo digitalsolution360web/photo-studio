@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { HeroSlider } from "@/components/HeroSlider";
+import { YouTubeButton } from "@/components/YouTubeButton";
 import {
   Camera,
   Film,
@@ -189,7 +190,7 @@ export default function Home() {
                     {service.icon}
                   </div>
 
-                  <div className="space-y-3 relative z-10">
+                  <div className="space-y-3 relative z-10 w-full">
                     <h4 className="text-xl font-heading font-extrabold text-primary leading-tight">
                       {service.title}
                     </h4>
@@ -216,7 +217,7 @@ export default function Home() {
 
                 {/* Years badge - More stable positioning */}
                 <div className="absolute -bottom-4 -right-4 lg:-bottom-10 lg:-left-10 lg:right-auto bg-primary text-white p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] shadow-[0_30px_60px_rgba(0,0,0,0.4)] z-20 border border-white/5 backdrop-blur-sm">
-                  <p className="text-3xl md:text-5xl font-heading font-extrabold text-secondary leading-none">15+</p>
+                  <p className="text-3xl md:text-5xl font-heading font-extrabold text-secondary leading-none">33+</p>
                   <p className="text-[7px] md:text-[10px] uppercase tracking-[0.3em] font-bold opacity-60 mt-2">Years of Legacy</p>
                 </div>
               </div>
@@ -243,6 +244,41 @@ export default function Home() {
                       <p className="text-sm md:text-base text-slate-600 font-medium group-hover:text-primary transition-colors">{item}</p>
                     </div>
                   ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Cinematic Video Showcase */}
+        <section className="py-24 bg-white overflow-hidden">
+          <div className="container mx-auto px-6 md:px-12">
+            <div className="text-center mb-12 space-y-4">
+              <span className="text-secondary font-bold uppercase tracking-[0.4em] text-xs block">Cinematic Experience</span>
+              <h2 className="text-3xl md:text-5xl font-heading font-extrabold text-primary leading-tight tracking-tighter">Feel The Emotion</h2>
+              <p className="text-slate-500 font-light text-base md:text-lg max-w-2xl mx-auto">Every frame we capture is designed to bring you back to the exact moment, the exact feeling.</p>
+            </div>
+            
+            <div className="relative rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.15)] bg-slate-900 group max-w-6xl mx-auto border border-slate-100">
+              <video 
+                src="/3.mp4" 
+                controls
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="w-full h-auto block"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-transparent to-transparent opacity-80 transition-opacity duration-700 pointer-events-none"></div>
+              
+              {/* Overlay elements */}
+              <div className="absolute top-6 left-6 md:top-10 md:left-10 z-10 flex items-center gap-4 transition-transform duration-700 pointer-events-none">
+                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30 text-white shadow-xl">
+                  <Video className="w-5 h-5 md:w-6 md:h-6 ml-1" />
+                </div>
+                <div>
+                  <h3 className="text-white font-heading font-extrabold text-lg md:text-xl tracking-tight drop-shadow-md">Cinematic Highlight</h3>
+                  <p className="text-white/80 text-xs md:text-sm font-bold tracking-widest uppercase mt-1 drop-shadow-md">Max Photo Films</p>
                 </div>
               </div>
             </div>

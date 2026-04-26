@@ -42,34 +42,79 @@ export default function CollagesBlowupsPage() {
           </div>
         </section>
 
-        {/* Gallery - Artistic Grid */}
-        <section className="py-12 bg-white">
+        {/* Gallery - Premium Bento Showcase */}
+        <section className="py-16 md:py-24 bg-white overflow-hidden">
            <div className="container mx-auto px-6 md:px-12">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                 {/* Featured image */}
-                 <div className="md:col-span-2 relative aspect-[16/10] rounded-3xl overflow-hidden shadow-2xl border border-slate-100 group">
-                    <Image src="/keith-album/Keith's%20Communion.webp" alt="Collage Featured" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-end p-8">
-                       <div className="flex items-center gap-3 text-white">
-                          <Maximize size={20} className="text-secondary" />
-                          <span className="font-bold uppercase tracking-widest text-xs">High Resolution Blow-Ups</span>
-                       </div>
+              <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                 <div className="space-y-4 max-w-2xl">
+                    <span className="text-secondary font-bold uppercase tracking-[0.3em] text-[10px]">Curated Portfolio</span>
+                    <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-primary tracking-tighter leading-tight">
+                       Artistic <span className="text-secondary italic">Masterpieces</span>
+                    </h2>
+                    <p className="text-slate-500 font-light leading-relaxed">A refined collection of custom designs and large-format blow-ups, crafted with precision and passion.</p>
+                 </div>
+                 <div className="hidden md:block">
+                    <div className="w-24 h-px bg-slate-200"></div>
+                 </div>
+              </div>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                 {/* Main Feature */}
+                 <div className="col-span-2 row-span-2 relative aspect-[4/5] md:aspect-auto rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl group border border-slate-100">
+                    <Image src="/Coll-blow-up/Carl%20Collage4.webp" alt="Featured Collage" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 md:p-12">
+                       <span className="text-secondary font-bold text-[10px] uppercase tracking-widest mb-2">Editor's Choice</span>
+                       <h3 className="text-white text-2xl font-heading font-bold">Premium Multi-Photo Composition</h3>
                     </div>
                  </div>
-                 
-                 {/* Side images */}
-                 <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/kristin/Kristine_Cover.webp" alt="Collage 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+
+                 {/* Top Right Items */}
+                 <div className="relative aspect-square rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg group border border-slate-100">
+                    <Image src="/keith-album/Keith's%20Communion.webp" alt="Art 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div className="absolute inset-0 bg-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                  </div>
-                 <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/kristin/Kristine_Page.webp" alt="Collage 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                 <div className="relative aspect-square rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg group border border-slate-100">
+                    <Image src="/Coll-blow-up/Blow-Ups-1.webp" alt="Art 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                  </div>
-                 <div className="md:col-span-2 relative aspect-[16/7] rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/kristin/Kristine_Page_.webp" alt="Collage 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+
+                 {/* Middle Row */}
+                 <div className="col-span-2 relative aspect-[21/9] rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg group border border-slate-100">
+                    <Image src="/Coll-blow-up/Blow-Ups3.webp" alt="Art 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                       <p className="text-white text-sm font-medium italic">"Large scale excellence."</p>
+                    </div>
+                 </div>
+
+                 {/* Bottom Grid */}
+                 <div className="relative aspect-square rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg group border border-slate-100">
+                    <Image src="/kristin/Kristine_Cover.webp" alt="Art 4" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                 </div>
+                 <div className="relative aspect-square rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg group border border-slate-100">
+                    <Image src="/Coll-blow-up/Blow-Ups2.webp" alt="Art 5" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                 </div>
+                 <div className="relative aspect-square rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg group border border-slate-100">
+                    <Image src="/Coll-blow-up/Blow-Ups5.webp" alt="Art 6" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                 </div>
+                 <div className="relative aspect-square rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg group border border-slate-100">
+                    <Image src="/kristin/Kristine_Page.webp" alt="Art 7" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                 </div>
+
+                 {/* Final Large Piece */}
+                 <div className="col-span-2 relative aspect-[16/7] rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg group border border-slate-100">
+                    <Image src="/Coll-blow-up/Blow-Ups7.webp" alt="Art 8" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                 </div>
+                 <div className="relative aspect-square rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg group border border-slate-100">
+                    <Image src="/Coll-blow-up/Blow-Ups6.webp" alt="Art 9" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                 </div>
+                 <div className="relative aspect-square rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg group border border-slate-100">
+                    <Image src="/kristin/Kristine_Page_.webp" alt="Art 10" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                  </div>
               </div>
            </div>
         </section>
+
+        {/* Features & Stats */}
 
         {/* Features & Stats */}
         <section className="py-12 md:py-16 bg-slate-50 border-y border-slate-100">

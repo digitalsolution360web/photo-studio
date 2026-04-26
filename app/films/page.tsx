@@ -109,12 +109,6 @@ export default function FilmsPage() {
 
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-40 transition-opacity duration-500"></div>
                     
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/20 transform transition-all duration-500 group-hover:scale-110 group-hover:bg-secondary group-hover:border-secondary shadow-2xl">
-                        <Play fill="white" size={28} className="ml-1" />
-                      </div>
-                    </div>
-                    
                     <div className="absolute bottom-6 left-10 flex items-center gap-3">
                         <div className="w-10 h-[1px] bg-secondary"></div>
                         <span className="text-[10px] font-bold text-white/50 uppercase tracking-[0.3em]">{film.duration} MINUTE STORY</span>

@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import Image from "next/image";
-import { Camera, CheckCircle2, ArrowRight, Heart } from "lucide-react";
+import { Camera, CheckCircle2, ArrowRight, Heart, Play } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
 import { Counter } from "@/components/Counter";
@@ -72,6 +72,28 @@ export default function StudioPhotographyPage() {
            </div>
         </section>
 
+        {/* YouTube Video Showcase */}
+        <section className="py-12 md:py-16 bg-white">
+           <div className="container mx-auto px-6 md:px-12">
+              <div className="relative group rounded-[3rem] overflow-hidden aspect-video max-w-5xl mx-auto shadow-2xl border border-slate-100">
+                 <Image src="/stu.webp" alt="Watch Studio Video" fill className="object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80" />
+                 <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent flex flex-col items-center justify-center p-8 text-center">
+                    <Link 
+                       href="https://youtu.be/FUZCWJPiygI?si=SnMrsnZscQnzsujp" 
+                       target="_blank"
+                       className="w-20 h-20 bg-secondary text-white rounded-full flex items-center justify-center shadow-2xl scale-100 hover:scale-110 transition-all group/play"
+                    >
+                       <Play fill="currentColor" size={32} className="ml-1" />
+                    </Link>
+                    <div className="mt-8 space-y-2">
+                       <h3 className="text-white text-2xl md:text-3xl font-heading font-extrabold tracking-tight">Watch Our Studio Showcase</h3>
+                       <p className="text-white/70 text-sm font-medium uppercase tracking-[0.2em]">Experience the Art of Portraits on YouTube</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </section>
+
         {/* Features & Stats - Compact */}
         <section className="py-12 md:py-16 bg-slate-50 border-y border-slate-100">
            <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-12">
@@ -81,7 +103,7 @@ export default function StudioPhotographyPage() {
                     <p className="text-[10px] uppercase tracking-widest font-bold text-slate-400 mt-1">Unique Sets</p>
                  </div>
                  <div>
-                    <Counter from={0} to={15} suffix="+" className="text-4xl font-heading font-extrabold text-primary" />
+                    <Counter from={0} to={33} suffix="+" className="text-4xl font-heading font-extrabold text-primary" />
                     <p className="text-[10px] uppercase tracking-widest font-bold text-slate-400 mt-1">Years Mastery</p>
                  </div>
               </div>

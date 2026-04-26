@@ -14,6 +14,7 @@ import {
   Gift,
   ArrowUpRight
 } from "lucide-react";
+import { YouTubeButton } from "@/components/YouTubeButton";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -148,7 +149,7 @@ export default function ServicesPage() {
                            </p>
                         </div>
 
-                        <div className="pt-2 w-full relative z-10">
+                        <div className="pt-2 w-full relative z-10 flex flex-wrap gap-4 items-center">
                            <div className="text-[10px] uppercase tracking-widest font-bold text-slate-400 group-hover:text-primary transition-all flex items-center gap-2">
                               {service.href !== "/services" ? "View Details" : "Inquire Now"} <ArrowUpRight size={12} />
                            </div>

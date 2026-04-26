@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import Image from "next/image";
-import { Users, CheckCircle2, ArrowRight, Sparkles, MapPin, Calendar } from "lucide-react";
+import { Users, CheckCircle2, ArrowRight, Sparkles, MapPin, Calendar, Play } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
 import { Counter } from "@/components/Counter";
@@ -81,7 +81,7 @@ export default function EventPhotographyPage() {
                     <p className="text-[10px] uppercase tracking-widest font-bold text-slate-400 mt-1">Events covered</p>
                  </div>
                  <div>
-                    <Counter from={0} to={15} suffix="+" className="text-4xl font-heading font-extrabold text-primary" />
+                    <Counter from={0} to={33} suffix="+" className="text-4xl font-heading font-extrabold text-primary" />
                     <p className="text-[10px] uppercase tracking-widest font-bold text-slate-400 mt-1">Years Legacy</p>
                  </div>
               </div>

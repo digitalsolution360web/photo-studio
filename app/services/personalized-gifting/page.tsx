@@ -42,34 +42,56 @@ export default function PersonalizedGiftingPage() {
           </div>
         </section>
 
-        {/* Gallery - Product Showcase */}
-        <section className="py-12 bg-white">
+        {/* Gallery - Luxury Lookbook */}
+        <section className="py-16 md:py-24 bg-white overflow-hidden">
            <div className="container mx-auto px-6 md:px-12">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                 {/* Featured image */}
-                 <div className="md:col-span-2 relative aspect-[16/10] rounded-3xl overflow-hidden shadow-2xl border border-slate-100 group">
-                    <Image src="/wedding/Page.webp" alt="Gifting Featured" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-                    <div className="absolute top-6 left-6 z-20">
-                       <div className="bg-white/90 backdrop-blur-md px-4 py-2 rounded-full flex items-center gap-2 shadow-lg">
-                          <Gift size={14} className="text-secondary" />
-                          <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Handcrafted with Love</span>
+              <div className="flex flex-col items-center text-center mb-20 space-y-4">
+                 <span className="text-secondary font-bold uppercase tracking-[0.4em] text-[10px]">The Gifting Suite</span>
+                 <h2 className="text-4xl md:text-6xl font-heading font-extrabold text-primary tracking-tight">
+                    Heartfelt <span className="text-secondary">Keep-sakes</span>
+                 </h2>
+                 <div className="w-12 h-1 bg-secondary rounded-full mt-4"></div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-start">
+                 {/* Large Showcase Item */}
+                 <div className="md:col-span-8 group relative rounded-[3rem] overflow-hidden shadow-2xl border border-slate-100 aspect-video md:aspect-auto md:h-[600px]">
+                    <Image src="/personlized/personalized-gifting-1.webp" alt="Signature Gift" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent flex items-end p-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                       <div className="space-y-3">
+                          <span className="bg-white text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Premium Choice</span>
+                          <h3 className="text-white text-3xl font-heading font-bold">Custom Photo Mugs & Sets</h3>
                        </div>
                     </div>
                  </div>
-                 
-                 {/* Side images */}
-                 <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/wedding/Page_0.webp" alt="Gift Item 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+
+                 {/* Side Column Items */}
+                 <div className="md:col-span-4 flex flex-col gap-6 md:gap-8">
+                    <div className="group relative rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 aspect-square">
+                       <Image src="/personlized/personalized-gifting-2.webp" alt="Gift 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    </div>
+                    <div className="group relative rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 aspect-square">
+                       <Image src="/personlized/personalized-gifting-3.webp" alt="Gift 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    </div>
                  </div>
-                 <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/wedding/Page_00.webp" alt="Gift Item 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+
+                 {/* Wide Product Shot */}
+                 <div className="md:col-span-12 group relative rounded-[3rem] overflow-hidden shadow-2xl border border-slate-100 aspect-[21/9]">
+                    <Image src="/personlized/personalized-gifting-6.webp" alt="Wide Feature" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
                  </div>
-                 <div className="md:col-span-2 relative aspect-[16/7] rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/aeron-album/Aaron%20Album.webp" alt="Gift Item 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+
+                 {/* Final Row Items */}
+                 <div className="md:col-span-6 group relative rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 aspect-video">
+                    <Image src="/personlized/personalized-gifting-4.webp" alt="Gift 4" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                 </div>
+                 <div className="md:col-span-6 group relative rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 aspect-video">
+                    <Image src="/personlized/personalized-gifting-5.webp" alt="Gift 5" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                  </div>
               </div>
            </div>
         </section>
+
+        {/* Features & Stats */}
 
         {/* Features & Stats */}
         <section className="py-12 md:py-16 bg-slate-50 border-y border-slate-100">

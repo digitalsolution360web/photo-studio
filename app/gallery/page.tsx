@@ -184,7 +184,7 @@ export default function GalleryPage() {
                 { label: "Wedding Stories", value: 500, icon: <Heart className="text-secondary" size={24} /> },
                 { label: "Cinematic Films", value: 200, icon: <Film className="text-secondary" size={24} /> },
                 { label: "Happy Couples",   value: 1200, icon: <Camera className="text-secondary" size={24} /> },
-                { label: "Legacy Years",    value: 15,   icon: <Sparkles className="text-secondary" size={24} /> },
+                { label: "Legacy Years",    value: 33,   icon: <Sparkles className="text-secondary" size={24} /> },
               ].map((stat, i) => (
                 <div key={i} className="bg-slate-50 p-10 rounded-[3rem] text-center space-y-4 border border-slate-100 hover:bg-white hover:shadow-xl transition-all duration-500">
                   <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mx-auto shadow-sm">

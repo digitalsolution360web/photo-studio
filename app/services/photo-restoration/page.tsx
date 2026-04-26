@@ -42,34 +42,67 @@ export default function PhotoRestorationPage() {
           </div>
         </section>
 
-        {/* Gallery - Before/After Vibe */}
-        <section className="py-12 bg-white">
+        {/* Gallery - Cinematic History Gallery */}
+        <section className="py-16 md:py-24 bg-[#fafafa] overflow-hidden">
            <div className="container mx-auto px-6 md:px-12">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                 {/* Featured image */}
-                 <div className="md:col-span-2 relative aspect-[16/10] rounded-3xl overflow-hidden shadow-2xl border border-slate-100 group">
-                    <Image src="/aeron-album/Aeron%20Album.webp" alt="Restoration Featured" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-                    <div className="absolute top-6 right-6 z-20">
-                       <div className="bg-secondary text-white px-4 py-2 rounded-full flex items-center gap-2 shadow-lg animate-pulse">
-                          <Wand2 size={14} />
-                          <span className="text-[10px] font-bold uppercase tracking-widest">Master Restoration</span>
-                       </div>
+              <div className="flex flex-col md:flex-row items-center justify-between mb-16 gap-8">
+                 <div className="md:w-1/2 space-y-4">
+                    <span className="text-secondary font-bold uppercase tracking-[0.4em] text-[10px]">The Restoration Archive</span>
+                    <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-primary tracking-tight leading-tight">
+                       Preserving <span className="text-secondary italic">Legacies</span>
+                    </h2>
+                 </div>
+                 <div className="md:w-1/2">
+                    <p className="text-slate-500 font-light leading-relaxed max-w-md">Our specialized process combines historical accuracy with modern digital artistry to bring your most precious memories back to life.</p>
+                 </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                 {/* Main Story Item */}
+                 <div className="md:col-span-2 group relative rounded-[3rem] overflow-hidden shadow-2xl border border-white/50 aspect-[4/3] md:aspect-auto md:h-[500px]">
+                    <Image src="/coloursing/Colouring-restoration-1.webp" alt="Master Restoration" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                       <h3 className="text-white text-2xl font-heading font-bold mb-2">Master Color Reconstruction</h3>
+                       <p className="text-white/70 text-sm">Historically accurate colorization process.</p>
                     </div>
                  </div>
-                 
-                 {/* Side images */}
-                 <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/aeron-album/Aeronalbum.webp" alt="Restoration 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+
+                 {/* Side Item */}
+                 <div className="group relative rounded-[2.5rem] overflow-hidden shadow-xl border border-white/50 aspect-square md:aspect-auto">
+                    <Image src="/aeron-album/Aeron%20Album.webp" alt="Restoration 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                  </div>
-                 <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/birthday/Dalreen%20Birthda.webp" alt="Restoration 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+
+                 {/* Bottom Row */}
+                 <div className="group relative rounded-[2.5rem] overflow-hidden shadow-xl border border-white/50 aspect-square">
+                    <Image src="/coloursing/Colouring-restoration-2.webp" alt="Restoration 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                  </div>
-                 <div className="md:col-span-2 relative aspect-[16/7] rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/birthday/Dalreen%20Birthday.webp" alt="Restoration 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                 <div className="group relative rounded-[2.5rem] overflow-hidden shadow-xl border border-white/50 aspect-square">
+                    <Image src="/aeron-album/Aeronalbum.webp" alt="Restoration 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                 </div>
+                 <div className="group relative rounded-[2.5rem] overflow-hidden shadow-xl border border-white/50 aspect-square">
+                    <Image src="/coloursing/Colouring-restoration-3.webp" alt="Restoration 4" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                 </div>
+
+                 {/* Extra Items for Breadth */}
+                 <div className="group relative rounded-[2.5rem] overflow-hidden shadow-xl border border-white/50 aspect-square">
+                    <Image src="/birthday/Dalreen%20Birthda.webp" alt="Restoration 5" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                 </div>
+                 <div className="group relative rounded-[2.5rem] overflow-hidden shadow-xl border border-white/50 aspect-square">
+                    <Image src="/coloursing/Colouring-restoration-4.webp" alt="Restoration 6" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                 </div>
+                 <div className="group relative rounded-[2.5rem] overflow-hidden shadow-xl border border-white/50 aspect-square">
+                    <Image src="/birthday/Dalreen%20Birthday.webp" alt="Restoration 7" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                 </div>
+
+                 {/* Final Wide Shot */}
+                 <div className="md:col-span-3 group relative rounded-[3rem] overflow-hidden shadow-2xl border border-white/50 aspect-[21/9]">
+                    <Image src="/coloursing/Colouring-restoration-5.webp" alt="Restoration Wide" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
                  </div>
               </div>
            </div>
         </section>
+
+        {/* Features & Stats */}
 
         {/* Features & Stats */}
         <section className="py-12 md:py-16 bg-slate-50 border-y border-slate-100">

@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import Image from "next/image";
-import { Film, CheckCircle2, Heart, Sparkles, MapPin } from "lucide-react";
+import { Film, CheckCircle2, Heart, Sparkles, MapPin, Play } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
 import { Counter } from "@/components/Counter";
@@ -66,6 +66,28 @@ export default function PreWeddingPage() {
                  </div>
                  <div className="md:col-span-2 relative aspect-[16/7] rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
                     <Image src="/florines/Florine's%20Communion.webp" alt="Pre-Wedding 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                 </div>
+              </div>
+           </div>
+        </section>
+
+        {/* YouTube Video Showcase */}
+        <section className="py-12 md:py-16 bg-white">
+           <div className="container mx-auto px-6 md:px-12">
+              <div className="relative group rounded-[3rem] overflow-hidden aspect-video max-w-5xl mx-auto shadow-2xl border border-slate-100">
+                 <Image src="/kristin/Kristine_Cover.webp" alt="Watch Pre-Wedding Video" fill className="object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80" />
+                 <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent flex flex-col items-center justify-center p-8 text-center">
+                    <Link 
+                       href="https://youtu.be/h5UJvhwLh2o?si=f-1R8MkyNa2dGZai" 
+                       target="_blank"
+                       className="w-20 h-20 bg-secondary text-white rounded-full flex items-center justify-center shadow-2xl scale-100 hover:scale-110 transition-all group/play"
+                    >
+                       <Play fill="currentColor" size={32} className="ml-1" />
+                    </Link>
+                    <div className="mt-8 space-y-2">
+                       <h3 className="text-white text-2xl md:text-3xl font-heading font-extrabold tracking-tight">Watch Our Pre-Wedding Film</h3>
+                       <p className="text-white/70 text-sm font-medium uppercase tracking-[0.2em]">Romantic Stories on YouTube</p>
+                    </div>
                  </div>
               </div>
            </div>
