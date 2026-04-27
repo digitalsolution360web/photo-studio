@@ -74,24 +74,18 @@ export default function PhotoRestorationPage() {
 
                  {/* Bottom Row */}
                  <div className="group relative rounded-[2.5rem] overflow-hidden shadow-xl border border-white/50 aspect-square">
-                    <Image src="/coloursing/Colouring-restoration-2.webp" alt="Restoration 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <Image src="/coloursing/Colouring-restoration-3.webp" alt="Restoration 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                  </div>
                  <div className="group relative rounded-[2.5rem] overflow-hidden shadow-xl border border-white/50 aspect-square">
-                    <Image src="/aeron-album/Aeronalbum.webp" alt="Restoration 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <Image src="/birthday/Dalreen%20Birthda.webp" alt="Restoration 4" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                  </div>
                  <div className="group relative rounded-[2.5rem] overflow-hidden shadow-xl border border-white/50 aspect-square">
-                    <Image src="/coloursing/Colouring-restoration-3.webp" alt="Restoration 4" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <Image src="/coloursing/Colouring-restoration-4.webp" alt="Restoration 5" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                  </div>
 
-                 {/* Extra Items for Breadth */}
-                 <div className="group relative rounded-[2.5rem] overflow-hidden shadow-xl border border-white/50 aspect-square">
-                    <Image src="/birthday/Dalreen%20Birthda.webp" alt="Restoration 5" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-                 </div>
-                 <div className="group relative rounded-[2.5rem] overflow-hidden shadow-xl border border-white/50 aspect-square">
-                    <Image src="/coloursing/Colouring-restoration-4.webp" alt="Restoration 6" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-                 </div>
-                 <div className="group relative rounded-[2.5rem] overflow-hidden shadow-xl border border-white/50 aspect-square">
-                    <Image src="/birthday/Dalreen%20Birthday.webp" alt="Restoration 7" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                 {/* Extra Item Adjusted */}
+                 <div className="md:col-span-3 group relative rounded-[3rem] overflow-hidden shadow-xl border border-white/50 aspect-[21/9]">
+                    <Image src="/birthday/Dalreen%20Birthday.webp" alt="Restoration 6" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                  </div>
 
                  {/* Final Wide Shot */}

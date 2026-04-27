@@ -42,27 +42,51 @@ export default function CandidPhotographyPage() {
           </div>
         </section>
 
-        {/* Gallery - Editorial Layout */}
-        <section className="py-12 bg-white">
+        {/* Gallery - Premium Bento Showcase */}
+        <section className="py-16 md:py-28 bg-white overflow-hidden">
            <div className="container mx-auto px-6 md:px-12">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                 {/* Featured image */}
-                 <div className="md:col-span-2 relative aspect-[16/10] rounded-3xl overflow-hidden shadow-2xl border border-slate-100 group">
-                    <Image src="/jassi-album/Jessy%20Albu.webp" alt="Candid Featured" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
-                       <p className="text-white font-medium italic">"Every smile tells a story."</p>
+              <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
+                 <div className="max-w-2xl space-y-4 text-left">
+                    <span className="text-secondary font-bold uppercase tracking-[0.4em] text-[10px]">Visual Storytelling</span>
+                    <h2 className="text-4xl md:text-6xl font-heading font-extrabold text-primary tracking-tighter leading-none">
+                       The Art of <span className="text-secondary italic">Moments</span>
+                    </h2>
+                    <p className="text-slate-500 font-light text-lg">Capturing the unseen, the unscripted, and the unforgettable through an artistic lens.</p>
+                 </div>
+                 <div className="hidden md:block">
+                    <div className="w-24 h-px bg-slate-200"></div>
+                 </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8">
+                 {/* Featured - Large Left */}
+                 <div className="md:col-span-8 relative aspect-[4/5] md:aspect-auto md:h-[700px] rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden shadow-2xl group border border-slate-100">
+                    <Image src="/jassi-album/Jessy%20Al.webp" alt="Candid Masterpiece" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8 md:p-14 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                       <span className="text-secondary font-bold text-[10px] uppercase tracking-widest mb-2">Featured Masterpiece</span>
+                       <h3 className="text-white text-3xl md:text-4xl font-heading font-bold">Soulful Expressions</h3>
                     </div>
                  </div>
-                 
-                 {/* Side images */}
-                 <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/jassi-album/Jessy%20Album.webp" alt="Candid 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+
+                 {/* Right Column Stack */}
+                 <div className="md:col-span-4 flex flex-col gap-6 md:gap-8">
+                    <div className="relative aspect-square rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl border border-slate-100 group">
+                       <Image src="/keith-album/Keith's%20Communion.webp" alt="Candid 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    </div>
+                    <div className="relative aspect-square rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl border border-slate-100 group">
+                       <Image src="/jassi-album/Jessy%20Album.webp" alt="Candid 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    </div>
                  </div>
-                 <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/keith-album/Keith's%20Comm.webp" alt="Candid 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+
+                 {/* Bottom Row */}
+                 <div className="md:col-span-4 relative aspect-[3/4] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl border border-slate-100 group">
+                    <Image src="/keith-album/Keith's%20Communio.webp" alt="Candid 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                  </div>
-                 <div className="md:col-span-2 relative aspect-[16/7] rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                    <Image src="/keith-album/Keith's%20Commun.webp" alt="Candid 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                 <div className="md:col-span-8 relative aspect-[16/9] md:aspect-auto rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl border border-slate-100 group">
+                    <Image src="/keith-album/Keith's%20Commun.webp" alt="Candid 4" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center p-8 text-center">
+                       <p className="text-white text-xl md:text-2xl font-medium italic max-w-md">"Every smile tells a story, and every moment is a masterpiece waiting to be captured."</p>
+                    </div>
                  </div>
               </div>
            </div>
