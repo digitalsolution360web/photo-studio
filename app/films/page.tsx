@@ -55,6 +55,7 @@ export default function FilmsPage() {
                 alt="Cinematography" 
                 fill 
                 className="object-cover opacity-40 grayscale hover:grayscale-0 transition-all duration-1000"
+                sizes="100vw"
              />
              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0b] via-transparent to-transparent"></div>
            </div>
@@ -101,6 +102,7 @@ export default function FilmsPage() {
                       alt={film.title} 
                       fill 
                       className="object-cover transition-transform duration-1000 group-hover:scale-110" 
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     {/* Glass Tag */}
                     <div className="absolute top-6 left-6 px-4 py-1.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-[9px] font-bold uppercase tracking-[0.2em] text-white z-20">

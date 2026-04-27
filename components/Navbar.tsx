@@ -52,6 +52,7 @@ export function Navbar() {
               alt="Max Photo Studio"
               fill
               className="object-contain"
+              sizes="(max-width: 768px) 128px, 176px"
               priority
             />
           </div>
@@ -108,7 +109,13 @@ export function Navbar() {
           >
             <div className="flex justify-between items-center mb-16">
               <div className="relative w-32 h-10">
-                <Image src="/logo.jpeg" alt="Logo" fill className="object-contain" />
+                <Image 
+                  src="/logo.jpeg" 
+                  alt="Logo" 
+                  fill 
+                  className="object-contain" 
+                  sizes="128px"
+                />
               </div>
               <button onClick={() => setMobileMenuOpen(false)} className="text-white p-2">
                 <X size={32} />

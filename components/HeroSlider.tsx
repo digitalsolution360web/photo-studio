@@ -42,6 +42,7 @@ export function HeroSlider() {
                 fill
                 className="object-cover object-center scale-105"
                 priority={index === 0}
+                sizes="100vw"
               />
             </div>
           </SwiperSlide>

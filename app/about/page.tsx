@@ -24,6 +24,7 @@ export default function AboutPage() {
               alt="Cinematic Background"
               fill
               className="object-cover opacity-30 scale-105"
+              sizes="100vw"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-transparent to-primary"></div>
           </div>
@@ -51,7 +52,13 @@ export default function AboutPage() {
                 <div className="relative p-2">
                   <div className="absolute -top-6 -left-6 w-32 h-32 bg-secondary/5 rounded-full blur-3xl"></div>
                   <div className="rounded-[3rem] overflow-hidden shadow-[0_30px_70px_rgba(0,0,0,0.15)] relative z-10 aspect-[4/5]">
-                    <Image src="/aeron-album/Aaron%20Album%60_Page_024.jpg" alt="Max Photo Studio Legacy" fill className="object-cover" />
+                    <Image 
+                      src="/aeron-album/Aaron%20Album%60_Page_024.jpg" 
+                      alt="Max Photo Studio Legacy" 
+                      fill 
+                      className="object-cover" 
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
                   </div>
                   {/* Stats overlay */}
                   <div className="absolute -bottom-10 -right-10 bg-white p-10 rounded-[2.5rem] shadow-2xl border border-slate-50 z-20 hidden md:block">

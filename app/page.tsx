@@ -251,27 +251,27 @@ export default function Home() {
         </section>
 
         {/* Cinematic Video Showcase */}
-        <section className="py-24 bg-white overflow-hidden">
+        {/* <section className="py-24 bg-white overflow-hidden">
           <div className="container mx-auto px-6 md:px-12">
             <div className="text-center mb-12 space-y-4">
               <span className="text-secondary font-bold uppercase tracking-[0.4em] text-xs block">Cinematic Experience</span>
               <h2 className="text-3xl md:text-5xl font-heading font-extrabold text-primary leading-tight tracking-tighter">Feel The Emotion</h2>
               <p className="text-slate-500 font-light text-base md:text-lg max-w-2xl mx-auto">Every frame we capture is designed to bring you back to the exact moment, the exact feeling.</p>
             </div>
-            
+
             <div className="relative rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.15)] bg-slate-900 group max-w-6xl mx-auto border border-slate-100">
-              <video 
-                src="/3.mp4" 
+              <video
+                src="/3.mp4"
                 controls
-                autoPlay 
-                loop 
-                muted 
+                autoPlay
+                loop
+                muted
                 playsInline
                 className="w-full h-auto block"
               />
               <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-transparent to-transparent opacity-80 transition-opacity duration-700 pointer-events-none"></div>
+
               
-              {/* Overlay elements */}
               <div className="absolute top-6 left-6 md:top-10 md:left-10 z-10 flex items-center gap-4 transition-transform duration-700 pointer-events-none">
                 <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30 text-white shadow-xl">
                   <Video className="w-5 h-5 md:w-6 md:h-6 ml-1" />
@@ -283,7 +283,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Recent Masterpieces Showcase - NEW PREMIUM SECTION */}
         <section className="py-24 bg-slate-50 overflow-hidden">
