@@ -211,8 +211,8 @@ export default function Home() {
               {/* Image Container First on Mobile */}
               <div className="w-full lg:w-1/2 relative p-4 order-1 lg:order-1">
                 <div className="absolute inset-0 bg-slate-50 rounded-[2.5rem] translate-x-3 translate-y-3 md:translate-x-4 md:translate-y-4"></div>
-                <div className="relative z-10 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden shadow-2xl aspect-[4/3] md:aspect-square bg-slate-100 max-w-[500px] mx-auto lg:ml-0">
-                  <Image src="/kristin/Kristine_Cover.webp" alt="Why Couples Trust Us" fill className="object-cover" sizes="(max-width: 768px) 100vw, 500px" />
+                <div className="relative z-10 rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl aspect-[2.2/1] bg-slate-50 max-w-[700px] mx-auto lg:ml-0">
+                  <Image src="/kristin/Kristine_Cover.webp" alt="Why Couples Trust Us" fill className="object-cover" sizes="(max-width: 768px) 100vw, 700px" />
                 </div>
 
                 {/* Years badge - More stable positioning */}
@@ -309,7 +309,7 @@ export default function Home() {
                 { src: "/birthday/Dalreen%20Birthday.webp", cat: "Celebration", title: "Joyful Spirit" },
                 { src: "/keith-album/Keith%27s%20Communion.webp", cat: "Event", title: "Legacy Celebration" }
               ].map((item, i) => (
-                <div key={i} className="group relative rounded-[2.5rem] overflow-hidden shadow-lg aspect-[4/5] bg-slate-200">
+                <div key={i} className="group relative rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg aspect-[2.2/1] bg-slate-100 border border-slate-100">
                   <Image
                     src={item.src}
                     alt={item.title}
@@ -317,9 +317,9 @@ export default function Home() {
                     className="object-cover transition-transform duration-1000 group-hover:scale-110"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 p-8 flex flex-col justify-end">
-                    <span className="text-secondary font-bold uppercase tracking-widest text-[10px] mb-2 block">{item.cat}</span>
-                    <h4 className="text-white text-2xl font-heading font-extrabold tracking-tight">{item.title}</h4>
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 p-6 flex flex-col justify-end">
+                    <span className="text-secondary font-bold uppercase tracking-widest text-[9px] mb-1 block">{item.cat}</span>
+                    <h4 className="text-white text-xl font-heading font-extrabold tracking-tight">{item.title}</h4>
                   </div>
                 </div>
               ))}

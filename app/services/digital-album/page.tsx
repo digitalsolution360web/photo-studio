@@ -27,7 +27,7 @@ export default function DigitalAlbumPage() {
             {/* Heritage Hero */}
             <section className="relative py-12 md:py-20 bg-[#0a0a0b] text-white">
                <div className="absolute inset-0">
-                  <Image src="/kristin/Kristine_Page_00.webp" alt="Album Hero" fill className="object-cover opacity-20" priority />
+                  <Image src="/kristin/Kristine_Page_00.webp" alt="Album Hero" fill className="object-cover opacity-20" priority sizes="100vw" />
                   <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/80 via-[#0a0a0b] to-[#0a0a0b]"></div>
                </div>
 
@@ -48,19 +48,19 @@ export default function DigitalAlbumPage() {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                      {/* Featured image */}
                      <div className="md:col-span-2 relative aspect-[16/10] rounded-3xl overflow-hidden shadow-2xl border border-slate-100 group">
-                        <Image src="/lalia-album/Lilia%20M.webp" alt="Album Featured" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                        <Image src="/lalia-album/Lilia%20M.webp" alt="Album Featured" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 800px" />
                         <div className="absolute inset-0 bg-gradient-to-tr from-secondary/20 to-transparent pointer-events-none"></div>
                      </div>
 
                      {/* Side images */}
                      <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                        <Image src="/lalia-album/Lilia%20Maa.webp" alt="Album 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                        <Image src="/lalia-album/Lilia%20Maa.webp" alt="Album 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px" />
                      </div>
                      <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                        <Image src="/lalia-album/Lilia%20Maam.webp" alt="Album 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                        <Image src="/lalia-album/Lilia%20Maam.webp" alt="Album 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px" />
                      </div>
                      <div className="md:col-span-2 relative aspect-[16/7] rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                        <Image src="/lalia-album/Lilia%20Maam_Pa.webp" alt="Album 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                        <Image src="/lalia-album/Lilia%20Maam_Pa.webp" alt="Album 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 800px" />
                      </div>
                   </div>
                </div>
@@ -69,40 +69,23 @@ export default function DigitalAlbumPage() {
             {/* YouTube Video Showcase */}
             <section className="py-12 md:py-16 bg-white">
                <div className="container mx-auto px-6 md:px-12">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                     {/* Video 1 */}
-                     <div className="relative group rounded-[2rem] overflow-hidden aspect-video shadow-2xl border border-slate-100">
-                        <Image src="/Rochel.webp" alt="Watch Digital Album Video 1" fill className="object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent flex flex-col items-center justify-center p-6 text-center">
-                           <Link
-                              href="https://www.youtube.com/watch?v=M2LF7xZw1nw"
-                              target="_blank"
-                              className="w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center shadow-2xl scale-100 hover:scale-110 transition-all group/play"
-                           >
-                              <Play fill="currentColor" size={24} className="ml-1" />
-                           </Link>
-                           <div className="mt-6 space-y-1">
-                              <h3 className="text-white text-xl font-heading font-extrabold tracking-tight">Digital Album Showcase 1</h3>
-                              <p className="text-white/70 text-[10px] font-medium uppercase tracking-[0.2em]">Premium Printing</p>
-                           </div>
-                        </div>
-                     </div>
-
-                     {/* Video 2 */}
-                     <div className="relative group rounded-[2rem] overflow-hidden aspect-video shadow-2xl border border-slate-100">
-                        <Image src="/Rochell.webp" alt="Watch Digital Album Video 2" fill className="object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent flex flex-col items-center justify-center p-6 text-center">
-                           <Link
-                              href="https://www.youtube.com/watch?v=mqOBsqfErlA"
-                              target="_blank"
-                              className="w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center shadow-2xl scale-100 hover:scale-110 transition-all group/play"
-                           >
-                              <Play fill="currentColor" size={24} className="ml-1" />
-                           </Link>
-                           <div className="mt-6 space-y-1">
-                              <h3 className="text-white text-xl font-heading font-extrabold tracking-tight">Digital Album Showcase 2</h3>
-                              <p className="text-white/70 text-[10px] font-medium uppercase tracking-[0.2em]">Cinematic Quality</p>
-                           </div>
+                  <div className="relative group rounded-[3rem] overflow-hidden aspect-video max-w-5xl mx-auto shadow-2xl border border-slate-100">
+                     {/* Background image */}
+                     <Image src="/Rochel.webp" alt="Digital Album Video" fill className="object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80" sizes="(max-width: 1024px) 100vw, 1024px" />
+                     {/* Dark overlay */}
+                     <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent" />
+                     {/* Play button + text */}
+                     <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center z-10">
+                        <Link
+                           href="https://www.youtube.com/watch?v=gV7bxx1TdVY"
+                           target="_blank"
+                           className="w-20 h-20 bg-secondary text-white rounded-full flex items-center justify-center shadow-2xl scale-100 hover:scale-110 transition-all"
+                        >
+                           <Play fill="currentColor" size={32} className="ml-1" />
+                        </Link>
+                        <div className="mt-8 space-y-2">
+                           <h3 className="text-white text-2xl md:text-3xl font-heading font-extrabold tracking-tight">Digital Album Showcase</h3>
+                           <p className="text-white/70 text-sm font-medium uppercase tracking-[0.2em]">Premium Printing on YouTube</p>
                         </div>
                      </div>
                   </div>
