@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import Image from "next/image";
-import { BookOpen, CheckCircle2, Layers, Palette, ShieldCheck } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
 import { Counter } from "@/components/Counter";

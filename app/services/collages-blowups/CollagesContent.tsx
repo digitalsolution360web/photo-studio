@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { CheckCircle2, Maximize, Layout, Frame, ArrowRight, Sparkles, Wand2, Layers } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Counter } from "@/components/Counter";
 
 export function CollagesContent() {
@@ -14,7 +14,7 @@ export function CollagesContent() {
       { title: "Digital Enhancement", desc: "Advanced sharpening and color correction for large prints." }
    ];
 
-   const containerVariants = {
+   const containerVariants: Variants = {
       hidden: { opacity: 0 },
       visible: {
          opacity: 1,
@@ -24,7 +24,7 @@ export function CollagesContent() {
       }
    };
 
-   const itemVariants = {
+   const itemVariants: Variants = {
       hidden: { opacity: 0, y: 20 },
       visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
    };

@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import Image from "next/image";
-import { Users, CheckCircle2, ArrowRight, Sparkles, MapPin, Calendar, Play } from "lucide-react";
+import { Users, CheckCircle2, Sparkles, MapPin } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
 import { Counter } from "@/components/Counter";
