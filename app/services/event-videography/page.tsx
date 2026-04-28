@@ -25,55 +25,13 @@ export default function EventVideographyPage() {
 
          <main className="flex-grow pt-24">
             {/* Luxury Hero */}
-            <section className="relative py-12 md:py-20 bg-[#0a0a0b] text-white">
-               <div className="absolute inset-0">
-                  <Image src="/samford-album/Samford%20Roc.webp" alt="Videography Hero" fill className="object-cover opacity-20" priority />
-                  <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/80 via-[#0a0a0b] to-[#0a0a0b]"></div>
-               </div>
-
-               <div className="container mx-auto px-6 relative z-10 text-center space-y-6">
-                  <span className="text-secondary font-bold uppercase tracking-[0.4em] text-[10px]">Cinematography</span>
-                  <h1 className="text-3xl md:text-5xl font-heading font-extrabold tracking-tighter">
-                     Event Videography & <span className="text-secondary">Cinematography</span>
-                  </h1>
-                  <p className="text-sm md:text-base text-white/50 max-w-xl mx-auto font-light leading-relaxed">
-                     Professional video coverage with a cinematic style and smooth storytelling.
-                  </p>
-               </div>
-            </section>
-
-            {/* Video Gallery Style Layout */}
-            <section className="py-12 bg-white">
-               <div className="container mx-auto px-6 md:px-12">
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                     {/* Featured image */}
-                     <div className="md:col-span-2 relative aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl border border-slate-100 group">
-                        <Image src="/samford-album/Samford%20Roce.webp" alt="Videography Featured" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-
-                     </div>
-
-                     {/* Side images */}
-                     <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                        <Image src="/silver-wedding/Silver%20Wed.webp" alt="Event 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-                     </div>
-                     <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                        <Image src="/silver-wedding/Silver%20Wedd.webp" alt="Event 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-                     </div>
-                     <div className="md:col-span-2 relative aspect-[16/7] rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                        <Image src="/silver-wedding/Silver%20Weddin.webp" alt="Event 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-                     </div>
-                  </div>
-               </div>
-            </section>
-
             {/* YouTube Video Showcase */}
             <section className="py-12 md:py-16 bg-white">
                <div className="container mx-auto px-6 md:px-12">
-                  <div className="relative group rounded-[3rem] overflow-hidden aspect-video max-w-5xl mx-auto shadow-2xl border border-slate-100">
-                     <Image src="/samford-album/Samford%20Roce.webp" alt="Watch Videography Video" fill className="object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80" />
-                     <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent flex flex-col items-center justify-center p-8 text-center">
+                  <div className="relative group rounded-[3rem] overflow-hidden aspect-video max-w-5xl mx-auto shadow-2xl border border-slate-100 bg-[#0a0a0b]">
+                     <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
                         <Link
-                           href="https://www.youtube.com/watch?v=zkOm2t5ac9Q"
+                           href="https://www.youtube.com/watch?v=mqOBsqfErlA"
                            target="_blank"
                            className="w-20 h-20 bg-secondary text-white rounded-full flex items-center justify-center shadow-2xl scale-100 hover:scale-110 transition-all group/play"
                         >

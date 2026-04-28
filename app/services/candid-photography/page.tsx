@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import Image from "next/image";
-import { Camera, CheckCircle2, Heart, Sparkles } from "lucide-react";
+import { Camera, CheckCircle2, Heart, Sparkles, Play } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
 import { Counter } from "@/components/Counter";
@@ -25,9 +25,9 @@ export default function CandidPhotographyPage() {
 
       <main className="flex-grow pt-24">
         {/* Luxury Hero */}
+        {/* Luxury Hero */}
         <section className="relative py-12 md:py-20 bg-[#0a0a0b] text-white">
           <div className="absolute inset-0">
-             <Image src="/jassi-album/Jessy%20Alb.webp" alt="Candid Hero" fill className="object-cover opacity-20" priority />
              <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/80 via-[#0a0a0b] to-[#0a0a0b]"></div>
           </div>
           
@@ -40,6 +40,27 @@ export default function CandidPhotographyPage() {
                 Natural, emotionally driven moments captured without disruption.
               </p>
           </div>
+        </section>
+
+        {/* YouTube Video Showcase */}
+        <section className="py-12 md:py-16 bg-white">
+           <div className="container mx-auto px-6 md:px-12">
+              <div className="relative group rounded-[3rem] overflow-hidden aspect-video max-w-5xl mx-auto shadow-2xl border border-slate-100 bg-[#0a0a0b]">
+                 <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
+                    <Link
+                       href="https://www.youtube.com/watch?v=FJ1lPq_RfWA"
+                       target="_blank"
+                       className="w-20 h-20 bg-secondary text-white rounded-full flex items-center justify-center shadow-2xl scale-100 hover:scale-110 transition-all group/play"
+                    >
+                       <Play fill="currentColor" size={32} className="ml-1" />
+                    </Link>
+                    <div className="mt-8 space-y-2">
+                       <h3 className="text-white text-2xl md:text-3xl font-heading font-extrabold tracking-tight">Candid Photography Highlights</h3>
+                       <p className="text-white/70 text-sm font-medium uppercase tracking-[0.2em]">Capturing Moments on YouTube</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
         </section>
 
         {/* Gallery - Premium Bento Showcase */}
@@ -59,16 +80,7 @@ export default function CandidPhotographyPage() {
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8">
-                 {/* Featured - Large Left */}
-                 <div className="md:col-span-8 relative aspect-[4/5] md:aspect-auto md:h-[700px] rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden shadow-2xl group border border-slate-100">
-                    <Image src="/jassi-album/Jessy%20Al.webp" alt="Candid Masterpiece" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8 md:p-14 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                       <span className="text-secondary font-bold text-[10px] uppercase tracking-widest mb-2">Featured Masterpiece</span>
-                       <h3 className="text-white text-3xl md:text-4xl font-heading font-bold">Soulful Expressions</h3>
-                    </div>
-                 </div>
-
-                 {/* Right Column Stack */}
+                 {/* Right Column Stack (Moved up as first column since old featured is gone) */}
                  <div className="md:col-span-4 flex flex-col gap-6 md:gap-8">
                     <div className="relative aspect-square rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl border border-slate-100 group">
                        <Image src="/keith-album/Keith's%20Communion.webp" alt="Candid 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
@@ -78,15 +90,12 @@ export default function CandidPhotographyPage() {
                     </div>
                  </div>
 
-                 {/* Bottom Row */}
+                 {/* Bottom Row - Shifted */}
                  <div className="md:col-span-4 relative aspect-[3/4] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl border border-slate-100 group">
                     <Image src="/keith-album/Keith's%20Communio.webp" alt="Candid 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                  </div>
-                 <div className="md:col-span-8 relative aspect-[16/9] md:aspect-auto rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl border border-slate-100 group">
+                 <div className="md:col-span-4 relative aspect-square rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl border border-slate-100 group">
                     <Image src="/keith-album/Keith's%20Commun.webp" alt="Candid 4" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center p-8 text-center">
-                       <p className="text-white text-xl md:text-2xl font-medium italic max-w-md">"Every smile tells a story, and every moment is a masterpiece waiting to be captured."</p>
-                    </div>
                  </div>
               </div>
            </div>

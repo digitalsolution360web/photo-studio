@@ -34,7 +34,7 @@ export function CollagesContent() {
          {/* Original Artistic Hero */}
          <section className="relative py-12 md:py-20 bg-[#0a0a0b] text-white">
             <div className="absolute inset-0">
-               <Image src="/keith-album/Keith's%20Communio.webp" alt="Collages Hero" fill className="object-cover opacity-20" priority sizes="100vw" />
+               <Image src="/Coll-blow-up/Blow-Ups5.webp" alt="Collages Hero" fill className="object-cover opacity-20" priority sizes="100vw" />
                <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/80 via-[#0a0a0b] to-[#0a0a0b]"></div>
             </div>
 
@@ -65,14 +65,14 @@ export function CollagesContent() {
                   </div>
                </div>
 
-               <motion.div 
+               <motion.div
                   variants={containerVariants}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, margin: "-100px" }}
                   className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
                >
-                  {/* Improved Bento Layout with animations */}
+                  {/* Bento Layout with exactly 5 unique images */}
                   <motion.div variants={itemVariants} className="relative aspect-square rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg group border border-slate-100">
                      <Image src="/Coll-blow-up/Blow-Ups2.webp" alt="Art 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 50vw, 25vw" />
                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
@@ -81,13 +81,20 @@ export function CollagesContent() {
                   </motion.div>
 
                   <motion.div variants={itemVariants} className="relative aspect-square rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg group border border-slate-100">
-                     <Image src="/kristin/Kristine_Cover.webp" alt="Art 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 50vw, 25vw" />
+                     <Image src="/Coll-blow-up/Carl%20Collage4.webp" alt="Art 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 50vw, 25vw" />
                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                         <span className="text-white font-bold text-[10px] uppercase tracking-widest">Premium Finish</span>
                      </div>
                   </motion.div>
 
-                  <motion.div variants={itemVariants} className="col-span-2 row-span-2 relative aspect-square md:aspect-auto rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg group border border-slate-100">
+                  <motion.div variants={itemVariants} className="relative  md:col-span-2 rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg group border border-slate-100">
+                     <Image src="/Coll-blow-up/Blow-Ups6.webp" alt="Art 6" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 508px) 50vw, 25vw" />
+                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                        <span className="text-white font-bold text-[10px] uppercase tracking-widest">Master Craft</span>
+                     </div>
+                  </motion.div>
+
+                  <motion.div variants={itemVariants} className="md:col-span-2 relative aspect-video rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg group border border-slate-100">
                      <Image src="/Coll-blow-up/Blow-Ups5.webp" alt="Art 4" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
                         <div className="space-y-1">
@@ -97,24 +104,14 @@ export function CollagesContent() {
                      </div>
                   </motion.div>
 
-                  <motion.div variants={itemVariants} className="relative aspect-square rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg group border border-slate-100">
-                     <Image src="/kristin/Kristine_Page.webp" alt="Art 5" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 50vw, 25vw" />
-                  </motion.div>
-
-                  <motion.div variants={itemVariants} className="relative aspect-square rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg group border border-slate-100">
-                     <Image src="/Coll-blow-up/Blow-Ups6.webp" alt="Art 6" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 50vw, 25vw" />
-                  </motion.div>
-
-                  <motion.div variants={itemVariants} className="col-span-2 relative aspect-[16/7] rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg group border border-slate-100">
+                  <motion.div variants={itemVariants} className="md:col-span-2 relative aspect-video rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg group border border-slate-100">
                      <Image src="/Coll-blow-up/Blow-Ups7.webp" alt="Art 7" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
-                  </motion.div>
-
-                  <motion.div variants={itemVariants} className="relative aspect-square rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg group border border-slate-100">
-                     <Image src="/kristin/Kristine_Page_.webp" alt="Art 8" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 50vw, 25vw" />
-                  </motion.div>
-
-                  <motion.div variants={itemVariants} className="relative aspect-square rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg group border border-slate-100">
-                     <Image src="/keith-album/Keith's%20Commun.webp" alt="Art 9" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 50vw, 25vw" />
+                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                        <div className="space-y-1">
+                           <span className="text-secondary font-bold text-[8px] uppercase tracking-widest">Elegant Display</span>
+                           <h3 className="text-white text-xl font-heading font-bold">Photo Collage</h3>
+                        </div>
+                     </div>
                   </motion.div>
                </motion.div>
             </div>
