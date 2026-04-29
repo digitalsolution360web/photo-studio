@@ -29,7 +29,7 @@ export default function Home() {
         <HeroSlider />
 
         {/* Hero Content Section */}
-        <section className="py-16 md:py-24 bg-white border-b border-slate-50">
+        <section className="py-8 md:py-12 bg-white border-b border-slate-50">
           <div className="container mx-auto px-6 md:px-12">
             <div className="max-w-4xl mx-auto text-center space-y-8">
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading font-extrabold text-primary leading-[1.1] tracking-tight">
@@ -60,7 +60,7 @@ export default function Home() {
         </section>
 
         {/* Intro Section */}
-        <section className="py-12 bg-white relative overflow-hidden">
+        <section className="py-6 md:py-8 bg-white relative overflow-hidden">
 
           <div className="container mx-auto px-6 md:px-12">
             <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
@@ -80,16 +80,22 @@ export default function Home() {
               <div className="lg:w-1/2">
                 <div className="grid grid-cols-12 gap-4 items-center">
                   <div className="col-span-12 md:col-span-7">
-                    <div className="rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl relative aspect-[4/5] group">
-                      <Image src="/Rochel.webp" alt="Wedding Story" fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
+                    <div className="rounded-[2rem] md:rounded-[2.5rem] p-2 bg-white shadow-2xl relative aspect-[4/5] group border border-secondary/20 transition-colors duration-500 hover:border-secondary/40">
+                      <div className="relative w-full h-full rounded-[1.5rem] md:rounded-[2rem] overflow-hidden">
+                        <Image src="/Rochel.webp" alt="Wedding Story" fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
+                      </div>
                     </div>
                   </div>
                   <div className="hidden md:block md:col-span-5 space-y-4">
-                    <div className="rounded-[1.5rem] md:rounded-[1.5rem] overflow-hidden shadow-xl aspect-square relative group">
-                      <Image src="/Rochell.webp" alt="Candid Moments" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
+                    <div className="rounded-[1.5rem] md:rounded-[1.5rem] p-1.5 bg-white overflow-hidden shadow-xl aspect-square relative group border border-secondary/20 transition-colors duration-500 hover:border-secondary/40">
+                      <div className="relative w-full h-full rounded-[1rem] md:rounded-[1rem] overflow-hidden">
+                        <Image src="/Rochell.webp" alt="Candid Moments" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
+                      </div>
                     </div>
-                    <div className="rounded-[1.5rem] md:rounded-[1.5rem] overflow-hidden shadow-xl aspect-square relative group">
-                      <Image src="/Rochelle.webp" alt="Emotional Energy" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
+                    <div className="rounded-[1.5rem] md:rounded-[1.5rem] p-1.5 bg-white overflow-hidden shadow-xl aspect-square relative group border border-secondary/20 transition-colors duration-500 hover:border-secondary/40">
+                      <div className="relative w-full h-full rounded-[1rem] md:rounded-[1rem] overflow-hidden">
+                        <Image src="/Rochelle.webp" alt="Emotional Energy" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -178,7 +184,7 @@ export default function Home() {
                                     service.title === "Personalized Gifting" ? "/services/personalized-gifting" :
                                       "/services"
                   }
-                  className="group relative bg-white p-7 md:p-10 rounded-[2.5rem] md:rounded-[3rem] border border-slate-100 transition-all duration-700 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] hover:border-secondary/20 hover:-translate-y-2 overflow-hidden flex flex-col items-start gap-6 shadow-sm"
+                  className="group relative bg-white p-7 md:p-10 rounded-[2.5rem] md:rounded-[3rem] border border-slate-100 transition-all duration-700 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] hover:border-secondary/20 hover:-translate-y-2 overflow-hidden flex flex-col items-center text-center gap-6 shadow-sm"
                 >
 
                   {/* Ghost Background Icon */}
@@ -205,7 +211,7 @@ export default function Home() {
         </section>
 
         {/* Why Choose Us Section */}
-        <section className="py-24 bg-white overflow-hidden">
+        <section className="py-12 md:py-16 bg-white overflow-hidden">
           <div className="container mx-auto px-6 md:px-12">
             <div className="flex flex-col lg:flex-row gap-12 items-center">
               {/* Image Container First on Mobile */}
@@ -250,45 +256,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Cinematic Video Showcase */}
-        {/* <section className="py-24 bg-white overflow-hidden">
-          <div className="container mx-auto px-6 md:px-12">
-            <div className="text-center mb-12 space-y-4">
-              <span className="text-secondary font-bold uppercase tracking-[0.4em] text-xs block">Cinematic Experience</span>
-              <h2 className="text-3xl md:text-5xl font-heading font-extrabold text-primary leading-tight tracking-tighter">Feel The Emotion</h2>
-              <p className="text-slate-500 font-light text-base md:text-lg max-w-2xl mx-auto">Every frame we capture is designed to bring you back to the exact moment, the exact feeling.</p>
-            </div>
-
-            <div className="relative rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.15)] bg-slate-900 group max-w-6xl mx-auto border border-slate-100">
-              <video
-                src="/3.mp4"
-                controls
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-auto block"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-transparent to-transparent opacity-80 transition-opacity duration-700 pointer-events-none"></div>
-
-              
-              <div className="absolute top-6 left-6 md:top-10 md:left-10 z-10 flex items-center gap-4 transition-transform duration-700 pointer-events-none">
-                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30 text-white shadow-xl">
-                  <Video className="w-5 h-5 md:w-6 md:h-6 ml-1" />
-                </div>
-                <div>
-                  <h3 className="text-white font-heading font-extrabold text-lg md:text-xl tracking-tight drop-shadow-md">Cinematic Highlight</h3>
-                  <p className="text-white/80 text-xs md:text-sm font-bold tracking-widest uppercase mt-1 drop-shadow-md">Max Photo Films</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> */}
-
         {/* Recent Masterpieces Showcase - NEW PREMIUM SECTION */}
-        <section className="py-24 bg-slate-50 overflow-hidden">
+        <section className="py-12 md:py-16 bg-slate-50 overflow-hidden">
           <div className="container mx-auto px-6 md:px-12">
-            <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
               <div className="space-y-4 max-w-2xl">
                 <span className="text-secondary font-bold uppercase tracking-[0.4em] text-xs">Recently Captured</span>
                 <h2 className="text-3xl md:text-5xl font-heading font-extrabold text-primary leading-tight tracking-tighter">Recent Masterpieces</h2>
@@ -328,7 +299,7 @@ export default function Home() {
         </section>
 
         {/* Feature Section */}
-        <section className="py-12 md:py-20 bg-primary text-white relative overflow-hidden mx-4 md:mx-12 rounded-[3rem] mt-16 mb-8 shadow-2xl shadow-primary/20">
+        <section className="py-8 md:py-12 bg-primary text-white relative overflow-hidden mx-4 md:mx-12 rounded-[3rem] mt-8 mb-4 shadow-2xl shadow-primary/20">
 
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-secondary/20 rounded-full blur-[120px] pointer-events-none"></div>

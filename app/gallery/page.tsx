@@ -29,55 +29,55 @@ function AnimatedCounter({ target, duration = 2000 }: { target: number; duration
 
 const allImages = [
   // Weddings
-  { src: "/wedding/Page%20wed.webp",       title: "Royal Union",             category: "Weddings" },
-  { src: "/wedding/Page.webp",             title: "The Grand Celebration",    category: "Weddings" },
-  { src: "/wedding/Page_0.webp",           title: "Eternal Vows",            category: "Weddings" },
-  { src: "/wedding/Page_00.webp",          title: "Golden Moments",          category: "Weddings" },
-  { src: "/sam-wedding/Samford%20Wedding.webp",  title: "Cultural Heritage",   category: "Weddings" },
-  { src: "/sam-wedding/Samford%20Weddin.webp",   title: "Sacred Bond",         category: "Weddings" },
-  { src: "/sam-wedding/Samford%20Wedd.webp",     title: "Traditional Grace",    category: "Weddings" },
-  { src: "/sam-wedding/Samford%20Wed.webp",      title: "Vibrant Joy",          category: "Weddings" },
-  { src: "/silver-wedding/Silver%20Wedding.webp", title: "Silver Jubilee",      category: "Weddings" },
-  { src: "/silver-wedding/Silver%20Weddin.webp",  title: "Classic Elegance",    category: "Weddings" },
-  { src: "/silver-wedding/Silver%20Wedd.webp",    title: "Timeless Bond",       category: "Weddings" },
-  { src: "/silver-wedding/Silver%20Wed.webp",     title: "Love's Journey",      category: "Weddings" },
+  { src: "/wedding/Page%20wed.webp", title: "Royal Union", category: "Weddings" },
+  { src: "/wedding/Page.webp", title: "The Grand Celebration", category: "Weddings" },
+  { src: "/wedding/Page_0.webp", title: "Eternal Vows", category: "Weddings" },
+  { src: "/wedding/Page_00.webp", title: "Golden Moments", category: "Weddings" },
+  // { src: "/sam-wedding/Samford%20Wedding.webp", title: "Cultural Heritage", category: "Weddings" },
+  { src: "/sam-wedding/Samford%20Weddin.webp", title: "Sacred Bond", category: "Weddings" },
+  { src: "/sam-wedding/Samford%20Wedd.webp", title: "Traditional Grace", category: "Weddings" },
+  { src: "/sam-wedding/Samford%20Wed.webp", title: "Vibrant Joy", category: "Weddings" },
+  { src: "/silver-wedding/Silver%20Wedding.webp", title: "Silver Jubilee", category: "Weddings" },
+  { src: "/silver-wedding/Silver%20Weddin.webp", title: "Classic Elegance", category: "Weddings" },
+  { src: "/silver-wedding/Silver%20Wedd.webp", title: "Timeless Bond", category: "Weddings" },
+  { src: "/silver-wedding/Silver%20Wed.webp", title: "Love's Journey", category: "Weddings" },
 
   // Pre-Wedding
-  { src: "/kristin/Kristine_Cover.webp",         title: "Sunset Romance",       category: "Pre-Wedding" },
-  { src: "/kristin/Kristine_Page.webp",          title: "Timeless Love",        category: "Pre-Wedding" },
-  { src: "/kristin/Kristine_Page_.webp",         title: "Modern Fairytale",     category: "Pre-Wedding" },
-  { src: "/kristin/Kristine_Page_00.webp",       title: "Urban Romance",        category: "Pre-Wedding" },
-  { src: "/lalia-album/Lilia%20Maam.webp",       title: "Artistic Portrait",    category: "Pre-Wedding" },
-  { src: "/lalia-album/Lilia%20Maam_Pa.webp",    title: "Candid Grace",         category: "Pre-Wedding" },
-  { src: "/lalia-album/Lilia%20Maa.webp",        title: "Dreamy Escape",        category: "Pre-Wedding" },
-  { src: "/lalia-album/Lilia%20M.webp",          title: "Serene Moments",       category: "Pre-Wedding" },
+  // { src: "/kristin/Kristine_Cover.webp",         title: "Sunset Romance",       category: "Pre-Wedding" },
+  { src: "/kristin/Kristine_Page.webp", title: "Timeless Love", category: "Pre-Wedding" },
+  { src: "/kristin/Kristine_Page_.webp", title: "Modern Fairytale", category: "Pre-Wedding" },
+  { src: "/kristin/Kristine_Page_00.webp", title: "Urban Romance", category: "Pre-Wedding" },
+  { src: "/lalia-album/Lilia%20Maam.webp", title: "Artistic Portrait", category: "Pre-Wedding" },
+  { src: "/lalia-album/Lilia%20Maam_Pa.webp", title: "Candid Grace", category: "Pre-Wedding" },
+  { src: "/lalia-album/Lilia%20Maa.webp", title: "Dreamy Escape", category: "Pre-Wedding" },
+  { src: "/lalia-album/Lilia%20M.webp", title: "Serene Moments", category: "Pre-Wedding" },
 
   // Events
-  { src: "/florines/Florine%27s%20Communion.webp", title: "Sacred Communion",  category: "Events" },
-  { src: "/florines/Florine%27s%20Communi.webp",   title: "Divine Joy",         category: "Events" },
-  { src: "/florines/Florine%27s%20Comm.webp",      title: "Blessed Path",       category: "Events" },
-  { src: "/florines/Florine%27scommu.webp",        title: "Holy Spirit",        category: "Events" },
-  { src: "/keith-album/Keith%27s%20Communion.webp",  title: "Family Legacy",   category: "Events" },
-  { src: "/keith-album/Keith%27s%20Communio.webp",   title: "Solemn Ceremony",  category: "Events" },
-  { src: "/keith-album/Keith%27s%20Commun.webp",     title: "Faith & Love",     category: "Events" },
-  { src: "/keith-album/Keith%27s%20Comm.webp",       title: "Youthful Grace",   category: "Events" },
-  { src: "/birthday/Dalreen%20Birthday.webp",   title: "Celebration Spirit",   category: "Events" },
-  { src: "/birthday/Dalreenbirthday.webp",       title: "Joyful Gathering",     category: "Events" },
-  { src: "/birthday/Dalreen%20Birthda.webp",     title: "Birthday Cheer",      category: "Events" },
-  { src: "/birthday/Dalreenbirthda.webp",       title: "Party Vibes",          category: "Events" },
+  { src: "/florines/Florine%27s%20Communion.webp", title: "Sacred Communion", category: "Events" },
+  { src: "/florines/Florine%27s%20Communi.webp", title: "Divine Joy", category: "Events" },
+  { src: "/florines/Florine%27s%20Comm.webp", title: "Blessed Path", category: "Events" },
+  { src: "/florines/Florine%27scommu.webp", title: "Holy Spirit", category: "Events" },
+  { src: "/keith-album/Keith%27s%20Communion.webp", title: "Family Legacy", category: "Events" },
+  { src: "/keith-album/Keith%27s%20Communio.webp", title: "Solemn Ceremony", category: "Events" },
+  { src: "/keith-album/Keith%27s%20Commun.webp", title: "Faith & Love", category: "Events" },
+  { src: "/keith-album/Keith%27s%20Comm.webp", title: "Youthful Grace", category: "Events" },
+  { src: "/birthday/Dalreen%20Birthday.webp", title: "Celebration Spirit", category: "Events" },
+  { src: "/birthday/Dalreenbirthday.webp", title: "Joyful Gathering", category: "Events" },
+  { src: "/birthday/Dalreen%20Birthda.webp", title: "Birthday Cheer", category: "Events" },
+  { src: "/birthday/Dalreenbirthda.webp", title: "Party Vibes", category: "Events" },
 
   // Cinematic / Albums
-  { src: "/aeron-album/Aaron%20Album.webp",      title: "Storybook Legacy",     category: "Cinematic" },
-  { src: "/aeron-album/Aeronalbum.webp",          title: "Visual Narrative",     category: "Cinematic" },
-  { src: "/aeron-album/Aaron%20Album_Page_024.jpg", title: "Detailed Memories", category: "Cinematic" },
-  { src: "/jassi-album/Jessy%20Album.webp",      title: "Signature Style",      category: "Cinematic" },
-  { src: "/jassi-album/Jessy%20Al.webp",         title: "Candid Essence",       category: "Cinematic" },
-  { src: "/jassi-album/Jessy%20Alb.webp",        title: "Refined Texture",      category: "Cinematic" },
-  { src: "/jassi-album/Jessy%20Albu.webp",       title: "Elegant Layout",       category: "Cinematic" },
-  { src: "/samford-album/Samford%20Roce.webp",   title: "Cinematic Frame",      category: "Cinematic" },
-  { src: "/samford-album/Samford%20Roc.webp",    title: "Dynamic Shot",         category: "Cinematic" },
-  { src: "/samford-album/Samford%20Ro.webp",     title: "Artistic Angle",       category: "Cinematic" },
-  { src: "/samford-album/Samford%20R.webp",      title: "Pro Production",       category: "Cinematic" },
+  { src: "/aeron-album/Aaron%20Album.webp", title: "Storybook Legacy", category: "Cinematic" },
+  { src: "/aeron-album/Aeronalbum.webp", title: "Visual Narrative", category: "Cinematic" },
+  { src: "/aeron-album/Aaron.webp", title: "Detailed Memories", category: "Cinematic" },
+  { src: "/jassi-album/Jessy%20Album.webp", title: "Signature Style", category: "Cinematic" },
+  { src: "/jassi-album/Jessy%20Al.webp", title: "Candid Essence", category: "Cinematic" },
+  { src: "/jassi-album/Jessy%20Alb.webp", title: "Refined Texture", category: "Cinematic" },
+  { src: "/jassi-album/Jessy%20Albu.webp", title: "Elegant Layout", category: "Cinematic" },
+  { src: "/samford-album/Samford%20Roce.webp", title: "Cinematic Frame", category: "Cinematic" },
+  { src: "/samford-album/Samford%20Roc.webp", title: "Dynamic Shot", category: "Cinematic" },
+  { src: "/samford-album/Samford%20Ro.webp", title: "Artistic Angle", category: "Cinematic" },
+  // { src: "/samford-album/Samford%20R.webp", title: "Pro Production", category: "Cinematic" },
 ];
 
 const categories = ["All", "Weddings", "Pre-Wedding", "Events", "Cinematic"];
@@ -120,28 +120,27 @@ export default function GalleryPage() {
         {/* Gallery Grid Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6 md:px-12">
-            
+
             {/* Filter Navigation */}
             <div className="flex flex-wrap justify-center gap-3 mb-16">
               {categories.map((cat, i) => (
                 <button
                   key={i}
                   onClick={() => setActiveCategory(cat)}
-                  className={`px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all duration-300 ${
-                    activeCategory === cat
-                      ? "bg-primary text-white shadow-xl shadow-primary/20 scale-105"
-                      : "bg-slate-50 text-slate-400 hover:bg-slate-100 hover:text-primary"
-                  }`}
+                  className={`px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all duration-300 ${activeCategory === cat
+                    ? "bg-primary text-white shadow-xl shadow-primary/20 scale-105"
+                    : "bg-slate-50 text-slate-400 hover:bg-slate-100 hover:text-primary"
+                    }`}
                 >
                   {cat}
                 </button>
               ))}
             </div>
 
-            {/* Masonry-Style Grid */}
-            <motion.div 
+            {/* Optimized High-Scale Grid */}
+            <motion.div
               layout
-              className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6"
+              className="columns-1 md:columns-2 gap-10 space-y-10"
             >
               <AnimatePresence mode="popLayout">
                 {filtered.map((img, i) => (
@@ -154,12 +153,13 @@ export default function GalleryPage() {
                     transition={{ duration: 0.5, delay: i * 0.05 }}
                     className="group relative break-inside-avoid rounded-[2rem] overflow-hidden border border-slate-100 shadow-sm transition-all duration-700 hover:shadow-2xl hover:shadow-primary/10"
                   >
-                    <div className="relative w-full overflow-hidden" style={{ aspectRatio: i % 2 === 0 ? '4/5' : '1/1' }}>
+                    <div className="relative w-full overflow-hidden bg-slate-50">
                       <Image
                         src={img.src}
                         alt={img.title}
-                        fill
-                        className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                        width={600}
+                        height={800}
+                        className="w-full h-auto block transition-transform duration-1000 group-hover:scale-105"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
@@ -183,8 +183,8 @@ export default function GalleryPage() {
               {[
                 { label: "Wedding Stories", value: 500, icon: <Heart className="text-secondary" size={24} /> },
                 { label: "Cinematic Films", value: 200, icon: <Film className="text-secondary" size={24} /> },
-                { label: "Happy Couples",   value: 1200, icon: <Camera className="text-secondary" size={24} /> },
-                { label: "Legacy Years",    value: 33,   icon: <Sparkles className="text-secondary" size={24} /> },
+                { label: "Happy Couples", value: 1200, icon: <Camera className="text-secondary" size={24} /> },
+                { label: "Legacy Years", value: 33, icon: <Sparkles className="text-secondary" size={24} /> },
               ].map((stat, i) => (
                 <div key={i} className="bg-slate-50 p-10 rounded-[3rem] text-center space-y-4 border border-slate-100 hover:bg-white hover:shadow-xl transition-all duration-500">
                   <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mx-auto shadow-sm">
@@ -203,17 +203,17 @@ export default function GalleryPage() {
         </section>
 
         {/* Final Call to Action */}
-        <section className="py-24 bg-primary text-white text-center mx-6 md:mx-12 rounded-[3.5rem] mb-12 relative overflow-hidden">
+        <section className="py-12 bg-primary text-white text-center mx-6 md:mx-12 rounded-[3.5rem] mb-12 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
-          <div className="relative z-10 container mx-auto px-6 space-y-8">
-            <h2 className="text-3xl md:text-5xl font-heading font-extrabold tracking-tighter">Ready to tell your story?</h2>
-            <p className="text-lg text-white/50 max-w-xl mx-auto font-light leading-relaxed">
+          <div className="relative z-10 container mx-auto px-6 space-y-4">
+            <h2 className="text-2xl md:text-4xl font-heading font-extrabold tracking-tighter">Ready to tell your story?</h2>
+            <p className="text-base text-white/50 max-w-lg mx-auto font-light leading-relaxed">
               Book your consultation today and let's start planning how to capture your most valuable moments.
             </p>
             <div className="flex justify-center pt-4">
-              <Link href="/contact" className="group px-12 py-5 bg-secondary text-white rounded-full font-extrabold text-lg hover:shadow-2xl hover:scale-105 active:scale-95 transition-all flex items-center gap-3">
+              <Link href="/contact" className="group px-10 py-4 bg-secondary text-white rounded-full font-extrabold text-base hover:shadow-2xl hover:scale-105 active:scale-95 transition-all flex items-center gap-3">
                 Inquire for Date
-                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>

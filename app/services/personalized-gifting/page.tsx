@@ -56,55 +56,48 @@ export default function PersonalizedGiftingPage() {
                      <div className="w-12 h-1 bg-secondary rounded-full mt-4"></div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-start">
-                     {/* Large Showcase Item */}
-                     <div className="md:col-span-8 group relative rounded-[3rem] overflow-hidden shadow-2xl border border-slate-100 aspect-video md:aspect-auto md:h-[600px]">
-                        <Image src="/personlized/personalized-gifting-1.webp" alt="Signature Gift" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent flex items-end p-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                           <div className="space-y-3">
-                              <span className="bg-white text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Premium Choice</span>
-                              <h3 className="text-white text-3xl font-heading font-bold">Custom Photo Mugs & Sets</h3>
+                  <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+                     {[
+                        { src: "/personlized/personalized-gifting-1.webp", title: "Custom Photo Mugs & Sets", tag: "Premium Choice" },
+                        { src: "/personlized/personalized-gifting-2.webp", title: "Personalized Keepsakes", tag: "Handcrafted" },
+                        { src: "/personlized/personalized-gifting-3.webp", title: "Custom Photo Prints", tag: "Vivid Quality" },
+                        { src: "/personlized/personalized-gifting-6.webp", title: "Gift Sets", tag: "Exclusive" },
+                        { src: "/personlized/personalized-gifting-4.webp", title: "Unique Gifts", tag: "Creative" },
+                        { src: "/personlized/personalized-gifting-5.webp", title: "Customized Frames", tag: "Timeless" }
+                     ].map((item, i) => (
+                        <div key={i} className="break-inside-avoid group relative rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 bg-white">
+                           <Image 
+                              src={item.src} 
+                              alt={item.title} 
+                              width={600} 
+                              height={800} 
+                              className="w-full h-auto block transition-transform duration-1000 group-hover:scale-105" 
+                           />
+                           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                              <div className="space-y-2">
+                                 <span className="bg-white/90 backdrop-blur-sm text-primary px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest">{item.tag}</span>
+                                 <h3 className="text-white text-xl font-heading font-bold">{item.title}</h3>
+                              </div>
                            </div>
                         </div>
-                     </div>
-
-                     {/* Side Column Items */}
-                     <div className="md:col-span-4 flex flex-col gap-6 md:gap-8">
-                        <div className="group relative rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 aspect-square">
-                           <Image src="/personlized/personalized-gifting-2.webp" alt="Gift 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-                        </div>
-                        <div className="group relative rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 aspect-square">
-                           <Image src="/personlized/personalized-gifting-3.webp" alt="Gift 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-                        </div>
-                     </div>
-
-                     {/* Wide Product Shot */}
-                     <div className="md:col-span-12 group relative rounded-[3rem] overflow-hidden shadow-2xl border border-slate-100 aspect-[21/9]">
-                        <Image src="/personlized/personalized-gifting-6.webp" alt="Wide Feature" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
-                     </div>
-
-                     {/* Final Row Items */}
-                     <div className="md:col-span-6 group relative rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 aspect-video">
-                        <Image src="/personlized/personalized-gifting-4.webp" alt="Gift 4" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-                     </div>
-                     <div className="md:col-span-6 group relative rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 aspect-video">
-                        <Image src="/personlized/personalized-gifting-5.webp" alt="Gift 5" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-                     </div>
+                     ))}
                   </div>
                </div>
             </section>
             <section className="py-12 md:py-16 bg-white">
                <div className="container mx-auto px-6 md:px-12">
                   <div className="relative group rounded-[3rem] overflow-hidden aspect-video max-w-5xl mx-auto shadow-2xl border border-slate-100 bg-[#0a0a0b]">
+                     <Image src="/personlized/personalized-gifting-6.webp" alt="Gifting Showcase" fill className="object-cover opacity-60 transition-transform duration-1000 group-hover:scale-105" />
+                     <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-40"></div>
                      <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
                         <Link
                            href="https://youtu.be/FUZCWJPiygI?si=ujrb_dYKSLMP_OwA"
                            target="_blank"
-                           className="w-20 h-20 bg-secondary text-white rounded-full flex items-center justify-center shadow-2xl scale-100 hover:scale-110 transition-all group/play"
+                           className="w-20 h-20 bg-secondary text-white rounded-full flex items-center justify-center shadow-[0_0_50px_rgba(255,87,123,0.3)] scale-100 hover:scale-110 transition-all duration-500 group/play relative z-20"
                         >
                            <Play fill="currentColor" size={32} className="ml-1" />
                         </Link>
-                        <div className="mt-8 space-y-2">
+                        <div className="mt-8 space-y-2 relative z-20">
                            <h3 className="text-white text-2xl md:text-3xl font-heading font-extrabold tracking-tight">Personalized Gifting Showcase</h3>
                            <p className="text-white/70 text-sm font-medium uppercase tracking-[0.2em]">Custom Keepsakes on YouTube</p>
                         </div>

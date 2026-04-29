@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import Image from "next/image";
 import { Play } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
@@ -77,17 +78,24 @@ export default function EventPhotographyPage() {
 
                   {/* Top 2 videos - large */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                     {videos.slice(0, 2).map((video) => (
-                        <div key={video.id} className="relative group rounded-[2rem] overflow-hidden aspect-video bg-[#0a0a0b] shadow-2xl border border-slate-100">
+                     {videos.slice(0, 2).map((video, idx) => (
+                        <div key={video.id} className="relative group rounded-[2rem] overflow-hidden aspect-video bg-slate-900 shadow-2xl border border-slate-100">
+                           <Image 
+                              src={idx === 0 ? "/wedding/Page.webp" : "/sam-wedding/Samford%20Weddin.webp"} 
+                              alt={video.title} 
+                              fill 
+                              className="object-cover opacity-60 transition-transform duration-1000 group-hover:scale-110" 
+                           />
+                           <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60"></div>
                            <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
                               <Link
                                  href={video.href}
                                  target="_blank"
-                                 className="w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300"
+                                 className="w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(255,87,123,0.3)] hover:scale-110 transition-all duration-300 relative z-20"
                               >
                                  <Play fill="currentColor" size={24} className="ml-1" />
                               </Link>
-                              <div className="mt-5 space-y-1">
+                              <div className="mt-5 space-y-1 relative z-20">
                                  <h3 className="text-white text-lg md:text-xl font-heading font-extrabold tracking-tight">{video.title}</h3>
                                  <p className="text-white/60 text-[10px] font-bold uppercase tracking-[0.2em]">{video.subtitle}</p>
                               </div>
@@ -98,17 +106,24 @@ export default function EventPhotographyPage() {
 
                   {/* Bottom 3 videos */}
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                     {videos.slice(2).map((video) => (
-                        <div key={video.id} className="relative group rounded-[2rem] overflow-hidden aspect-video bg-[#0a0a0b] shadow-xl border border-slate-100">
+                     {videos.slice(2).map((video, idx) => (
+                        <div key={video.id} className="relative group rounded-[2rem] overflow-hidden aspect-video bg-slate-900 shadow-xl border border-slate-100">
+                           <Image 
+                              src={idx === 0 ? "/keith-album/Keith's%20Communion.webp" : idx === 1 ? "/birthday/Dalreen%20Birthday.webp" : "/silver-wedding/Silver%20Wedding.webp"} 
+                              alt={video.title} 
+                              fill 
+                              className="object-cover opacity-50 transition-transform duration-1000 group-hover:scale-110" 
+                           />
+                           <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60"></div>
                            <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
                               <Link
                                  href={video.href}
                                  target="_blank"
-                                 className="w-14 h-14 bg-secondary text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300"
+                                 className="w-14 h-14 bg-secondary text-white rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(255,87,123,0.3)] hover:scale-110 transition-all duration-300 relative z-20"
                               >
                                  <Play fill="currentColor" size={20} className="ml-0.5" />
                               </Link>
-                              <div className="mt-4 space-y-1">
+                              <div className="mt-4 space-y-1 relative z-20">
                                  <h3 className="text-white text-base font-heading font-extrabold tracking-tight">{video.title}</h3>
                                  <p className="text-white/60 text-[9px] font-bold uppercase tracking-[0.2em]">{video.subtitle}</p>
                               </div>

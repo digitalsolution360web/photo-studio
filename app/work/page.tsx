@@ -19,7 +19,7 @@ export default function WorkPage() {
          title: "Fine Art Photography",
          desc: "Classic wedding portraiture with a modern, elegant finish. Preserving every look, touch, and tear in high definition.",
          icon: <Camera />,
-         img: "/sam-wedding/Samford%20Wedding.webp"
+         img: "/sam.webp"
       },
       {
          title: "Candid Storytelling",
@@ -34,7 +34,7 @@ export default function WorkPage() {
          title: "Samford Wedding Celebration",
          location: "Mumbai",
          date: "December 2023",
-         img: "/sam-wedding/Samford%20Wedding.webp",
+         img: "/same.webp",
          tag: "Cinematic"
       },
       {

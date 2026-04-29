@@ -29,15 +29,17 @@ export default function EventVideographyPage() {
             <section className="py-12 md:py-16 bg-white">
                <div className="container mx-auto px-6 md:px-12">
                   <div className="relative group rounded-[3rem] overflow-hidden aspect-video max-w-5xl mx-auto shadow-2xl border border-slate-100 bg-[#0a0a0b]">
+                     <Image src="/wedding/Page.webp" alt="Videography Showreel" fill className="object-cover opacity-60 transition-transform duration-1000 group-hover:scale-105" />
+                     <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-40"></div>
                      <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
                         <Link
                            href="https://www.youtube.com/watch?v=mqOBsqfErlA"
                            target="_blank"
-                           className="w-20 h-20 bg-secondary text-white rounded-full flex items-center justify-center shadow-2xl scale-100 hover:scale-110 transition-all group/play"
+                           className="w-20 h-20 bg-secondary text-white rounded-full flex items-center justify-center shadow-[0_0_50px_rgba(255,87,123,0.3)] scale-100 hover:scale-110 transition-all duration-500 group/play relative z-20"
                         >
                            <Play fill="currentColor" size={32} className="ml-1" />
                         </Link>
-                        <div className="mt-8 space-y-2">
+                        <div className="mt-8 space-y-2 relative z-20">
                            <h3 className="text-white text-2xl md:text-3xl font-heading font-extrabold tracking-tight">Watch Our Cinematic Showreel</h3>
                            <p className="text-white/70 text-sm font-medium uppercase tracking-[0.2em]">High-End Cinematography on YouTube</p>
                         </div>

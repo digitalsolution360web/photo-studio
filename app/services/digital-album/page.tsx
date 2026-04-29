@@ -43,24 +43,49 @@ export default function DigitalAlbumPage() {
             </section>
 
             {/* Gallery - Material & Design Focus */}
-            <section className="py-12 bg-white">
+            <section className="py-8 bg-white">
                <div className="container mx-auto px-6 md:px-12">
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                     {/* Featured image */}
-                     <div className="md:col-span-2 relative aspect-[16/10] rounded-3xl overflow-hidden shadow-2xl border border-slate-100 group">
-                        <Image src="/lalia-album/Lilia%20M.webp" alt="Album Featured" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 800px" />
-                        <div className="absolute inset-0 bg-gradient-to-tr from-secondary/20 to-transparent pointer-events-none"></div>
-                     </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                     {[
+                        { src: "/lalia-album/Lilia%20M.webp", title: "Signature Wedding Album", tag: "Featured" },
+                        { src: "/lalia-album/Lilia%20Maa.webp", title: "Premium Leather Binding", tag: "Quality" },
+                        { src: "/lalia-album/Lilia%20Maam.webp", title: "Artistic Layouts", tag: "Design" },
+                        { src: "/lalia-album/Lilia%20Maam_Pa.webp", title: "Digital Masterpieces", tag: "Heritage" }
+                     ].map((item, i) => (
+                        <div key={i} className="group relative rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 bg-white aspect-[4/3] md:aspect-auto md:h-[320px]">
+                           <Image
+                              src={item.src}
+                              alt={item.title}
+                              fill
+                              className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                              sizes="(max-width: 768px) 100vw, 50vw"
+                           />
+                           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                              <div className="space-y-1">
+                                 <span className="text-secondary font-bold uppercase tracking-widest text-[9px]">{item.tag}</span>
+                                 <h3 className="text-white text-lg font-heading font-bold tracking-tight">{item.title}</h3>
+                              </div>
+                           </div>
+                        </div>
+                     ))}
 
-                     {/* Side images */}
-                     <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                        <Image src="/lalia-album/Lilia%20Maa.webp" alt="Album 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px" />
-                     </div>
-                     <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                        <Image src="/lalia-album/Lilia%20Maam.webp" alt="Album 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px" />
-                     </div>
-                     <div className="md:col-span-2 relative aspect-[16/7] rounded-3xl overflow-hidden shadow-lg border border-slate-100 group">
-                        <Image src="/lalia-album/Lilia%20Maam_Pa.webp" alt="Album 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 800px" />
+                     {/* Full Width Feature spanning both columns, aligned with container */}
+                     <div className="md:col-span-2 group relative rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-2xl border border-slate-100 bg-white">
+                        <div className="relative w-full aspect-[21/5]">
+                           <Image
+                              src="/kristin/Kristine_Page_00.webp"
+                              alt="Panoramic Album Spread"
+                              fill
+                              className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                              sizes="100vw"
+                           />
+                        </div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-6 md:p-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                           <div className="space-y-1">
+                              <span className="bg-white/90 backdrop-blur-sm text-primary px-4 py-1 rounded-full text-[9px] font-bold uppercase tracking-[0.3em]">Masterpiece Showcase</span>
+                              <h3 className="text-white text-xl md:text-3xl font-heading font-extrabold tracking-tight">Panoramic Digital Spreads</h3>
+                           </div>
+                        </div>
                      </div>
                   </div>
                </div>
@@ -123,15 +148,15 @@ export default function DigitalAlbumPage() {
             </section>
 
             {/* CTA */}
-            <section className="py-12 md:py-20 text-center relative overflow-hidden">
-               <div className="container mx-auto px-6 relative z-10">
-                  <h2 className="text-2xl md:text-3xl font-heading font-extrabold text-primary mb-4">Hold Your Memories in Your Hands</h2>
-                  <p className="text-sm text-slate-500 mb-8 max-w-lg mx-auto">Get in touch to explore our catalog of premium finishes and design options for your personal album.</p>
-                  <div className="flex flex-col sm:flex-row justify-center gap-4">
-                     <Link href="/contact" className="px-10 py-4 bg-primary text-white rounded-full font-bold text-sm hover:bg-secondary transition-all shadow-xl shadow-primary/10">
+            <section className="py-12 md:py-16 text-center relative overflow-hidden">
+               <div className="container mx-auto px-6 relative z-10 space-y-4">
+                  <h2 className="text-2xl md:text-3xl font-heading font-extrabold text-primary">Hold Your Memories in Your Hands</h2>
+                  <p className="text-sm text-slate-500 max-w-lg mx-auto font-light">Explore our range of premium finishes and design options for your personal album.</p>
+                  <div className="flex flex-col sm:flex-row justify-center gap-3 pt-2">
+                     <Link href="/contact" className="px-10 py-3.5 bg-primary text-white rounded-full font-bold text-sm hover:bg-secondary transition-all shadow-xl shadow-primary/10">
                         Get a Quote
                      </Link>
-                     <Link href="https://wa.me/919820685643" className="px-10 py-4 bg-white text-primary border border-slate-200 rounded-full font-bold text-sm hover:bg-slate-50 transition-all flex items-center justify-center gap-2">
+                     <Link href="https://wa.me/919820685643" className="px-10 py-3.5 bg-white text-primary border border-slate-200 rounded-full font-bold text-sm hover:bg-slate-50 transition-all flex items-center justify-center gap-2">
                         WhatsApp Inquiry
                      </Link>
                   </div>

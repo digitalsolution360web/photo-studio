@@ -60,23 +60,32 @@ export default function CandidPhotographyPage() {
                      </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8">
-                     {/* Right Column Stack (Moved up as first column since old featured is gone) */}
-                     <div className="md:col-span-4 flex flex-col gap-6 md:gap-8">
-                        <div className="relative aspect-square rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl border border-slate-100 group">
-                           <Image src="/keith-album/Keith's%20Communion.webp" alt="Candid 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-                        </div>
-                        <div className="relative aspect-square rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl border border-slate-100 group">
-                           <Image src="/jassi-album/Jessy%20Album.webp" alt="Candid 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 auto-rows-[200px] md:auto-rows-[250px]">
+                     {/* Signature Shot - Balanced Height */}
+                     <div className="md:col-span-8 md:row-span-2 relative rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl border-4 border-slate-50 group">
+                        <Image src="/wedding/Page%20wed.webp" alt="Signature Candid" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                           <div className="space-y-1">
+                              <span className="text-secondary font-bold uppercase tracking-widest text-[10px]">Featured Story</span>
+                              <p className="text-white font-heading font-extrabold text-2xl tracking-tight">Emotional Legacy</p>
+                           </div>
                         </div>
                      </div>
 
-                     {/* Bottom Row - Shifted */}
-                     <div className="md:col-span-4 relative aspect-[3/4] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl border border-slate-100 group">
-                        <Image src="/keith-album/Keith's%20Communio.webp" alt="Candid 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                     {/* Detail Shots */}
+                     <div className="md:col-span-4 relative rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-slate-50 group">
+                        <Image src="/keith-album/Keith's%20Communion.webp" alt="Candid Detail 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                      </div>
-                     <div className="md:col-span-4 relative aspect-square rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl border border-slate-100 group">
-                        <Image src="/keith-album/Keith's%20Commun.webp" alt="Candid 4" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                     <div className="md:col-span-4 relative rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-slate-50 group">
+                        <Image src="/jassi-album/Jessy%20Album.webp" alt="Candid Detail 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                     </div>
+
+                     {/* Cinematic Wides */}
+                     <div className="md:col-span-6 relative rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-slate-50 group">
+                        <Image src="/sam-wedding/Samford%20Weddin.webp" alt="Cinematic Wide 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                     </div>
+                     <div className="md:col-span-6 relative rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-slate-50 group">
+                        <Image src="/silver-wedding/Silver%20Wedding.webp" alt="Cinematic Wide 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                      </div>
                   </div>
                </div>
@@ -84,15 +93,17 @@ export default function CandidPhotographyPage() {
             <section className="py-12 md:py-16 bg-white">
                <div className="container mx-auto px-6 md:px-12">
                   <div className="relative group rounded-[3rem] overflow-hidden aspect-video max-w-5xl mx-auto shadow-2xl border border-slate-100 bg-[#0a0a0b]">
+                     <Image src="/keith-album/Keith's%20Communion.webp" alt="Candid Video" fill className="object-cover opacity-60 transition-transform duration-1000 group-hover:scale-105" />
+                     <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-40"></div>
                      <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
                         <Link
                            href="https://www.youtube.com/watch?v=FJ1lPq_RfWA"
                            target="_blank"
-                           className="w-20 h-20 bg-secondary text-white rounded-full flex items-center justify-center shadow-2xl scale-100 hover:scale-110 transition-all group/play"
+                           className="w-20 h-20 bg-secondary text-white rounded-full flex items-center justify-center shadow-[0_0_50px_rgba(255,87,123,0.3)] scale-100 hover:scale-110 transition-all duration-500 group/play relative z-20"
                         >
                            <Play fill="currentColor" size={32} className="ml-1" />
                         </Link>
-                        <div className="mt-8 space-y-2">
+                        <div className="mt-8 space-y-2 relative z-20">
                            <h3 className="text-white text-2xl md:text-3xl font-heading font-extrabold tracking-tight">Candid Photography Highlights</h3>
                            <p className="text-white/70 text-sm font-medium uppercase tracking-[0.2em]">Capturing Moments on YouTube</p>
                         </div>
