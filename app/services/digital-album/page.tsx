@@ -42,77 +42,32 @@ export default function DigitalAlbumPage() {
                </div>
             </section>
 
-            {/* Gallery - Material & Design Focus */}
-            <section className="py-8 bg-white">
-               <div className="container mx-auto px-6 md:px-12">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Digital Album Showcase - Premium Grid */}
+            <section className="py-12 md:py-24 bg-white">
+               <div className="container mx-auto px-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-7xl mx-auto">
                      {[
-                        { src: "/lalia-album/Lilia%20M.webp", title: "Signature Wedding Album", tag: "Featured" },
-                        { src: "/lalia-album/Lilia%20Maa.webp", title: "Premium Leather Binding", tag: "Quality" },
-                        { src: "/lalia-album/Lilia%20Maam.webp", title: "Artistic Layouts", tag: "Design" },
-                        { src: "/lalia-album/Lilia%20Maam_Pa.webp", title: "Digital Masterpieces", tag: "Heritage" }
-                     ].map((item, i) => (
-                        <div key={i} className="group relative rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 bg-white aspect-[4/3] md:aspect-auto md:h-[320px]">
-                           <Image
-                              src={item.src}
-                              alt={item.title}
-                              fill
-                              className="object-cover transition-transform duration-1000 group-hover:scale-105"
-                              sizes="(max-width: 768px) 100vw, 50vw"
-                           />
-                           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                              <div className="space-y-1">
-                                 <span className="text-secondary font-bold uppercase tracking-widest text-[9px]">{item.tag}</span>
-                                 <h3 className="text-white text-lg font-heading font-bold tracking-tight">{item.title}</h3>
-                              </div>
+                        "/digital-album/Cassandra_Page_001.webp",
+                        "/digital-album/Cassandra_Page_002.webp",
+                        "/digital-album/Cassandra_Page_003.webp",
+                        "/digital-album/Cassandra_Page_015.webp",
+                        "/digital-album/Cassandra_Page_016.webp",
+                        "/digital-album/Cassandra_Page_017.webp",
+                     ].map((src, idx) => (
+                        <div key={idx} className="group relative rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-slate-100 bg-[#f8f9fa] transition-all duration-500 hover:shadow-[0_30px_60px_rgba(0,0,0,0.15)]">
+                           <div className="relative w-full aspect-[16/10] md:aspect-[3/2] lg:aspect-[16/9]">
+                              <Image
+                                 src={src}
+                                 alt={`Cassandra Album Spread ${idx + 1}`}
+                                 fill
+                                 className="p-2 md:p-4 object-contain transition-transform duration-1000 group-hover:scale-105"
+                                 sizes="(max-width: 768px) 100vw, 50vw"
+                                 priority={idx < 2}
+                              />
                            </div>
+                           <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent pointer-events-none" />
                         </div>
                      ))}
-
-                     {/* Full Width Feature spanning both columns, aligned with container */}
-                     <div className="md:col-span-2 group relative rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-2xl border border-slate-100 bg-white">
-                        <div className="relative w-full aspect-[21/5]">
-                           <Image
-                              src="/kristin/Kristine_Page_00.webp"
-                              alt="Panoramic Album Spread"
-                              fill
-                              className="object-cover transition-transform duration-1000 group-hover:scale-105"
-                              sizes="100vw"
-                           />
-                        </div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-6 md:p-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                           <div className="space-y-1">
-                              <span className="bg-white/90 backdrop-blur-sm text-primary px-4 py-1 rounded-full text-[9px] font-bold uppercase tracking-[0.3em]">Masterpiece Showcase</span>
-                              <h3 className="text-white text-xl md:text-3xl font-heading font-extrabold tracking-tight">Panoramic Digital Spreads</h3>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </section>
-
-            {/* YouTube Video Showcase */}
-            <section className="py-12 md:py-16 bg-white">
-               <div className="container mx-auto px-6 md:px-12">
-                  <div className="relative group rounded-[3rem] overflow-hidden aspect-video max-w-5xl mx-auto shadow-2xl border border-slate-100">
-                     {/* Background image */}
-                     <Image src="/Rochel.webp" alt="Digital Album Video" fill className="object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80" sizes="(max-width: 1024px) 100vw, 1024px" />
-                     {/* Dark overlay */}
-                     <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent" />
-                     {/* Play button + text */}
-                     <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center z-10">
-                        <Link
-                           href="https://www.youtube.com/watch?v=gV7bxx1TdVY"
-                           target="_blank"
-                           className="w-20 h-20 bg-secondary text-white rounded-full flex items-center justify-center shadow-2xl scale-100 hover:scale-110 transition-all"
-                        >
-                           <Play fill="currentColor" size={32} className="ml-1" />
-                        </Link>
-                        <div className="mt-8 space-y-2">
-                           <h3 className="text-white text-2xl md:text-3xl font-heading font-extrabold tracking-tight">Digital Album Showcase</h3>
-                           <p className="text-white/70 text-sm font-medium uppercase tracking-[0.2em]">Premium Printing on YouTube</p>
-                        </div>
-                     </div>
                   </div>
                </div>
             </section>

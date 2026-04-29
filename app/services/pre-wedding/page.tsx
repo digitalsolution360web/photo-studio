@@ -37,36 +37,30 @@ export default function PreWeddingPage() {
           </div>
         </section>
 
-        {/* YouTube Video Showcase */}
+        {/* Image Showcase Grid */}
         <section className="py-12 md:py-24 bg-white">
-           <div className="container mx-auto px-6 md:px-12">
-              <div className="relative group rounded-[3rem] overflow-hidden aspect-video max-w-5xl mx-auto shadow-2xl border border-slate-100">
-                 {/* Background image */}
-                 <Image
-                    src="/kristin/Kristine_Cover.webp"
-                    alt="Pre-Wedding Background"
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {[
+                { src: "/pre-wedding/pre-wedding.webp", alt: "Pre-Wedding Shoot 1" },
+                { src: "/pre-wedding/Pre-Wedding1.webp", alt: "Pre-Wedding Shoot 2" },
+                { src: "/pre-wedding/pre-wedding2.webp", alt: "Pre-Wedding Shoot 3" },
+                { src: "/pre-wedding/Prewedding3.webp", alt: "Pre-Wedding Shoot 4" },
+              ].map((img, idx) => (
+                <div key={idx} className="relative aspect-[4/5] md:aspect-[3/2] rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100 bg-slate-50 group">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
                     fill
-                    className="object-cover transition-transform duration-1000 group-hover:scale-105"
-                    sizes="(max-width: 1024px) 100vw, 1024px"
-                 />
-                 {/* Dark overlay */}
-                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
-                 {/* Play button + text */}
-                 <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center z-10">
-                    <Link 
-                       href="https://www.youtube.com/watch?v=h5UJvhwLh2o" 
-                       target="_blank"
-                       className="w-20 h-20 bg-secondary text-white rounded-full flex items-center justify-center shadow-2xl scale-100 hover:scale-110 transition-all"
-                    >
-                       <Play fill="currentColor" size={32} className="ml-1" />
-                    </Link>
-                    <div className="mt-8 space-y-2">
-                       <h3 className="text-white text-2xl md:text-3xl font-heading font-extrabold tracking-tight">Watch Our Pre-Wedding Film</h3>
-                       <p className="text-white/70 text-sm font-medium uppercase tracking-[0.2em]">Romantic Stories on YouTube</p>
-                    </div>
-                 </div>
-              </div>
-           </div>
+                    className="object-cover object-top transition-transform duration-1000 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    priority={idx < 2}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
       </main>
 
