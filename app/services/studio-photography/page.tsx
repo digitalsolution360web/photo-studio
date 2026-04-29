@@ -34,7 +34,7 @@ export default function StudioPhotographyPage() {
             {/* Simple & Clean Hero */}
             <section className="relative py-12 md:py-20 bg-[#0a0a0b] text-white">
                <div className="absolute inset-0">
-                  <Image src="/florines/Florine'scommu.webp" alt="Studio Hero" fill className="object-cover opacity-20" priority />
+                  <Image src="/florines/Florine'scommu.webp" alt="Studio Hero" fill className="object-cover opacity-20" priority sizes="100vw" />
                   <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/80 via-[#0a0a0b] to-[#0a0a0b]"></div>
                </div>
 
@@ -55,7 +55,7 @@ export default function StudioPhotographyPage() {
             <section className="py-12 md:py-16 bg-white">
                <div className="container mx-auto px-6 md:px-12">
                   <div className="relative group rounded-[3rem] overflow-hidden aspect-video max-w-5xl mx-auto shadow-2xl border border-slate-100 bg-[#0a0a0b]">
-                     <Image src="/wedding/Page.webp" alt="Watch Studio Video" fill className="object-cover transition-transform duration-1000 group-hover:scale-105 opacity-60" />
+                     <Image src="/jassi-album/Jessy%20Album.webp" alt="Watch Studio Video" fill className="object-cover transition-transform duration-1000 group-hover:scale-105 opacity-60" sizes="(max-width: 1024px) 100vw, 1024px" />
                      <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-40"></div>
                      <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
                         <Link

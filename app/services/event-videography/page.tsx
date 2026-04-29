@@ -27,7 +27,7 @@ export default function EventVideographyPage() {
             {/* Luxury Hero */}
             <section className="relative py-12 md:py-20 bg-[#0a0a0b] text-white">
                <div className="absolute inset-0">
-                  <Image src="/wedding/Page.webp" alt="Videography Hero" fill className="object-cover opacity-20" priority />
+                  <Image src="/wedding/Page.webp" alt="Videography Hero" fill className="object-cover opacity-20" priority sizes="100vw" />
                   <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/80 via-[#0a0a0b] to-[#0a0a0b]"></div>
                </div>
 
@@ -46,7 +46,7 @@ export default function EventVideographyPage() {
             <section className="py-12 md:py-16 bg-white">
                <div className="container mx-auto px-6 md:px-12">
                   <div className="relative group rounded-[3rem] overflow-hidden aspect-video max-w-5xl mx-auto shadow-2xl border border-slate-100 bg-[#0a0a0b]">
-                     <Image src="/wedding/Page.webp" alt="Videography Showreel" fill className="object-cover opacity-60 transition-transform duration-1000 group-hover:scale-105" />
+                     <Image src="/Rochel.webp" alt="Videography Showreel" fill className="object-cover opacity-60 transition-transform duration-1000 group-hover:scale-105" sizes="(max-width: 1024px) 100vw, 1024px" />
                      <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-40"></div>
                      <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
                         <Link

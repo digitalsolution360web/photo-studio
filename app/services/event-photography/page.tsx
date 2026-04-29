@@ -12,35 +12,12 @@ export const metadata: Metadata = {
 
 const videos = [
    {
-      id: "M2LF7xZw1nw",
-      title: "Event Highlights",
-      subtitle: "Premium Coverage",
-      href: "https://www.youtube.com/watch?v=M2LF7xZw1nw",
-   },
-   {
-      id: "m01g3yWdll0",
-      title: "Social Celebrations",
-      subtitle: "Cinematic Moments",
-      href: "https://www.youtube.com/watch?v=m01g3yWdll0",
-   },
-   {
-      id: "FJ1lPq_RfWA",
-      title: "Candid Stories",
-      subtitle: "Real Emotions",
-      href: "https://www.youtube.com/watch?v=FJ1lPq_RfWA",
-   },
-   {
-      id: "zkOm2t5ac9Q",
-      title: "Special Occasions",
-      subtitle: "Timeless Memories",
-      href: "https://www.youtube.com/watch?v=zkOm2t5ac9Q",
-   },
-   {
       id: "h5UJvhwLh2o",
-      title: "Signature Film",
-      subtitle: "Max Photo Studios",
-      href: "https://www.youtube.com/watch?v=h5UJvhwLh2o",
-   },
+      title: "Signature Event Film",
+      subtitle: "Cinematic Excellence",
+      href: "https://www.youtube.com/watch?si=Jf_e3Rw9TdohhXyS&v=h5UJvhwLh2o&feature=youtu.be",
+      thumbnail: "/silver-wedding/Silver%20Wedding.webp"
+   }
 ];
 
 export default function EventPhotographyPage() {
@@ -76,56 +53,28 @@ export default function EventPhotographyPage() {
                      </p>
                   </div>
 
-                  {/* Top 2 videos - large */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                     {videos.slice(0, 2).map((video, idx) => (
-                        <div key={video.id} className="relative group rounded-[2rem] overflow-hidden aspect-video bg-slate-900 shadow-2xl border border-slate-100">
+                  {/* Single Featured Video */}
+                  <div className="max-w-4xl mx-auto">
+                     {videos.map((video) => (
+                        <div key={video.id} className="relative group rounded-[3rem] overflow-hidden aspect-video bg-[#0a0a0b] shadow-2xl border border-slate-100">
                            <Image 
-                              src={idx === 0 ? "/wedding/Page.webp" : "/sam-wedding/Samford%20Weddin.webp"} 
+                              src={video.thumbnail} 
                               alt={video.title} 
                               fill 
-                              className="object-cover opacity-60 transition-transform duration-1000 group-hover:scale-110" 
+                              className="object-cover opacity-60 transition-transform duration-1000 group-hover:scale-105" 
                            />
-                           <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60"></div>
-                           <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                           <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-40"></div>
+                           <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
                               <Link
                                  href={video.href}
                                  target="_blank"
-                                 className="w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(255,87,123,0.3)] hover:scale-110 transition-all duration-300 relative z-20"
+                                 className="w-24 h-24 bg-secondary text-white rounded-full flex items-center justify-center shadow-[0_0_50px_rgba(255,87,123,0.3)] scale-100 hover:scale-110 transition-all duration-500 group/play relative z-20"
                               >
-                                 <Play fill="currentColor" size={24} className="ml-1" />
+                                 <Play fill="currentColor" size={32} className="ml-1" />
                               </Link>
-                              <div className="mt-5 space-y-1 relative z-20">
-                                 <h3 className="text-white text-lg md:text-xl font-heading font-extrabold tracking-tight">{video.title}</h3>
-                                 <p className="text-white/60 text-[10px] font-bold uppercase tracking-[0.2em]">{video.subtitle}</p>
-                              </div>
-                           </div>
-                        </div>
-                     ))}
-                  </div>
-
-                  {/* Bottom 3 videos */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                     {videos.slice(2).map((video, idx) => (
-                        <div key={video.id} className="relative group rounded-[2rem] overflow-hidden aspect-video bg-slate-900 shadow-xl border border-slate-100">
-                           <Image 
-                              src={idx === 0 ? "/keith-album/Keith%27s%20Communion.webp" : idx === 1 ? "/birthday/Dalreen%20Birthday.webp" : "/silver-wedding/Silver%20Wedding.webp"} 
-                              alt={video.title} 
-                              fill 
-                              className="object-cover opacity-50 transition-transform duration-1000 group-hover:scale-110" 
-                           />
-                           <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60"></div>
-                           <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                              <Link
-                                 href={video.href}
-                                 target="_blank"
-                                 className="w-14 h-14 bg-secondary text-white rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(255,87,123,0.3)] hover:scale-110 transition-all duration-300 relative z-20"
-                              >
-                                 <Play fill="currentColor" size={20} className="ml-0.5" />
-                              </Link>
-                              <div className="mt-4 space-y-1 relative z-20">
-                                 <h3 className="text-white text-base font-heading font-extrabold tracking-tight">{video.title}</h3>
-                                 <p className="text-white/60 text-[9px] font-bold uppercase tracking-[0.2em]">{video.subtitle}</p>
+                              <div className="mt-8 space-y-2 relative z-20">
+                                 <h3 className="text-white text-2xl md:text-4xl font-heading font-extrabold tracking-tight">{video.title}</h3>
+                                 <p className="text-white/70 text-sm md:text-base font-medium uppercase tracking-[0.2em]">{video.subtitle}</p>
                               </div>
                            </div>
                         </div>
