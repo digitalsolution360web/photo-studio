@@ -27,7 +27,7 @@ export default function PhotoRestorationPage() {
             {/* Legacy Hero */}
             <section className="relative py-12 md:py-20 bg-[#0a0a0b] text-white">
                <div className="absolute inset-0">
-                  <Image src="/aeron-album/Aaron%20Album%60_Page_024.jpg" alt="Restoration Hero" fill className="object-cover opacity-20" priority />
+                  <Image src="/aeron-album/Aaron%20Album.webp" alt="Restoration Hero" fill className="object-cover opacity-20" priority />
                   <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/80 via-[#0a0a0b] to-[#0a0a0b]"></div>
                </div>
 

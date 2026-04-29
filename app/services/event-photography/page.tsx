@@ -109,7 +109,7 @@ export default function EventPhotographyPage() {
                      {videos.slice(2).map((video, idx) => (
                         <div key={video.id} className="relative group rounded-[2rem] overflow-hidden aspect-video bg-slate-900 shadow-xl border border-slate-100">
                            <Image 
-                              src={idx === 0 ? "/keith-album/Keith's%20Communion.webp" : idx === 1 ? "/birthday/Dalreen%20Birthday.webp" : "/silver-wedding/Silver%20Wedding.webp"} 
+                              src={idx === 0 ? "/keith-album/Keith%27s%20Communion.webp" : idx === 1 ? "/birthday/Dalreen%20Birthday.webp" : "/silver-wedding/Silver%20Wedding.webp"} 
                               alt={video.title} 
                               fill 
                               className="object-cover opacity-50 transition-transform duration-1000 group-hover:scale-110" 

@@ -74,7 +74,7 @@ export default function CandidPhotographyPage() {
 
                      {/* Detail Shots */}
                      <div className="md:col-span-4 relative rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-slate-50 group">
-                        <Image src="/keith-album/Keith's%20Communion.webp" alt="Candid Detail 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                        <Image src="/keith-album/Keith%27s%20Communion.webp" alt="Candid Detail 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                      </div>
                      <div className="md:col-span-4 relative rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-slate-50 group">
                         <Image src="/jassi-album/Jessy%20Album.webp" alt="Candid Detail 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
@@ -93,7 +93,7 @@ export default function CandidPhotographyPage() {
             <section className="py-12 md:py-16 bg-white">
                <div className="container mx-auto px-6 md:px-12">
                   <div className="relative group rounded-[3rem] overflow-hidden aspect-video max-w-5xl mx-auto shadow-2xl border border-slate-100 bg-[#0a0a0b]">
-                     <Image src="/keith-album/Keith's%20Communion.webp" alt="Candid Video" fill className="object-cover opacity-60 transition-transform duration-1000 group-hover:scale-105" />
+                     <Image src="/keith-album/Keith%27s%20Communion.webp" alt="Candid Video" fill className="object-cover opacity-60 transition-transform duration-1000 group-hover:scale-105" />
                      <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-40"></div>
                      <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
                         <Link

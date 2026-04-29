@@ -19,7 +19,7 @@ export default function WorkPage() {
          title: "Fine Art Photography",
          desc: "Classic wedding portraiture with a modern, elegant finish. Preserving every look, touch, and tear in high definition.",
          icon: <Camera />,
-         img: "/sam.webp"
+         img: "/Sam.webp"
       },
       {
          title: "Candid Storytelling",
@@ -34,7 +34,7 @@ export default function WorkPage() {
          title: "Samford Wedding Celebration",
          location: "Mumbai",
          date: "December 2023",
-         img: "/same.webp",
+         img: "/Same.webp",
          tag: "Cinematic"
       },
       {
@@ -82,7 +82,7 @@ export default function WorkPage() {
                      <div className="lg:w-1/2 relative group">
                         <div className="absolute inset-0 bg-slate-50 rounded-[4rem] translate-x-6 translate-y-6 -z-10 group-hover:translate-x-8 group-hover:translate-y-8 transition-transform duration-700"></div>
                         <div className="relative aspect-[4/5] rounded-[3.5rem] overflow-hidden shadow-2xl">
-                           <Image src="/keith-album/Keith's%20Comm.webp" alt="Our Work" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+                           <Image src="/keith-album/Keith%27s%20Comm.webp" alt="Our Work" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
 
                         </div>
                      </div>

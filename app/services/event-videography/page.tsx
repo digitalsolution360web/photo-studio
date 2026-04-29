@@ -25,6 +25,23 @@ export default function EventVideographyPage() {
 
          <main className="flex-grow pt-24">
             {/* Luxury Hero */}
+            <section className="relative py-12 md:py-20 bg-[#0a0a0b] text-white">
+               <div className="absolute inset-0">
+                  <Image src="/wedding/Page.webp" alt="Videography Hero" fill className="object-cover opacity-20" priority />
+                  <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/80 via-[#0a0a0b] to-[#0a0a0b]"></div>
+               </div>
+
+               <div className="container mx-auto px-6 relative z-10 text-center space-y-6">
+                  <span className="text-secondary font-bold uppercase tracking-[0.4em] text-[10px]">Our Expertise</span>
+                   <h1 className="text-3xl md:text-5xl font-heading font-extrabold tracking-tighter">
+                      Cinematic <span className="text-secondary">Excellence</span>
+                   </h1>
+                   <p className="text-sm md:text-base text-white/50 max-w-xl mx-auto font-light leading-relaxed">
+                      From immersive wedding films to dynamic event highlights, we deliver high-end cinematography tailored to preserve your most moving moments.
+                   </p>
+               </div>
+            </section>
+
             {/* YouTube Video Showcase */}
             <section className="py-12 md:py-16 bg-white">
                <div className="container mx-auto px-6 md:px-12">
