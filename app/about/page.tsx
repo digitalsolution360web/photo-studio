@@ -20,7 +20,7 @@ export default function AboutPage() {
         <section className="relative py-20 md:py-32 overflow-hidden bg-[#0a0a0b] text-white">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/samford-album/Samford%20Ro.webp"
+              src="/samford-album/Samford Ro.webp"
               alt="Cinematic Background"
               fill
               className="object-cover opacity-30 scale-105"
@@ -53,7 +53,7 @@ export default function AboutPage() {
                   <div className="absolute -top-6 -left-6 w-32 h-32 bg-secondary/5 rounded-full blur-3xl"></div>
                   <div className="rounded-[3rem] overflow-hidden shadow-[0_30px_70px_rgba(0,0,0,0.15)] relative z-10 aspect-[4/5]">
                     <Image 
-                      src="/aeron-album/Aaron%20Album%60_Page_024.jpg" 
+                      src="/aeron-album/Aaron Album.webp" 
                       alt="Max Photo Studio Legacy" 
                       fill 
                       className="object-cover" 

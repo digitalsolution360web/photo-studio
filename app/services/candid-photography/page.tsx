@@ -26,11 +26,11 @@ export default function CandidPhotographyPage() {
          <main className="flex-grow pt-24">
             {/* Luxury Hero */}
             {/* Luxury Hero */}
-             <section className="relative py-12 md:py-20 bg-[#0a0a0b] text-white">
-                <div className="absolute inset-0">
-                   <Image src="/candid/Dalreen-Birthday-Album_Cover.webp" alt="Candid Hero" fill className="object-cover opacity-20" priority sizes="100vw" />
-                   <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/80 via-[#0a0a0b] to-[#0a0a0b]"></div>
-                </div>
+            <section className="relative py-12 md:py-20 bg-[#0a0a0b] text-white">
+               <div className="absolute inset-0">
+                  <Image src="/candid/Dalreen-Birthday-Album_Cover.webp" alt="Candid Hero" fill className="object-cover opacity-20" priority sizes="100vw" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/80 via-[#0a0a0b] to-[#0a0a0b]"></div>
+               </div>
 
                <div className="container mx-auto px-6 relative z-10 text-center space-y-6">
                   <span className="text-secondary font-bold uppercase tracking-[0.4em] text-[10px]">Candid Photography</span>
@@ -63,8 +63,8 @@ export default function CandidPhotographyPage() {
 
                   <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 auto-rows-[200px] md:auto-rows-[250px]">
                      {/* Signature Shot - Balanced Height */}
-                      <div className="md:col-span-8 md:row-span-2 relative rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl border-4 border-slate-50 group">
-                         <Image src="/candid/Dalreen-Birthday-Album_Page_001.webp" alt="Signature Candid" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" sizes="(max-width: 1024px) 100vw, 66vw" />
+                     <div className="md:col-span-8 md:row-span-2 relative rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl border-4 border-slate-50 group">
+                        <Image src="/candid/Dalreen-Birthday-Album_Page_001.webp" alt="Signature Candid" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" sizes="(max-width: 1024px) 100vw, 66vw" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                            <div className="space-y-1">
                               <span className="text-secondary font-bold uppercase tracking-widest text-[10px]">Featured Story</span>
@@ -74,44 +74,24 @@ export default function CandidPhotographyPage() {
                      </div>
 
                      {/* Detail Shots */}
-                      <div className="md:col-span-4 relative rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-slate-50 group">
-                         <Image src="/candid/Dalreen-Birthday-Album_Page_002.webp" alt="Candid Detail 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 1024px) 50vw, 33vw" />
+                     <div className="md:col-span-4 relative rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-slate-50 group">
+                        <Image src="/candid/Dalreen-Birthday-Album_Page_002.webp" alt="Candid Detail 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 1024px) 50vw, 33vw" />
                      </div>
-                      <div className="md:col-span-4 relative rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-slate-50 group">
-                         <Image src="/candid/Dalreen-Birthday-Album_Page_003.webp" alt="Candid Detail 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 1024px) 50vw, 33vw" />
+                     <div className="md:col-span-4 relative rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-slate-50 group">
+                        <Image src="/candid/Dalreen-Birthday-Album_Page_003.webp" alt="Candid Detail 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 1024px) 50vw, 33vw" />
                      </div>
 
                      {/* Cinematic Wides */}
-                      <div className="md:col-span-6 relative rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-slate-50 group">
-                         <Image src="/candid/Dalreen-Birthday-Album_Page_004.webp" alt="Cinematic Wide 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 1024px) 100vw, 50vw" />
+                     <div className="md:col-span-6 relative rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-slate-50 group">
+                        <Image src="/candid/Dalreen-Birthday-Album_Page_004.webp" alt="Cinematic Wide 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 1024px) 100vw, 50vw" />
                      </div>
-                      <div className="md:col-span-6 relative rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-slate-50 group">
-                         <Image src="/candid/Dalreen-Birthday-Album_Page_005.webp" alt="Cinematic Wide 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 1024px) 100vw, 50vw" />
-                     </div>
-                  </div>
-               </div>
-            </section>
-            <section className="py-12 md:py-16 bg-white">
-               <div className="container mx-auto px-6 md:px-12">
-                   <div className="relative group rounded-[3rem] overflow-hidden aspect-video max-w-5xl mx-auto shadow-2xl border border-slate-100 bg-[#0a0a0b]">
-                      <Image src="/candid/Dalreen-Birthday-Album_Cover.webp" alt="Candid Video" fill className="object-cover opacity-60 transition-transform duration-1000 group-hover:scale-105" sizes="(max-width: 1024px) 100vw, 1024px" />
-                     <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-40"></div>
-                     <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
-                        <Link
-                           href="https://www.youtube.com/watch?v=FJ1lPq_RfWA"
-                           target="_blank"
-                           className="w-20 h-20 bg-secondary text-white rounded-full flex items-center justify-center shadow-[0_0_50px_rgba(255,87,123,0.3)] scale-100 hover:scale-110 transition-all duration-500 group/play relative z-20"
-                        >
-                           <Play fill="currentColor" size={32} className="ml-1" />
-                        </Link>
-                        <div className="mt-8 space-y-2 relative z-20">
-                           <h3 className="text-white text-2xl md:text-3xl font-heading font-extrabold tracking-tight">Candid Photography Highlights</h3>
-                           <p className="text-white/70 text-sm font-medium uppercase tracking-[0.2em]">Capturing Moments on YouTube</p>
-                        </div>
+                     <div className="md:col-span-6 relative rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-slate-50 group">
+                        <Image src="/candid/Dalreen-Birthday-Album_Page_005.webp" alt="Cinematic Wide 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 1024px) 100vw, 50vw" />
                      </div>
                   </div>
                </div>
             </section>
+
 
 
             {/* Features & Stats */}
