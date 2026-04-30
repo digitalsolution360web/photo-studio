@@ -58,6 +58,31 @@ export default function WorkPage() {
          <Navbar />
 
          <main className="flex-grow pt-24">
+            {/* Top Banner Section */}
+            <section className="relative py-16 md:py-24 bg-[#0a0a0b] text-white overflow-hidden">
+               <div className="absolute inset-0 z-0">
+                  <Image 
+                     src="/wedding/Page%20wed.webp" 
+                     alt="Portfolio Banner" 
+                     fill 
+                     className="object-cover opacity-30"
+                     priority
+                     sizes="100vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/90 via-[#0a0a0b]/60 to-[#0a0a0b]"></div>
+               </div>
+               
+               <div className="container mx-auto px-6 relative z-10 text-center space-y-6">
+                  <span className="text-secondary font-bold uppercase tracking-[0.4em] text-[10px]">Mastering The Craft</span>
+                  <h1 className="text-4xl md:text-6xl font-heading font-extrabold tracking-tighter">
+                     Our <span className="text-secondary">Work</span>
+                  </h1>
+                  <p className="text-sm md:text-base text-white/50 max-w-xl mx-auto font-light leading-relaxed">
+                     Explore our collection of cinematic stories, candid moments, and elegant portraiture crafted over 33 years.
+                  </p>
+               </div>
+            </section>
+
             {/* Work Hero */}
             <section className="py-12 md:py-16 bg-white overflow-hidden">
 
@@ -81,8 +106,8 @@ export default function WorkPage() {
 
                      <div className="lg:w-1/2 relative group">
                         <div className="absolute inset-0 bg-slate-50 rounded-[4rem] translate-x-6 translate-y-6 -z-10 group-hover:translate-x-8 group-hover:translate-y-8 transition-transform duration-700"></div>
-                        <div className="relative aspect-[4/5] rounded-[3.5rem] overflow-hidden shadow-2xl">
-                           <Image src="/keith-album/Keith%27s%20Comm.webp" alt="Our Work" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+                        <div className="relative aspect-[21/9] md:aspect-[2.5/1] rounded-[2rem] overflow-hidden shadow-2xl bg-white border border-slate-100">
+                           <Image src="/keith-album/Keith%27s%20Comm.webp" alt="Our Work" fill className="object-contain p-2 md:p-3" sizes="(max-width: 1024px) 100vw, 50vw" />
 
                         </div>
                      </div>

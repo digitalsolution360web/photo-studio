@@ -40,23 +40,28 @@ export default function PreWeddingPage() {
         {/* Image Showcase Grid */}
         <section className="py-12 md:py-24 bg-white">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
               {[
                 { src: "/pre-wedding/pre-wedding.webp", alt: "Pre-Wedding Shoot 1" },
                 { src: "/pre-wedding/Pre-Wedding1.webp", alt: "Pre-Wedding Shoot 2" },
                 { src: "/pre-wedding/pre-wedding2.webp", alt: "Pre-Wedding Shoot 3" },
                 { src: "/pre-wedding/Prewedding3.webp", alt: "Pre-Wedding Shoot 4" },
               ].map((img, idx) => (
-                <div key={idx} className="relative aspect-[4/5] md:aspect-[3/2] rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100 bg-slate-50 group">
+                <div key={idx} className="relative aspect-[3/4] md:aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border border-slate-100 bg-slate-50 group">
                   <Image
                     src={img.src}
                     alt={img.alt}
                     fill
-                    className="object-cover object-top transition-transform duration-1000 group-hover:scale-110"
+                    className="object-cover object-center transition-transform duration-1000 group-hover:scale-110"
                     sizes="(max-width: 768px) 100vw, 50vw"
                     priority={idx < 2}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 flex items-end p-10">
+                    <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+                       <p className="text-white font-heading font-extrabold text-2xl tracking-tight">Elegance in Motion</p>
+                       <p className="text-secondary font-bold text-xs uppercase tracking-widest mt-2">Signature Session</p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>

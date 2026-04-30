@@ -7,8 +7,8 @@ export const metadata: Metadata = {
 };
 
 import { Preloader } from "@/components/Preloader";
+import { SupportBar } from "@/components/SupportBar";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-
 
 export default function RootLayout({
   children,
@@ -21,10 +21,13 @@ export default function RootLayout({
       className="h-full antialiased scroll-smooth"
       data-scroll-behavior="smooth"
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col font-sans">
         <Preloader />
         {children}
-        <WhatsAppButton />
+        <SupportBar />
+        <div className="hidden md:block">
+          <WhatsAppButton />
+        </div>
       </body>
     </html>
   );

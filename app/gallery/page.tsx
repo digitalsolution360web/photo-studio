@@ -28,56 +28,35 @@ function AnimatedCounter({ target, duration = 2000 }: { target: number; duration
 }
 
 const allImages = [
+  // Pre-Wedding
+  { src: "/pre-wedding/pre-wedding.webp", title: "Timeless Romance", category: "Pre-Wedding" },
+  { src: "/pre-wedding/Pre-Wedding1.webp", title: "Golden Hour", category: "Pre-Wedding" },
+  { src: "/pre-wedding/pre-wedding2.webp", title: "Stylized Story", category: "Pre-Wedding" },
+  { src: "/pre-wedding/Prewedding3.webp", title: "Modern Love", category: "Pre-Wedding" },
+
+  // Events
+  { src: "/florines/Florine%27s%20Communion.webp", title: "Sacred Communion", category: "Events" },
+  { src: "/florines/Florine%27s%20Communi.webp", title: "Divine Joy", category: "Events" },
+  { src: "/keith-album/Keith%27s%20Communion.webp", title: "Family Legacy", category: "Events" },
+  { src: "/keith-album/Keith%27s%20Communio.webp", title: "Solemn Ceremony", category: "Events" },
+  { src: "/birthday/Dalreen%20Birthday.webp", title: "Celebration Spirit", category: "Events" },
+  { src: "/birthday/Dalreenbirthday.webp", title: "Joyful Gathering", category: "Events" },
+
   // Weddings
   { src: "/wedding/Page%20wed.webp", title: "Royal Union", category: "Weddings" },
   { src: "/wedding/Page.webp", title: "The Grand Celebration", category: "Weddings" },
   { src: "/wedding/Page_0.webp", title: "Eternal Vows", category: "Weddings" },
   { src: "/wedding/Page_00.webp", title: "Golden Moments", category: "Weddings" },
-  // { src: "/sam-wedding/Samford%20Wedding.webp", title: "Cultural Heritage", category: "Weddings" },
   { src: "/sam-wedding/Samford%20Weddin.webp", title: "Sacred Bond", category: "Weddings" },
-  { src: "/sam-wedding/Samford%20Wedd.webp", title: "Traditional Grace", category: "Weddings" },
-  { src: "/sam-wedding/Samford%20Wed.webp", title: "Vibrant Joy", category: "Weddings" },
   { src: "/silver-wedding/Silver%20Wedding.webp", title: "Silver Jubilee", category: "Weddings" },
-  { src: "/silver-wedding/Silver%20Weddin.webp", title: "Classic Elegance", category: "Weddings" },
-  { src: "/silver-wedding/Silver%20Wedd.webp", title: "Timeless Bond", category: "Weddings" },
-  { src: "/silver-wedding/Silver%20Wed.webp", title: "Love's Journey", category: "Weddings" },
-
-  // Pre-Wedding
-  // { src: "/kristin/Kristine_Cover.webp",         title: "Sunset Romance",       category: "Pre-Wedding" },
-  { src: "/kristin/Kristine_Page.webp", title: "Timeless Love", category: "Pre-Wedding" },
-  { src: "/kristin/Kristine_Page_.webp", title: "Modern Fairytale", category: "Pre-Wedding" },
-  { src: "/kristin/Kristine_Page_00.webp", title: "Urban Romance", category: "Pre-Wedding" },
-  { src: "/lalia-album/Lilia%20Maam.webp", title: "Artistic Portrait", category: "Pre-Wedding" },
-  { src: "/lalia-album/Lilia%20Maam_Pa.webp", title: "Candid Grace", category: "Pre-Wedding" },
-  { src: "/lalia-album/Lilia%20Maa.webp", title: "Dreamy Escape", category: "Pre-Wedding" },
-  { src: "/lalia-album/Lilia%20M.webp", title: "Serene Moments", category: "Pre-Wedding" },
-
-  // Events
-  { src: "/florines/Florine%27s%20Communion.webp", title: "Sacred Communion", category: "Events" },
-  { src: "/florines/Florine%27s%20Communi.webp", title: "Divine Joy", category: "Events" },
-  { src: "/florines/Florine%27s%20Comm.webp", title: "Blessed Path", category: "Events" },
-  { src: "/florines/Florine%27scommu.webp", title: "Holy Spirit", category: "Events" },
-  { src: "/keith-album/Keith%27s%20Communion.webp", title: "Family Legacy", category: "Events" },
-  { src: "/keith-album/Keith%27s%20Communio.webp", title: "Solemn Ceremony", category: "Events" },
-  { src: "/keith-album/Keith%27s%20Commun.webp", title: "Faith & Love", category: "Events" },
-  { src: "/keith-album/Keith%27s%20Comm.webp", title: "Youthful Grace", category: "Events" },
-  { src: "/birthday/Dalreen%20Birthday.webp", title: "Celebration Spirit", category: "Events" },
-  { src: "/birthday/Dalreenbirthday.webp", title: "Joyful Gathering", category: "Events" },
-  { src: "/birthday/Dalreen%20Birthda.webp", title: "Birthday Cheer", category: "Events" },
-  { src: "/birthday/Dalreenbirthda.webp", title: "Party Vibes", category: "Events" },
 
   // Cinematic / Albums
   { src: "/aeron-album/Aaron%20Album.webp", title: "Storybook Legacy", category: "Cinematic" },
   { src: "/aeron-album/Aeronalbum.webp", title: "Visual Narrative", category: "Cinematic" },
-  { src: "/aeron-album/Aaron.webp", title: "Detailed Memories", category: "Cinematic" },
   { src: "/jassi-album/Jessy%20Album.webp", title: "Signature Style", category: "Cinematic" },
   { src: "/jassi-album/Jessy%20Al.webp", title: "Candid Essence", category: "Cinematic" },
-  { src: "/jassi-album/Jessy%20Alb.webp", title: "Refined Texture", category: "Cinematic" },
-  { src: "/jassi-album/Jessy%20Albu.webp", title: "Elegant Layout", category: "Cinematic" },
   { src: "/samford-album/Samford%20Roce.webp", title: "Cinematic Frame", category: "Cinematic" },
   { src: "/samford-album/Samford%20Roc.webp", title: "Dynamic Shot", category: "Cinematic" },
-  { src: "/samford-album/Samford%20Ro.webp", title: "Artistic Angle", category: "Cinematic" },
-  // { src: "/samford-album/Samford%20R.webp", title: "Pro Production", category: "Cinematic" },
 ];
 
 const categories = ["All", "Weddings", "Pre-Wedding", "Events", "Cinematic"];
@@ -137,40 +116,36 @@ export default function GalleryPage() {
               ))}
             </div>
 
-            {/* Optimized High-Scale Grid */}
+            {/* Masonry Style Grid - No Cropping */}
             <motion.div
               layout
-              className="columns-1 md:columns-2 gap-10 space-y-10"
+              className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8"
             >
               <AnimatePresence mode="popLayout">
                 {filtered.map((img, i) => (
                   <motion.div
                     layout
                     key={img.src}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, scale: 0.9 }}
                     transition={{ duration: 0.5, delay: i * 0.05 }}
-                    className="group relative break-inside-avoid rounded-[2rem] overflow-hidden border border-slate-100 shadow-sm transition-all duration-700 hover:shadow-2xl hover:shadow-primary/10"
+                    className="group relative break-inside-avoid rounded-3xl overflow-hidden border border-slate-100 shadow-sm transition-all duration-700 hover:shadow-2xl"
                   >
-                    <div className="relative w-full overflow-hidden bg-slate-50">
+                    <div className="relative w-full bg-slate-50">
                       <Image
                         src={img.src}
                         alt={img.title}
-                        width={600}
-                        height={800}
+                        width={800}
+                        height={1000}
                         className="w-full h-auto block transition-transform duration-1000 group-hover:scale-105"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                    </div>
-
-                    <div className="absolute bottom-0 left-0 w-full p-6 translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700">
-                      <span className="text-secondary font-bold uppercase tracking-widest text-[8px] mb-1 block">{img.category}</span>
-                      <h3 className="text-white text-base font-heading font-extrabold line-clamp-1">{img.title}</h3>
-                      <div className="mt-4 flex items-center gap-2 text-white/60 text-[10px] font-medium">
-                        <Sparkles size={12} className="text-secondary" />
-                        Signature Collection
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <div className="absolute bottom-6 left-6">
+                           <p className="text-white font-heading font-bold text-lg tracking-tight">{img.title}</p>
+                           <p className="text-secondary font-bold text-[10px] uppercase tracking-widest mt-1">{img.category}</p>
+                        </div>
                       </div>
                     </div>
                   </motion.div>

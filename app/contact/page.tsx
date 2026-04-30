@@ -1,14 +1,11 @@
-import { Metadata } from "next";
+"use client";
+
 import Image from "next/image";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { InquiryForm } from "@/components/InquiryForm";
 import { Gem, MapPin, Phone, Mail, Clock } from "lucide-react";
-
-export const metadata: Metadata = {
-  title: "Contact Max Photo | Premium Wedding Photography & Films in Mumbai",
-  description: "Get in touch with Max Photo to capture your special moments.",
-};
+import { motion } from "framer-motion";
 
 export default function ContactPage() {
   return (
@@ -17,15 +14,31 @@ export default function ContactPage() {
 
       <main className="flex-grow pt-24">
         {/* Contact Hero Section */}
-        <section className="py-20 bg-slate-50 relative overflow-hidden">
+        <section className="relative py-24 md:py-40 bg-[#0a0a0b] text-white overflow-hidden">
+          <div className="absolute inset-0">
+            <Image 
+              src="/wedding/Page%20wed.webp" 
+              alt="Contact Banner" 
+              fill 
+              className="object-cover opacity-30" 
+              priority 
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/80 via-[#0a0a0b]/60 to-[#0a0a0b]"></div>
+          </div>
           <div className="container mx-auto px-6 md:px-12 relative z-10 text-center">
-            <span className="text-secondary font-bold uppercase tracking-[0.5em] text-xs mb-6 block">Get In Touch</span>
-            <h1 className="text-3xl md:text-5xl font-heading font-extrabold mb-8 tracking-tighter leading-tight max-w-4xl mx-auto text-primary">
-              Let's Create Something <br className="hidden md:block" /> Beautiful Together
-            </h1>
-            <p className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto font-light leading-relaxed">
-              We’d love to hear from you. Fill out the form below or reach us through our contact details.
-            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <span className="text-secondary font-bold uppercase tracking-[0.6em] text-xs mb-8 block">Connect With Us</span>
+              <h1 className="text-4xl md:text-7xl font-heading font-extrabold mb-8 tracking-tighter leading-tight">
+                Let's Create <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-white">Magic</span> Together
+              </h1>
+              <p className="text-lg md:text-2xl text-white/50 max-w-2xl mx-auto font-light leading-relaxed">
+                Whether it's your wedding day or a corporate milestone, we're here to preserve your story with cinematic excellence.
+              </p>
+            </motion.div>
           </div>
         </section>
 

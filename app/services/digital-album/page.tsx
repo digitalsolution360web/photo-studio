@@ -45,7 +45,7 @@ export default function DigitalAlbumPage() {
             {/* Digital Album Showcase - Premium Grid */}
             <section className="py-12 md:py-24 bg-white">
                <div className="container mx-auto px-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-7xl mx-auto">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-7xl mx-auto">
                      {[
                         "/digital-album/Cassandra_Page_001.webp",
                         "/digital-album/Cassandra_Page_002.webp",
@@ -55,12 +55,12 @@ export default function DigitalAlbumPage() {
                         "/digital-album/Cassandra_Page_017.webp",
                      ].map((src, idx) => (
                         <div key={idx} className="group relative rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-slate-100 bg-[#f8f9fa] transition-all duration-500 hover:shadow-[0_30px_60px_rgba(0,0,0,0.15)]">
-                           <div className="relative w-full aspect-[16/10] md:aspect-[3/2] lg:aspect-[16/9]">
+                           <div className="relative w-full aspect-[16/9] md:aspect-[21/10] lg:aspect-[21/9]">
                               <Image
                                  src={src}
                                  alt={`Cassandra Album Spread ${idx + 1}`}
                                  fill
-                                 className="p-2 md:p-4 object-contain transition-transform duration-1000 group-hover:scale-105"
+                                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
                                  sizes="(max-width: 768px) 100vw, 50vw"
                                  priority={idx < 2}
                               />
