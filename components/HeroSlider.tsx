@@ -26,6 +26,10 @@ export function HeroSlider() {
           delay: 4000,
           disableOnInteraction: false,
         }}
+        pagination={{
+          clickable: true,
+          dynamicBullets: true,
+        }}
         loop={true}
         modules={[Autoplay, EffectFade, Pagination]}
         className="h-full w-full"
