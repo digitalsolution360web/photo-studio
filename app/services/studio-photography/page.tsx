@@ -59,7 +59,7 @@ export default function StudioPhotographyPage() {
                      <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-40"></div>
                      <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
                         <Link
-                           href="https://www.youtube.com/watch?v=kdclq-Ix4PY"
+                           href="https://www.youtube.com/watch?v=gV7bxx1TdVY"
                            target="_blank"
                            className="w-20 h-20 bg-secondary text-white rounded-full flex items-center justify-center shadow-[0_0_50px_rgba(255,87,123,0.3)] scale-100 hover:scale-110 transition-all duration-500 group/play relative z-20"
                         >
