@@ -33,12 +33,12 @@ export default function EventVideographyPage() {
 
                <div className="container mx-auto px-6 relative z-10 text-center space-y-6">
                   <span className="text-secondary font-bold uppercase tracking-[0.4em] text-[10px]">Our Expertise</span>
-                   <h1 className="text-3xl md:text-5xl font-heading font-extrabold tracking-tighter">
-                      Cinematic <span className="text-secondary">Excellence</span>
-                   </h1>
-                   <p className="text-sm md:text-base text-white/50 max-w-xl mx-auto font-light leading-relaxed">
-                      From immersive wedding films to dynamic event highlights, we deliver high-end cinematography tailored to preserve your most moving moments.
-                   </p>
+                  <h1 className="text-3xl md:text-5xl font-heading font-extrabold tracking-tighter">
+                     Cinematic <span className="text-secondary">Excellence</span>
+                  </h1>
+                  <p className="text-sm md:text-base text-white/50 max-w-xl mx-auto font-light leading-relaxed">
+                     From immersive wedding films to dynamic event highlights, we deliver high-end cinematography tailored to preserve your most moving moments.
+                  </p>
                </div>
             </section>
 
@@ -50,7 +50,7 @@ export default function EventVideographyPage() {
                      <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-40"></div>
                      <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
                         <Link
-                           href="https://www.youtube.com/watch?v=mqOBsqfErlA"
+                           href="https://youtu.be/MnZp4ABk9Jk?si=iKxjOh7sf49DG1QQ"
                            target="_blank"
                            className="w-20 h-20 bg-secondary text-white rounded-full flex items-center justify-center shadow-[0_0_50px_rgba(255,87,123,0.3)] scale-100 hover:scale-110 transition-all duration-500 group/play relative z-20"
                         >

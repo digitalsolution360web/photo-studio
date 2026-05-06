@@ -15,7 +15,7 @@ const videos = [
       id: "h5UJvhwLh2o",
       title: "Signature Event Film",
       subtitle: "Cinematic Excellence",
-      href: "https://www.youtube.com/watch?si=Jf_e3Rw9TdohhXyS&v=h5UJvhwLh2o&feature=youtu.be",
+      href: "https://youtu.be/MnZp4ABk9Jk?si=iKxjOh7sf49DG1QQ",
       thumbnail: "/silver-wedding/Silver%20Wedding.webp"
    }
 ];
@@ -57,11 +57,11 @@ export default function EventPhotographyPage() {
                   <div className="max-w-4xl mx-auto">
                      {videos.map((video) => (
                         <div key={video.id} className="relative group rounded-[3rem] overflow-hidden aspect-video bg-[#0a0a0b] shadow-2xl border border-slate-100">
-                           <Image 
-                              src={video.thumbnail} 
-                              alt={video.title} 
-                              fill 
-                              className="object-cover opacity-60 transition-transform duration-1000 group-hover:scale-105" 
+                           <Image
+                              src={video.thumbnail}
+                              alt={video.title}
+                              fill
+                              className="object-cover opacity-60 transition-transform duration-1000 group-hover:scale-105"
                            />
                            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-40"></div>
                            <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
