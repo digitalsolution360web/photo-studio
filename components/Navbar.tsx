@@ -105,40 +105,55 @@ export function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="md:hidden fixed inset-0 z-[60] bg-[#0a0a0b]/95 backdrop-blur-xl flex flex-col p-12"
+            className="md:hidden fixed inset-0 z-[60] bg-[#0a0a0b]/98 backdrop-blur-2xl flex flex-col justify-between p-8 md:p-12"
           >
-            <div className="flex justify-between items-center mb-16">
-              <div className="relative w-32 h-10">
+            {/* Header */}
+            <div className="flex justify-between items-center pb-6 border-b border-white/5">
+              <div className="relative w-28 h-8">
                 <Image 
                   src="/logo.jpeg" 
                   alt="Logo" 
                   fill 
                   className="object-contain" 
-                  sizes="128px"
+                  sizes="112px"
                 />
               </div>
-              <button onClick={() => setMobileMenuOpen(false)} className="text-white p-2">
-                <X size={32} />
+              <button 
+                onClick={() => setMobileMenuOpen(false)} 
+                className="text-white/80 hover:text-white p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors"
+              >
+                <X size={20} />
               </button>
             </div>
-            <div className="flex flex-col space-y-8">
-              {navLinks.map((link) => (
-                <Link
+
+            {/* Menu Links */}
+            <div className="flex flex-col space-y-5 my-auto py-8">
+              {navLinks.map((link, index) => (
+                <motion.div
                   key={link.name}
-                  href={link.href}
-                  className="text-3xl font-heading font-extrabold text-white hover:text-secondary transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.05, duration: 0.3 }}
                 >
-                  {link.name}
-                </Link>
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className="text-base font-bold uppercase tracking-[0.25em] text-white/80 hover:text-secondary transition-all duration-300 relative group py-2 block text-center"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {link.name}
+                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-secondary group-hover:w-8 transition-all duration-300"></span>
+                  </Link>
+                </motion.div>
               ))}
             </div>
-            <div className="mt-auto">
+
+            {/* Footer / CTA in Menu */}
+            <div className="pt-6 border-t border-white/5 w-full">
               <Link
                 href="/contact"
-
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full block text-center py-5 bg-secondary text-white rounded-2xl font-bold text-lg"
+                className="w-full block text-center py-3.5 bg-gradient-to-r from-secondary to-secondary/80 hover:from-secondary hover:to-secondary text-white rounded-full font-bold text-xs uppercase tracking-[0.2em] shadow-lg shadow-secondary/15 transition-all duration-300 hover:scale-[1.02]"
               >
                 Check My Date
               </Link>

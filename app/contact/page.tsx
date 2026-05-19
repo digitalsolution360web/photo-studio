@@ -117,6 +117,32 @@ export default function ContactPage() {
           </div>
         </section>
 
+        {/* Google Map Section */}
+        <section className="pb-20 bg-white">
+          <div className="container mx-auto px-6 md:px-12">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="w-full space-y-6"
+            >
+              <div className="text-center lg:text-left">
+                <span className="text-secondary font-bold uppercase tracking-[0.4em] text-xs mb-2 block">Find Our Studio</span>
+                <h2 className="text-2xl md:text-4xl font-heading font-extrabold text-primary tracking-tight">Visit Us In Person</h2>
+              </div>
+              <div className="w-full h-[450px] rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100 relative group">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.5596197655886!2d72.8673902!3d19.126965899999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8273b625cf5%3A0x8241bab0d76ddbce!2sMax%20Photo%20Studio!5e0!3m2!1sen!2sin!4v1779110203351!5m2!1sen!2sin"
+                  className="w-full h-full border-0 absolute inset-0 transition-transform duration-700 group-hover:scale-[1.01]"
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Feature Section (Premium Experience) */}
         <section className="py-12 md:py-20 bg-primary text-white relative overflow-hidden mx-4 md:mx-12 rounded-[3rem] mt-8 mb-16 shadow-2xl shadow-primary/20">
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
