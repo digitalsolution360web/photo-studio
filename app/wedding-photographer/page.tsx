@@ -150,7 +150,7 @@ export default function WeddingPhotographerAndheriPage() {
         <section className="relative overflow-hidden bg-[#09090b] text-white">
           <div className="absolute inset-0">
             <Image
-              src="/samford-album/Samford Ro.webp"
+              src="/wedding/Page wed.webp"
               alt="Wedding Photographer in Andheri Mumbai"
               fill
               priority
@@ -158,7 +158,7 @@ export default function WeddingPhotographerAndheriPage() {
               sizes="100vw"
             />
 
-            <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/50" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/40 to-primary/50" />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary" />
           </div>
 
@@ -237,10 +237,10 @@ export default function WeddingPhotographerAndheriPage() {
 
                 <div className="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] shadow-[0_25px_70px_rgba(0,0,0,0.15)]">
                   <Image
-                    src="/aeron-album/Aaron Album.webp"
+                    src="/wedding/Page_0.webp"
                     alt="Max Photo Studio Wedding Photography"
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>
@@ -422,10 +422,10 @@ export default function WeddingPhotographerAndheriPage() {
                 <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/5 p-2">
                   <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
                     <Image
-                      src="/samford-album/Samford Ro.webp"
+                      src="/wedding/Page_00.webp"
                       alt="Wedding Photography Studio Mumbai"
                       fill
-                      className="object-cover"
+                      className="object-cover object-right"
                       sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
