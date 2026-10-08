@@ -28,6 +28,166 @@ export function Navbar() {
     { name: "Contact", href: "/contact" },
   ];
 
+    const schemaData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.maxphotostudio.in/#organization",
+        name: "Max Photo Studio",
+        url: "https://www.maxphotostudio.in/",
+        email: "info@maxphotostudio.in",
+        telephone: "+91 9820685643",
+        description:
+          "Max Photo Studio is a photography and visual storytelling company in Mumbai specializing in wedding photography, cinematic wedding films, candid photography, event photography, pre-wedding photography and professional visual services.",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress:
+            "Shop No. 2, Saroj Apartments, Opp. Holy Spirit Hospital, Mahakali Caves Road, Andheri East",
+          addressLocality: "Mumbai",
+          addressRegion: "Maharashtra",
+          postalCode: "400093",
+          addressCountry: "IN",
+        },
+      },
+      {
+        "@type": "PhotographyBusiness",
+        "@id": "https://www.maxphotostudio.in/#photographybusiness",
+        name: "Max Photo Studio",
+        url: "https://www.maxphotostudio.in/",
+        telephone: "+91 9820685643",
+        email: "info@maxphotostudio.in",
+        priceRange: "$$",
+        description:
+          "Professional photography and cinematic visual storytelling services in Mumbai, including wedding photography, candid photography, event photography, cinematography and pre-wedding photography.",
+        image: "https://www.maxphotostudio.in/assets/images/logo.png",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress:
+            "Shop No. 2, Saroj Apartments, Opp. Holy Spirit Hospital, Mahakali Caves Road, Andheri East",
+          addressLocality: "Mumbai",
+          addressRegion: "Maharashtra",
+          postalCode: "400093",
+          addressCountry: "IN",
+        },
+        areaServed: {
+          "@type": "City",
+          name: "Mumbai",
+        },
+        parentOrganization: {
+          "@id": "https://www.maxphotostudio.in/#organization",
+        },
+        openingHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+            ],
+            opens: "09:00",
+            closes: "20:30",
+          },
+        ],
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.maxphotostudio.in/#website",
+        url: "https://www.maxphotostudio.in/",
+        name: "Max Photo Studio",
+        publisher: {
+          "@id": "https://www.maxphotostudio.in/#organization",
+        },
+        inLanguage: "en-IN",
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.maxphotostudio.in/#webpage",
+        url: "https://www.maxphotostudio.in/",
+        name: "Max Photo Studio | Wedding Photography & Cinematic Films in Mumbai",
+        description:
+          "Max Photo Studio offers wedding photography, cinematic wedding films, candid photography, event photography, pre-wedding photography and professional photography services in Mumbai.",
+        isPartOf: {
+          "@id": "https://www.maxphotostudio.in/#website",
+        },
+        about: {
+          "@id": "https://www.maxphotostudio.in/#photographybusiness",
+        },
+        inLanguage: "en-IN",
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://www.maxphotostudio.in/#services",
+        name: "Photography Services",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Wedding Photography",
+            url: "https://www.maxphotostudio.in/services",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Cinematic Wedding Films",
+            url: "https://www.maxphotostudio.in/films",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Studio Photography",
+            url: "https://www.maxphotostudio.in/services",
+          },
+          {
+            "@type": "ListItem",
+            position: 4,
+            name: "Event Photography",
+            url: "https://www.maxphotostudio.in/services",
+          },
+          {
+            "@type": "ListItem",
+            position: 5,
+            name: "Candid Photography",
+            url: "https://www.maxphotostudio.in/services",
+          },
+          {
+            "@type": "ListItem",
+            position: 6,
+            name: "Event Videography & Cinematography",
+            url: "https://www.maxphotostudio.in/services",
+          },
+          {
+            "@type": "ListItem",
+            position: 7,
+            name: "Pre-Wedding Photo Shoot",
+            url: "https://www.maxphotostudio.in/services",
+          },
+          {
+            "@type": "ListItem",
+            position: 8,
+            name: "Digital Album Printing",
+            url: "https://www.maxphotostudio.in/services",
+          },
+          {
+            "@type": "ListItem",
+            position: 9,
+            name: "Photo Colouring & Restoration",
+            url: "https://www.maxphotostudio.in/services",
+          },
+          {
+            "@type": "ListItem",
+            position: 10,
+            name: "Personalized Photo Gifting",
+            url: "https://www.maxphotostudio.in/services",
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-700 ease-in-out px-4 py-6 md:px-0 ${isScrolled ? "py-3" : "py-6"
