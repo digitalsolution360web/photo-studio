@@ -169,6 +169,26 @@ export default function Home() {
                   icon: <Gift size={20} />,
                   bgIcon: <Gift size={140} />
                 },
+                
+                {
+                  title: "Maternity Photoshoot",
+                  desc: "Beautiful maternity portraits that celebrate motherhood, connection, and the special moments before your baby arrives.",
+                  icon: <Heart size={20} />,
+                  bgIcon: <Heart size={140} />
+                },
+                {
+                  title: "Birthday & Anniversary Photography",
+                  desc: "Capture birthdays, anniversaries, and milestone celebrations with memorable photographs and professional coverage.",
+                  icon: <Gift size={20} />,
+                  bgIcon: <Gift size={140} />
+                },
+                {
+                  title: "Wedding Photographer",
+                  desc: "Preserve every special wedding moment with timeless portraits, candid photography, and beautiful storytelling.",
+                  icon: <Camera size={20} />,
+                  bgIcon: <Camera size={140} />
+                },
+
               ].map((service, index) => (
                 <Link
                   key={index}
@@ -181,7 +201,11 @@ export default function Home() {
                               service.title === "Digital Album Printing" ? "/services/digital-album" :
                                 service.title === "Collages & Blow-Ups" ? "/services/collages-blowups" :
                                   service.title === "Photo Colouring & Restoration" ? "/services/photo-restoration" :
-                                    service.title === "Personalized Gifting" ? "/services/personalized-gifting" :
+                                    service.title === "Personalized Gifting" ? "/services/personalized-gifting" :    
+                                      service.title === "Maternity Photoshoot" ? "/services/maternity-photoshoot" :
+                                        service.title === "Birthday & Anniversary Photography" ? "/services/birthday-anniversary-photography" :
+                                          service.title === "Wedding Photographer" ? "/services/wedding-photographer" :
+
                                       "/services"
                   }
                   className="group relative bg-white p-7 md:p-10 rounded-[2.5rem] md:rounded-[3rem] border border-slate-100 transition-all duration-700 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] hover:border-secondary/20 hover:-translate-y-2 overflow-hidden flex flex-col items-center text-center gap-6 shadow-sm"

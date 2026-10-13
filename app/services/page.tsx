@@ -11,6 +11,7 @@ import {
   BookOpen,
   Image as ImageIcon,
   Palette,
+  Heart ,
   Gift,
   ArrowUpRight
 } from "lucide-react";
@@ -86,7 +87,29 @@ export default function ServicesPage() {
       icon: <Gift size={24} />,
       bgIcon: <Gift size={120} />,
       href: "/services/personalized-gifting"
+    },
+    {
+      title: "Maternity Photoshoot",
+      desc: "Beautiful maternity portraits celebrating motherhood and the special moments before your baby arrives.",
+      icon: <Heart size={24} />,
+      bgIcon: <Heart size={120} />,
+      href: "/services/maternity-photoshoot"
+    },
+    {
+      title: "Birthday & Anniversary Photography",
+      desc: "Professional photography for birthdays, anniversaries, and special milestone celebrations.",
+      icon: <Gift size={24} />,
+      bgIcon: <Gift size={120} />,
+      href: "/services/birthday-anniversary-photography"
+    },
+    {
+      title: "Wedding Photographer",
+      desc: "Capture every precious wedding moment through timeless portraits and beautiful storytelling.",
+      icon: <Camera size={24} />,
+      bgIcon: <Camera size={120} />,
+      href: "/services/wedding-photographer"
     }
+
   ];
 
   return (

@@ -176,7 +176,7 @@ export default function WeddingPhotographerAndheriPage() {
               <h1 className="max-w-3xl text-3xl font-heading font-extrabold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
                 Wedding Photographer
                 
-              
+              +
               </h1>
 
               <p className="mt-5 max-w-xl text-sm leading-relaxed text-white/65 md:text-base">
