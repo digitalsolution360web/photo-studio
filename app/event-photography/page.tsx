@@ -126,7 +126,7 @@ export default function EventPhotographyPage() {
         <div className="relative mx-auto flex min-h-[620px] max-w-7xl items-center px-5 py-24 sm:px-8 lg:px-10">
           <div className="max-w-4xl">
             <div className="mb-6 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium backdrop-blur-md">
-              Event Photography in Andheri Mumbai
+              Event Photography 
             </div>
 
             <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
